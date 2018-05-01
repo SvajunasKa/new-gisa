@@ -1,4 +1,5 @@
 @import "../../../node_modules/bootstrap-4-grid/scss/grid";
+@import 'fonts';
 @import "variables";
 @import "mixins";
 
@@ -6,6 +7,8 @@
 body, html, * {
   margin: 0;
   padding: 0;
-  background-color: $gray;
   color: $white;
+  font-family: $font;
+  //background-color: $gray;
 }
+

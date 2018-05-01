@@ -10,7 +10,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     images: item.images,
-    menu: item.menu
+    menu: item.menu,
+    banner_title: item.banner_title,
+    banner_text: item.banner_text
   },
   getters
 })

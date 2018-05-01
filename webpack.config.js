@@ -22,7 +22,7 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader'
+          'sass-loader',
         ],
       },
       {
@@ -49,18 +49,11 @@ module.exports = {
             'sass': [
               'vue-style-loader',
               'css-loader',
-              'sass-loader?indentedSyntax'
+              'sass-loader?indentedSyntax',
             ]
-          },
-          // other vue-loader options go here
+          }
         }
       },
-      // {
-      //   loader: 'sass-resources-loader',
-      //   options: {
-      //     resources: path.resolve(__dirname, '../src/assets/main.scss')
-      //   }
-      // },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -72,12 +65,17 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '$scss': path.resolve(__dirname,'./src/assets/style/main.scss')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

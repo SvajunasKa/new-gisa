@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-
-        <app-header></app-header>
-        <router-view></router-view>
-
-
+    <app-header></app-header>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -20,6 +17,6 @@
 </script>
 
 <style lang="scss">
-//@import "./assets/style/main";
+  @import '~$scss';
 
 </style>

@@ -1,4 +1,3 @@
-
 export const images = [
   {"alt": "aaaa", "src": require("../assets/images/audio.jpg")},
   {"alt": "aaa", "src": require("../assets/images/audio.jpg")}
@@ -12,3 +11,12 @@ export const menu = [
   {"name": "Mūsų draugai"},
   {"name": "Kontaktai"}
 ];
+
+export const banner_title = {
+  "name": "Garso ir apšvietimo aparatūra"
+};
+
+export const banner_text = {
+  "name": "Įgarsiname ir apšviečiame renginius, teikiame konsultacijas ir techninį jų aptarnavimą."
+
+};
