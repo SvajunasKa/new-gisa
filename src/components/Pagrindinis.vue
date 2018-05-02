@@ -25,7 +25,7 @@
       </transition>
     </div>
     <div class="content">
-      <h2>{{data.banner_text.name}}</h2>
+      <h2>{{data.banner_text.name}}<br><br>{{data.banner_text.xxx}}</h2>
     </div>
   </section>
 
@@ -61,11 +61,24 @@
 
   .home {
     background-color: $gray;
-   //background-image: url("../assets/images/banner.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
     height: 100vh;
+    width: 100vw;
+    position: relative;
+    &:after{
+      background-image: url("../assets/images/banner.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
   }
   .inner {
     text-align: center;
@@ -79,6 +92,7 @@
       position: relative;
       z-index: 1;
       font-family: $font;
+      @include letter-space();
     }
     .fade-enter {
       opacity: 0;
@@ -114,6 +128,9 @@
   h2{
     font-size: 16px;
     font-family: $font;
+    text-align: center;
+    text-transform: uppercase;
+    @include letter-space();
   }
 
 </style>

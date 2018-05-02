@@ -17,6 +17,6 @@ export const banner_title = {
 };
 
 export const banner_text = {
-  "name": "Įgarsiname ir apšviečiame renginius, teikiame konsultacijas ir techninį jų aptarnavimą."
-
+  "name": "ĮGARSINAME IR APŠVIEČIAME RENGINIUS, TEIKIAME KONSULTACIJAS IR TECHNINĮ JŲ APTARNAVIMĄ.",
+  "xxx": "NUOMOJAME GARSO IR ŠVIESOS ĮRANGĄ."
 };

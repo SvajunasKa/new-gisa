@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import vbclass from 'vue-body-class'
 import Pagrindinis from './components/Pagrindinis'
 import Apvietimas from './components/Apsvietimas'
 import Darbai from './components/Darbai'
@@ -10,7 +9,7 @@ import Partneriai from './components/Partneriai'
 import Sprendimai from './components/Sprendimai'
 
 
-Vue.use(VueRouter, vbclass);
+Vue.use(VueRouter);
 
 const routes = [
   {path: '/', component: Pagrindinis,  meta: { bodyClass: 'dashboard' }},
