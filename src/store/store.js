@@ -12,7 +12,15 @@ export default new Vuex.Store({
     images: item.images,
     menu: item.menu,
     banner_title: item.banner_title,
-    banner_text: item.banner_text
+    banner_text: item.banner_text,
+    button_text: item.button_text,
+    audio: item.audio,
+    light: item.light,
+    offer: item.offer,
+    projects: item.projects,
+    partners:item.partners,
+    offer_title:item.offer_title,
+    family_img: item.family_img
   },
   getters
 })

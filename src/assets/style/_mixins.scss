@@ -1,3 +1,15 @@
 @mixin letter-space(){
  letter-spacing: 1.5px;
 }
+@mixin link(){
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+
+@mixin h1(){
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}

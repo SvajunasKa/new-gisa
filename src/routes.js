@@ -12,7 +12,7 @@ import Sprendimai from './components/Sprendimai'
 Vue.use(VueRouter);
 
 const routes = [
-  {path: '/', component: Pagrindinis,  meta: { bodyClass: 'dashboard' }},
+  {path: '/', component: Pagrindinis},
   {path: '/sprendimai', component: Sprendimai},
   {path:'/apsvietimo_technika', component: Apvietimas},
   {path: '/atlikti_darbai', component: Darbai},
