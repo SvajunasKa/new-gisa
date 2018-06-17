@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import * as item from '../Api/data'
 
 import * as getters from './getters'
+import * as actions from './actions'
 
 Vue.use(Vuex);
 
@@ -20,7 +21,16 @@ export default new Vuex.Store({
     projects: item.projects,
     partners:item.partners,
     offer_title:item.offer_title,
-    family_img: item.family_img
+    family_img: item.family_img,
+    family_title: item.family_title
   },
-  getters
+  getters,
+  // actions:{
+  //   showModal:({commit}, payload) =>{
+  //     commit('showModal', payload);
+  //     console.log(payload)
+  //
+  //   },
+  //},
+
 })
