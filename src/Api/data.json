@@ -1,0 +1,27 @@
+{
+  "menu": [
+    "Sprendimai",
+    "Apšvietimo aparatūra",
+    "Garso aparatūra",
+    "Atlikti darbai",
+    "Mūsų draugai",
+    "Kontaktai"
+  ],
+  "banner_title": {
+    "name": "Garso ir apšvietimo aparatūra"
+  },
+  "button_text": {
+    "name": "apsilankykite"
+  },
+  "banner_text": [
+    "ĮGARSINAME IR APŠVIEČIAME RENGINIUS, TEIKIAME KONSULTACIJAS IR TECHNINĮ JŲ APTARNAVIMĄ.",
+    "NUOMOJAME GARSO IR ŠVIESOS ĮRANGĄ.",
+    "GERIAUSIOMIS SĄLYGOMIS DIRBAME SU UŽSAKOVAIS, ORGANIZATORIAIS, KULTŪROS CENTRAIS VISOJE LIETUVOJE.",
+    "NUOLATINIAMS KLIENTAMS TAIKOME IŠIMTINES KAINAS",
+    "NAUDOJAME PROFESIONALIUS QSC STIPRINTUVUS, RCF, MARTIN, COMMUNITY AKUSTIKĄ. APŠVIETIMUI SIŪLOME ROBE IR MARTIN VALDOMUS PROŽEKTORIUS, BEI SKANERIUS."
+  ],
+  "audio":{
+    "src": "../assets/images/show.jpg",
+    "text": "Apšvietimo aparatūra"
+  }
+}

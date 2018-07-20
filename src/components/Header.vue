@@ -5,22 +5,22 @@
         <router-link class="logo" to="/"><img src="../../src/assets/images/logo.png"/></router-link>
         <ul class="nav-menu">
           <li>
-            <router-link class="link" to="/sprendimai">{{data.menu[0].name}}</router-link>
+            <router-link class="link" to="/sprendimai">{{data.data.menu[0]}}</router-link>
           </li>
           <li>
-            <router-link class="link" to="/apsvietimo_technika">{{data.menu[1].name}}</router-link>
+            <router-link class="link" to="/apsvietimo_technika">{{data.data.menu[1]}}</router-link>
           </li>
           <li>
-            <router-link class="link" to="/igarsinimo_technika">{{data.menu[2].name}}</router-link>
+            <router-link class="link" to="/igarsinimo_technika">{{data.data.menu[2]}}</router-link>
           </li>
           <li>
-            <router-link class="link" to="/atlikti_darbai">{{data.menu[3].name}}</router-link>
+            <router-link class="link" to="/atlikti_darbai">{{data.data.menu[3]}}</router-link>
           </li>
           <li>
-            <router-link class="link" to="/musu_draugai">{{data.menu[4].name}}</router-link>
+            <router-link class="link" to="/musu_draugai">{{data.data.menu[4]}}</router-link>
           </li>
           <li>
-            <router-link class="link" to="/kontaktai">{{data.menu[5].name}}</router-link>
+            <router-link class="link" to="/kontaktai">{{data.data.menu[5]}}</router-link>
           </li>
         </ul>
       </nav>
@@ -35,9 +35,8 @@
     computed: {
       ...mapGetters([
         "data",
-      ])
-
-    }
+      ]),
+    },
   }
 </script>
 

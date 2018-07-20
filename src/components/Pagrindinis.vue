@@ -1,111 +1,100 @@
 <template>
   <div class="container-fluid">
     <section class="banner">
-      <!--<div class="row">-->
-      <!--<div class="col-md-6">-->
-      <!--<div v-for="image in data.images">-->
-      <!--<img :src="image.src"/>-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--<div class="col-md-6">-->
 
-      <!--<div v-for="image in data.images">-->
-      <!--<img :src="image.src"/>-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--</div>-->
       <div class="inner container">
         <transition name="slide-right" appear>
           <hr>
         </transition>
         <transition name="fade" appear>
-          <h1 v-if="show">{{data.banner_title.name}}</h1>
+          <h1 v-if="show">{{data.data.banner_title.name}}</h1>
         </transition>
         <transition name="slide-left" appear>
           <hr>
         </transition>
-        <div class="button">
-          <a href="#">{{data.button_text.name}}</a>
+        <div class="button" @click="scroll">
+          <a href="#">{{data.data.button_text.name}}</a>
         </div>
         <div class="content">
-          <h2>{{data.banner_text.name}}<br><br>{{data.banner_text.name1}}<br><br>{{data.banner_text.name2}}<br>{{data.banner_text.name3}}<br><br>{{data.banner_text.name4}}
+          <h2>{{data.data.banner_text[0]}}<br><br>{{data.data.banner_text[1]}}<br><br>{{data.data.banner_text[2]}}
+            <br>{{data.data.banner_text[3]}}<br><br>{{data.data.banner_text[4]}}
           </h2>
         </div>
       </div>
 
     </section>
-    <div class="container">
-      <section>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="img">
-              <img :src="data.audio.src"/>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="text">
-              <router-link to="/igarsinimo_technika">{{data.audio.text}}</router-link>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="row">
-          <div class="col-md-8">
-            <div class="text">
-              <router-link to="/apsvietimo_technika">{{data.light.text}}</router-link>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img">
-              <img :src="data.light.src"/>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="img">
-              <img :src="data.offer.src"/>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="text">
-              <router-link to="/sprendimai">{{data.offer.text}}</router-link>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="row">
-          <div class="col-md-8">
-            <div class="text">
-              <router-link to="/atlikti_darbai">{{data.projects.text}}</router-link>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img">
-              <img :src="data.projects.src"/>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="img">
-              <img :src="data.partners.src"/>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="text">
-              <router-link to="/musu_draugai">{{data.partners.text}}</router-link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <!--<div class="container">-->
+    <!--<section class="main">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+    <div class="img">
+    <img :src="data.data.audio.src"/>
+  </div>
+    <!--</div>-->
+    <!--<div class="col-md-8">-->
+    <!--<div class="text">-->
+    <router-link to="/igarsinimo_technika">{{data.data.audio.text}}</router-link>
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-8">-->
+    <!--<div class="text">-->
+    <!--<router-link to="/apsvietimo_technika">{{data.light.text}}</router-link>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="img">-->
+    <!--<img :src="data.light.src"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="img">-->
+    <!--<img :src="data.offer.src"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-8">-->
+    <!--<div class="text">-->
+    <!--<router-link to="/sprendimai">{{data.offer.text}}</router-link>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-8">-->
+    <!--<div class="text">-->
+    <!--<router-link to="/atlikti_darbai">{{data.projects.text}}</router-link>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="img">-->
+    <!--<img :src="data.projects.src"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+    <!--<div class="img">-->
+    <!--<img :src="data.partners.src"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-8">-->
+    <!--<div class="text">-->
+    <!--<router-link to="/musu_draugai">{{data.partners.text}}</router-link>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--</div>-->
   </div>
 </template>
 
@@ -121,14 +110,23 @@
     computed: {
       ...mapGetters([
         'data'
-      ])
+      ]),
     },
     created: () => {
       document.body.className = 'home';
     },
     destroyed: () => {
       document.body.className = '';
-    }
+    },
+    methods: {
+      scroll() {
+        let elem = document.getElementsByClassName('main');
+        //elem.scrollIntoView()
+        console.log('aaa')
+      }
+    },
+
+
   }
 
 </script>
@@ -156,6 +154,7 @@
       z-index: -1;
     }
   }
+
   .banner {
     height: 100vh;
   }

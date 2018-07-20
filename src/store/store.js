@@ -1,36 +1,30 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import * as item from '../Api/data'
-
+//import * as item from '../Api/data'
 import * as getters from './getters'
-import * as actions from './actions'
+import * as data from '../Api/data.json'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    images: item.images,
+    /*images: item.images,
     menu: item.menu,
     banner_title: item.banner_title,
     banner_text: item.banner_text,
     button_text: item.button_text,
-    audio: item.audio,
+    //audio: item.audio,
     light: item.light,
     offer: item.offer,
     projects: item.projects,
     partners:item.partners,
     offer_title:item.offer_title,
     family_img: item.family_img,
-    family_title: item.family_title
+    family_title: item.family_title,
+    item:item,*/
+    data: data
+
   },
   getters,
-  // actions:{
-  //   showModal:({commit}, payload) =>{
-  //     commit('showModal', payload);
-  //     console.log(payload)
-  //
-  //   },
-  //},
-
 })

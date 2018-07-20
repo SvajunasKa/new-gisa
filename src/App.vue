@@ -2,7 +2,7 @@
   <div id="app">
     <app-header></app-header>
     <router-view></router-view>
-    <app-popup></app-popup>
+    <!--<app-popup></app-popup>-->
 
   </div>
 </template>
@@ -15,7 +15,7 @@
     name: 'app',
     components: {
       appHeader: Header,
-      appPopup: Popup
+      //appPopup: Popup
     }
   }
 </script>
