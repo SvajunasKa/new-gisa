@@ -21,80 +21,84 @@
           </h2>
         </div>
       </div>
-
     </section>
-    <!--<div class="container">-->
-    <!--<section class="main">-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-4">-->
-    <div class="img">
-    <img :src="data.data.audio.src"/>
-  </div>
-    <!--</div>-->
-    <!--<div class="col-md-8">-->
-    <!--<div class="text">-->
-    <router-link to="/igarsinimo_technika">{{data.data.audio.text}}</router-link>
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
-    <!--<section>-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-8">-->
-    <!--<div class="text">-->
-    <!--<router-link to="/apsvietimo_technika">{{data.light.text}}</router-link>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="img">-->
-    <!--<img :src="data.light.src"/>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
-    <!--<section>-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="img">-->
-    <!--<img :src="data.offer.src"/>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-8">-->
-    <!--<div class="text">-->
-    <!--<router-link to="/sprendimai">{{data.offer.text}}</router-link>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
-    <!--<section>-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-8">-->
-    <!--<div class="text">-->
-    <!--<router-link to="/atlikti_darbai">{{data.projects.text}}</router-link>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="img">-->
-    <!--<img :src="data.projects.src"/>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
-    <!--<section>-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="img">-->
-    <!--<img :src="data.partners.src"/>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-8">-->
-    <!--<div class="text">-->
-    <!--<router-link to="/musu_draugai">{{data.partners.text}}</router-link>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
-    <!--</div>-->
+    <div class="container">
+      <section>
+        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="img">
+              <img :src="data.images.audio.src"/>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="text">
+              <router-link to="/igarsinimo_technika">{{data.images.audio.text}}</router-link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="text">
+              <router-link to="/apsvietimo_technika">{{data.images.light.text}}</router-link>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="img">
+              <img :src="data.images.light.src"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="img">
+              <img :src="data.images.offer.src"/>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="text">
+              <router-link to="/sprendimai">{{data.images.offer.text}}</router-link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="text">
+              <router-link to="/atlikti_darbai">{{data.images.projects.text}}</router-link>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="img">
+              <img :src="data.images.projects.src"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="img">
+              <img :src="data.images.partners.src"/>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="text">
+              <router-link to="/musu_draugai">{{data.images.partners.text}}</router-link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -112,12 +116,12 @@
         'data'
       ]),
     },
-    created: () => {
+    /*created: () => {
       document.body.className = 'home';
     },
     destroyed: () => {
       document.body.className = '';
-    },
+    },*/
     methods: {
       scroll() {
         let elem = document.getElementsByClassName('main');
@@ -161,13 +165,9 @@
 
   .inner {
     text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
     h1 {
       @include h1();
       display: inline-block;
-      padding: 10px 20px;
       position: relative;
       z-index: 1;
       font-family: $font;
@@ -207,15 +207,14 @@
 
   .button {
     display: inline-block;
-    background-color: $red;
-    border-radius: 3px;
     margin: 50px 0;
     a {
       text-decoration: none;
       color: $white;
       text-transform: uppercase;
-      line-height: 2;
-      padding: 0 20px;
+      padding: 10px 20px;
+      background-color: $red;
+      border-radius: 3px;
     }
   }
 
@@ -248,7 +247,7 @@
 
   section {
     .row {
-      border: 3px solid rgba(0, 0, 0, 0.1);
+     // border: 3px solid rgba(0, 0, 0, 0.1);
       border-left: none;
       border-right: none;
       margin-top: 15px;

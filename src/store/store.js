@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-//import * as item from '../Api/data'
+import * as images from '../Api/images'
 import * as getters from './getters'
-import * as data from '../Api/data.json'
+import * as texts from '../Api/data.json'
 
 Vue.use(Vuex);
 
@@ -23,7 +23,8 @@ export default new Vuex.Store({
     family_img: item.family_img,
     family_title: item.family_title,
     item:item,*/
-    data: data
+    images: images,
+    data: texts
 
   },
   getters,
