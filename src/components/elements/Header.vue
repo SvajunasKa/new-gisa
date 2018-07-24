@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <nav>
-        <router-link class="logo" to="/"><img src="../../src/assets/images/logo.png"/></router-link>
+        <router-link class="logo" to="/"><img src="../../assets/images/logo.png"/></router-link>
         <ul class="nav-menu">
           <li>
             <router-link class="link" to="/sprendimai">{{data.data.menu[0]}}</router-link>

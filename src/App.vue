@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import Header from './components/Header'
+  import Header from './components/elements/Header'
   import Popup from './components/Popup'
 
   export default {

@@ -1,17 +1,16 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <section class="banner">
-
+      <transition name="slide-right" appear>
+        <hr>
+      </transition>
+      <transition name="fade" appear>
+        <h1 v-if="show">{{data.data.banner_title.name}}</h1>
+      </transition>
+      <transition name="slide-left" appear>
+        <hr>
+      </transition>
       <div class="inner container">
-        <transition name="slide-right" appear>
-          <hr>
-        </transition>
-        <transition name="fade" appear>
-          <h1 v-if="show">{{data.data.banner_title.name}}</h1>
-        </transition>
-        <transition name="slide-left" appear>
-          <hr>
-        </transition>
         <div class="button" @click="scroll">
           <a href="#">{{data.data.button_text.name}}</a>
         </div>
@@ -99,11 +98,13 @@
         </div>
       </section>
     </div>
+    <app-form></app-form>
   </div>
 </template>
 
 <script>
   import {mapGetters} from 'vuex'
+  import contactForm from '../components/elements/contactForm'
 
   export default {
     data() {
@@ -129,7 +130,9 @@
         console.log('aaa')
       }
     },
-
+    components:{
+      appForm: contactForm
+    }
 
   }
 
@@ -158,71 +161,71 @@
       z-index: -1;
     }
   }
-
+  h1 {
+    @include h1();
+    position: relative;
+    z-index: 1;
+    font-family: $font;
+    @include letter-space();
+  }
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    transition: opacity 3s;
+    transition-delay: 1s;
+  }
+  .slide-right-enter-active {
+    animation: slide-in 1s;
+  }
+  .slide-left-enter-active {
+    animation: slide-in-left 1s;
+  }
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      width: 100%;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      width: 100%;
+    }
+  }
   .banner {
     height: 100vh;
-  }
-
-  .inner {
     text-align: center;
-    h1 {
-      @include h1();
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      font-family: $font;
-      @include letter-space();
-    }
-    .fade-enter {
-      opacity: 0;
-    }
-    .fade-enter-active {
-      transition: opacity 3s;
-      transition-delay: 1s;
-    }
-    .slide-right-enter-active {
-      animation: slide-in 1s;
-    }
-    .slide-left-enter-active {
-      animation: slide-in-left 1s;
-    }
-    @keyframes slide-in {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        width: 100%;
-        transform: translateX(0);
-      }
-    }
-    @keyframes slide-in-left {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 100%;
-      }
-    }
+    margin-top: 10vh;
+    /*display: flex;*/
+    /*align-items: center;*/
   }
 
   .button {
     display: inline-block;
-    margin: 50px 0;
+    margin: 10vh 0;
     a {
       text-decoration: none;
       color: $white;
       text-transform: uppercase;
-      padding: 10px 20px;
+      padding: 20px 60px;
       background-color: $red;
       border-radius: 3px;
+      font-size: 18px;
     }
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 20px;
     font-family: $font;
     text-align: center;
     text-transform: uppercase;
+    line-height: 1.3;
     @include letter-space();
   }
 
