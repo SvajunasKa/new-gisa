@@ -18,3 +18,8 @@ export const partners = {
   "src": require("../assets/images/partners.jpg"),
   "text": "Mūsų draugai"
 };
+export const family_img = [
+  {"src": require("../assets/images/sviesa-seimai.jpg")},
+  {"src": require("../assets/images/garso-komplektas-seimai.jpg")}
+];
+

@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="title">
-      <h1>{{data.offer_title.name}}</h1>
+      <h1>{{data.data.sprendimai_page.offer_title.name}}</h1>
     </div>
     <section>
       <div class="row">
         <div class="col-md-5">
           <div class="content">
-            <h4>{{data.family_title.name}}</h4>
-            <p>{{data.family_title.dsc}}</p>
+            <h4>{{data.data.sprendimai_page.family_title.name}}</h4>
+            <p>{{data.data.sprendimai_page.family_title.description}}</p>
           </div>
           <div class="link">
 
@@ -17,14 +17,14 @@
               class="btn"
               v-on:click="show"
             >
-              {{data.family_title.more}}
+              {{data.data.sprendimai_page.family_title.button_text}}
             </button>
 
           </div>
         </div>
         <div class="col-md-7">
           <div class="img">
-            <div v-for="image in data.family_img">
+            <div v-for="image in data.images.family_img">
               <img :src="image.src"/>
             </div>
           </div>
@@ -52,18 +52,13 @@
       //   'showModal'
       // ])
       show () {
-        this.$modal.show('hello-world', {foo: 'llllll'});
+        this.$modal.show('hello-world', {foo: 'ladasdas'});
       },
       hide () {
         this.$modal.hide('hello-world');
       }
     },
-    created: () => {
-      document.body.className = 'offer';
-    },
-    destroyed: () => {
-      document.body.className = '';
-    },
+
     // methods:{
     //   showModal(){
     //     this.isModalVisible = true;

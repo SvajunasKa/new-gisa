@@ -20,7 +20,7 @@
             <router-link class="link" to="/musu_draugai">{{data.data.menu[4]}}</router-link>
           </li>
           <li>
-            <router-link class="link" to="/kontaktai">{{data.data.menu[5]}}</router-link>
+            <router-link class="link" to="/kontaktai" >{{data.data.menu[5]}}</router-link>
           </li>
         </ul>
       </nav>

@@ -20,8 +20,19 @@
     "NUOLATINIAMS KLIENTAMS TAIKOME IŠIMTINES KAINAS",
     "NAUDOJAME PROFESIONALIUS QSC STIPRINTUVUS, RCF, MARTIN, COMMUNITY AKUSTIKĄ. APŠVIETIMUI SIŪLOME ROBE IR MARTIN VALDOMUS PROŽEKTORIUS, BEI SKANERIUS."
   ],
-  "audio":{
+  "audio": {
     "src": "../assets/images/show.jpg",
     "text": "Apšvietimo aparatūra"
+  },
+  "sprendimai_page": {
+    "offer_title": {
+      "name": "RENGINIŲ APŠVIETIMO IR ĮGARSINIMO KOMPLEKTAI"
+    },
+    "family_title": {
+      "name": "šeimoms",
+      "description": "Gimtadieniams, jubiliejams, bernvakariams, mergvakariams, vestuvėms. Bendras garso galingumas - 2,5kW Foniniai ir 2 valdomi prožektoriai.",
+      "button_text": "Plačiau"
+    }
   }
 }
+

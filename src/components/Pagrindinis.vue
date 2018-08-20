@@ -11,7 +11,7 @@
         <hr>
       </transition>
       <div class="inner container">
-        <div class="button" @click="scroll">
+        <div class="button" v-scroll-to="'#main'">
           <a href="#">{{data.data.button_text.name}}</a>
         </div>
         <div class="content">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <div class="container" id="main">
       <section>
         <hr>
         <div class="row">
@@ -117,18 +117,8 @@
         'data'
       ]),
     },
-    /*created: () => {
-      document.body.className = 'home';
-    },
-    destroyed: () => {
-      document.body.className = '';
-    },*/
     methods: {
-      scroll() {
-        let elem = document.getElementsByClassName('main');
-        //elem.scrollIntoView()
-        console.log('aaa')
-      }
+
     },
     components:{
       appForm: contactForm
