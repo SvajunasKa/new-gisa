@@ -1,7 +1,7 @@
 <template id="modal-template">
   <modal name="hello-world" @before-open="beforeOpen">
     <div class="v--modal-box">
-      {{content}}
+     <slot></slot>
 
     </div>
 
@@ -27,8 +27,8 @@
 
 <style scoped lang="scss">
 
-  .v--modal {
+  .v--modal-box {
     color: black;
-    background: green;
+    background: white;
   }
 </style>

@@ -19,7 +19,6 @@
             >
               {{data.data.sprendimai_page.family_title.button_text}}
             </button>
-
           </div>
         </div>
         <div class="col-md-7">
@@ -37,7 +36,7 @@
 <script>
 
   import {mapGetters} from 'vuex'
-  import {mapMutations} from 'vuex'
+ import popup from './elements/Popup'
 
   export default {
 
@@ -52,7 +51,11 @@
       //   'showModal'
       // ])
       show () {
-        this.$modal.show('hello-world', {foo: 'ladasdas'});
+       /* this.$modal.show('hello-world', {
+            foo: 'ladasdas'
+        });*/
+       this.$store.dispatch('loadData');
+
       },
       hide () {
         this.$modal.hide('hello-world');
@@ -65,7 +68,9 @@
     //     console.log("aaa");
     //   }
     // }
-
+    comments:{
+        appPopup: popup
+    }
   }
 
 </script>

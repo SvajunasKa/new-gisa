@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from'axios'
 
 import * as images from '../Api/images'
 import * as getters from './getters'
 import * as texts from '../Api/data.json'
 
 Vue.use(Vuex);
-
+const ax = axios.create({
+    baseURL: 'http://localhost:8080/'
+})
 export default new Vuex.Store({
   state: {
     /*images: item.images,
@@ -27,5 +30,12 @@ export default new Vuex.Store({
     data: texts
 
   },
+    actions:{
+    loadData(){
+        ax.get('Api/data.json')
+            .then(res => console.log(res))
+    }
+
+    },
   getters,
 })
