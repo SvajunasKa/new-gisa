@@ -43,8 +43,7 @@
 <style scoped lang="scss">
   @import '~$scss';
   header{
-    //background-color: $gray;
-    background: transparent;
+    background-color: $gray;
   }
   .logo {
     float: left;
@@ -55,7 +54,7 @@
   li {
     display: inline-block;
     &:hover{
-      background-color: $gray;
+     // background-color: $gray;
     }
   }
   .link {
@@ -73,6 +72,9 @@
       justify-content: space-around;
       width: 100%;
       padding-left: 0;
+      a{
+        color: $white;
+      }
     }
   }
 

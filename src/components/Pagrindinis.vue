@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <div class="content">
+    <div class="container">
     <section class="banner">
       <transition name="slide-right" appear>
         <hr>
@@ -100,6 +101,7 @@
     </div>
     <app-form></app-form>
   </div>
+</div>
 </template>
 
 <script>

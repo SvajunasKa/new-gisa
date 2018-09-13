@@ -1,10 +1,9 @@
 <template id="modal-template">
-  <modal name="hello-world" @before-open="beforeOpen">
+  <modal name="images" @before-open="beforeOpen">
     <div class="v--modal-box">
-     <slot></slot>
-
+        <div @click="hide()">X</div>
+        <img :src="content[0]"/>
     </div>
-
   </modal>
 </template>
 
@@ -17,9 +16,10 @@
     },
     methods: {
       beforeOpen(event) {
-        console.log(event.params.foo);
         this.content = event.params.foo;
-       // return event.params.foo;
+      },
+      hide(){
+          this.$modal.hide("images");
       }
     }
   };

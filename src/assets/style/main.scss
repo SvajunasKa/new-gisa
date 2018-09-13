@@ -4,14 +4,20 @@
 @import "mixins";
 
 
-body, html, * {
+body, html {
   color: $white;
   font-family: $font;
-  background-color: $gray;
+  //background-color: $gray;
+  margin: 0;
+  padding: 0;
 }
 
-.offer{
+.content {
   background-color: $gray;
+  //min-height: 100vh;
+}
+.offer{
+  //background-color: $gray;
 }
 
 

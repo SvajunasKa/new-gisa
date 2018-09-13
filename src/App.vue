@@ -4,8 +4,6 @@
     <router-view></router-view>
     <app-popup>
 
-        <h1>dadadddd</h1>
-
     </app-popup>
 
   </div>

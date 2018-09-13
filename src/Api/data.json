@@ -28,10 +28,22 @@
     "offer_title": {
       "name": "RENGINIŲ APŠVIETIMO IR ĮGARSINIMO KOMPLEKTAI"
     },
-    "family_title": {
-      "name": "šeimoms",
-      "description": "Gimtadieniams, jubiliejams, bernvakariams, mergvakariams, vestuvėms. Bendras garso galingumas - 2,5kW Foniniai ir 2 valdomi prožektoriai.",
-      "button_text": "Plačiau"
+    "sprendimai":[{
+        "name": "šeimoms",
+        "description": "Gimtadieniams, jubiliejams, bernvakariams, mergvakariams, vestuvėms. Bendras garso galingumas - 2,5kW Foniniai ir 2 valdomi prožektoriai.",
+        "img":["src/assets/images/sviesa-seimai.jpg", "src/assets/images/garso-komplektas-seimai.jpg"],
+        "button_text": "Plačiau"
+
+    },
+      {
+        "name": "bendruomenėms",
+        "description": "blslfsd",
+        "img":["src/assets/images/sviesa-seimai.jpg", "src/assets/images/garso-komplektas-seimai.jpg"],
+        "button_text": "Plačiau"
+      }
+    ],
+    "community":{
+
     }
   }
 }
