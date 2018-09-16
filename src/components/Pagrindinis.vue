@@ -16,9 +16,12 @@
           <a href="#">{{data.data.button_text.name}}</a>
         </div>
         <div class="content">
-          <h2>{{data.data.banner_text[0]}}<br><br>{{data.data.banner_text[1]}}<br><br>{{data.data.banner_text[2]}}
-            <br>{{data.data.banner_text[3]}}<br><br>{{data.data.banner_text[4]}}
+          <h2 v-for="banner_text in data.data.banner_text">
+            {{banner_text}}
           </h2>
+          <!--<h2>{{data.data.banner_text[0]}}<br><br>{{data.data.banner_text[1]}}<br><br>{{data.data.banner_text[2]}}
+            <br>{{data.data.banner_text[3]}}<br><br>{{data.data.banner_text[4]}}
+          </h2>-->
         </div>
       </div>
     </section>
@@ -193,9 +196,7 @@
   .banner {
     height: 100vh;
     text-align: center;
-    margin-top: 10vh;
-    /*display: flex;*/
-    /*align-items: center;*/
+
   }
 
   .button {

@@ -45,6 +45,26 @@
     "community":{
 
     }
+  },
+  "atlikti_darbai": {
+    "darbai_title": {
+      "name": "APŠVIESTI IR ĮGARSINTI RENGINIAI"
+    },
+    "koncertai":[{
+      "name":"ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
+      "images": [
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai1.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai2.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai3.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai4.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai5.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai6.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai7.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai8.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai9.jpg"
+      ]
+    }]
   }
 }
 

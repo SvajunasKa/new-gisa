@@ -63,7 +63,7 @@
     @import '~$scss';
 
     .title {
-        padding: 50px 0;
+        padding: 20px 0;
         h1 {
             @include h1();
         }
