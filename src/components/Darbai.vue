@@ -7,9 +7,9 @@
             <section v-for="data in data.data.atlikti_darbai.koncertai">
                 <h2>{{data.name}}</h2>
                 <div class="row">
-                    <div class="col-md-4" v-for="img in data.images">
-                       <img :src="img" @click="show(data.images)">
-                    </div>
+                    <div class="col-md-4" v-for="(img, index) in data.images">
+                       <img :src="img" @click="show(data.images, index)"></div>
+
                 </div>
                 <hr>
             </section>
@@ -29,16 +29,15 @@
             ])
         },
         methods: {
-            show(params) {
+            show(params, index) {
+
                 this.$modal.show('images', {
                     foo: params,
-                    //index: Object.keys(params)
+                    index: index
                 });
-               // console.log(Object.keys(params))
+                console.log(index)
             },
-            /* hide () {
-               this.$modal.hide();
-             }*/
+
         },
 
     }

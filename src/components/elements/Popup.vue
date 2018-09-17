@@ -21,7 +21,9 @@
         methods: {
             beforeOpen(event) {
                 this.content = event.params.foo;
-                this.index = 0;
+                this.index = event.params.index;
+                //this.index = event.params.index;
+                console.log('aaaa', this.index)
             },
             hide() {
                 this.$modal.hide("images");
@@ -32,6 +34,7 @@
                 this.index++;
                 if (this.index === keys.length - 1) {
                     this.isHide = true;
+                    console.log(this.index)
                 }
             },
         }
