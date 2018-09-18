@@ -2,9 +2,8 @@
     <modal name="images" @before-open="beforeOpen">
         <div class="v--modal-box">
             <div @click="hide()">X</div>
-            <div id="index" @click="next()" :class="{hide: isHide}">next</div>
+            <div id="index" @click="next()" :class="{hide: isHide, slepti}">next</div>
             <img :src="content[index]"/>
-            {{this.index}}
         </div>
     </modal>
 </template>
@@ -18,24 +17,27 @@
                 isHide: false
             }
         },
+        computed:{
+            slepti(){
+                var keys = Object.keys(this.content);
+                if (this.index === keys.length-1) {
+                    this.isHide = true;
+                }
+            }
+
+        },
         methods: {
             beforeOpen(event) {
                 this.content = event.params.foo;
                 this.index = event.params.index;
-                //this.index = event.params.index;
-                console.log('aaaa', this.index)
             },
             hide() {
                 this.$modal.hide("images");
                 this.index = 0;
+                this.isHide = false;
             },
             next() {
-                var keys = Object.keys(this.content);
                 this.index++;
-                if (this.index === keys.length - 1) {
-                    this.isHide = true;
-                    console.log(this.index)
-                }
             },
         }
     };

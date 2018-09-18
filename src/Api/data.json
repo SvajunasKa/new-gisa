@@ -54,7 +54,6 @@
       "name":"ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
       "images": [
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai1.jpg",
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai2.jpg",
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai3.jpg",
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai4.jpg",
@@ -62,9 +61,106 @@
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai6.jpg",
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai7.jpg",
         "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai8.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai9.jpg"
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai9.jpg",
+        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai1.jpg"
       ]
-    }]
+    },
+      {
+        "name":"BALBIERIŠKIO VASAROS ŠVENTĖ 2018",
+        "images": [
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente1.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente2.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente3.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente4.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente5.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente6.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente7.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente8.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente9.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente10.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente11.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente12.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente13.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente14.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente15.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente16.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente17.jpg",
+          "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente18.jpg"
+        ]
+      },
+      {
+        "name":"STAKLIŠKIŲ SENIŪNIJOS VASAROS ŠVENTĖ 2018",
+        "images": [
+          "src/assets/images/darbai/Stakliskiu-svente/1.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/2.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/3.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/4.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/5.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/6.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/7.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/8.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/9.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/10.jpg",
+          "src/assets/images/darbai/Stakliskiu-svente/11.jpg"
+        ]
+      },
+      {
+        "name":"DEGAIČIŲ MIESTO SVENTĖ 2017",
+        "images": [
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente1.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente2.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente3.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente4.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente5.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente6.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente7.jpg",
+          "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente8.jpg"
+        ]
+      },
+      {
+        "name":"ŽIEŽMARIŲ MIESTO ŠVENTĖ 2017",
+        "images": [
+          "src/assets/images/darbai/Ziezmariu-miesto-svente/Ziezmariai.png",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente/Ziezmariai1.png",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente/Ziezmariai2.png"
+        ]
+      },
+      {
+        "name":"VEIVERIŲ MIESTO ŠVENTĖ 2017",
+        "images": [
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente1.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente2.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente3.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente4.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente5.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente6.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente7.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente8.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente9.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente10.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente11.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente12.png",
+          "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente13.png"
+        ]
+      },
+      {
+        "name":"KRUONIO MIESTO ŠVENTĖ 2017",
+        "images": [
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-1.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-2.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-3.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-6.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-7.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-8.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-9.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-4.png",
+          "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-5.png"
+        ]
+      }
+    ]
   }
 }
 
