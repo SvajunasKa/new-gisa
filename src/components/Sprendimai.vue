@@ -40,13 +40,16 @@
             ]),
 
         },
+        created(){
+            this.$store.dispatch("loadData")
+        },
         methods: {
 
             show(params) {
                 this.$modal.show('images', {
                     foo: params
                 });
-
+                this.$store.dispatch("loadData")
             },
             /* hide () {
                this.$modal.hide();
