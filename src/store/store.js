@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from'axios'
+import axios from 'axios'
 
 import * as images from '../Api/images'
 import * as getters from './getters'
@@ -11,16 +11,27 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     images: images,
-    data: texts
+    data: [],
   },
-    actions:{
-    loadData(){
-        axios.get('../Api/data.json')
-            .then(res => console.log(res));
 
-        console.log('sdsd')
+  actions: {
+    loadCoins ({ commit }) {
+      axios
+        .get('../src/Api/data.json')
+        .then(r => r.data)
+        .then(data => {
+          commit('SET_COINS', data)
+        })
+        .catch(error => console.log(error))
     }
+  },
+  mutations: {
+    SET_COINS (state, data) {
+      state.data = data
+    }
+  }
 
-    },
-  getters,
+
+
+ // getters,
 })

@@ -24,6 +24,7 @@
 
 <script>
     import {mapGetters} from 'vuex'
+    import axios from 'axios'
 
     export default {
         name: "darbai",
@@ -32,6 +33,11 @@
                 'data'
             ])
         },
+     /* mounted() {
+        axios.get('../../src/Api/data.json')
+          .then(res => console.log(res));
+
+      },*/
         methods: {
             show(params, index) {
                 this.$modal.show('images', {

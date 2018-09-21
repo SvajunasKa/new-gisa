@@ -29,11 +29,14 @@
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
+  import {mapState} from 'vuex'
 
   export default {
+    mounted () {
+      this.$store.dispatch('loadCoins')
+    },
     computed: {
-      ...mapGetters([
+      ...mapState([
         "data",
       ]),
     },

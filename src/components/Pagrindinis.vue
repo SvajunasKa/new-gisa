@@ -108,7 +108,7 @@
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
+  import {mapState} from 'vuex'
   import contactForm from '../components/elements/contactForm'
 
   export default {
@@ -117,13 +117,13 @@
         show: true
       }
     },
+    mounted () {
+      this.$store.dispatch('loadCoins')
+    },
     computed: {
-      ...mapGetters([
+      ...mapState([
         'data'
       ]),
-    },
-    methods: {
-
     },
     components:{
       appForm: contactForm
