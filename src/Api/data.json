@@ -21,7 +21,7 @@
     "NAUDOJAME PROFESIONALIUS QSC STIPRINTUVUS, RCF, MARTIN, COMMUNITY AKUSTIKĄ. APŠVIETIMUI SIŪLOME ROBE IR MARTIN VALDOMUS PROŽEKTORIUS, BEI SKANERIUS."
   ],
   "audio": {
-    "src": "../assets/images/show.jpg",
+    "src": "src/assets/images/show.jpg",
     "text": "Apšvietimo aparatūra"
   },
   "sprendimai_page": {
