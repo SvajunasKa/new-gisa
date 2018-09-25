@@ -1,27 +1,27 @@
 <template>
-  <!--<div class="content">
+  <div class="content">
     <div class="container">
     <section class="banner">
       <transition name="slide-right" appear>
         <hr>
       </transition>
       <transition name="fade" appear>
-        <h1 v-if="show">{{mainData.banner_title.name}}</h1>
+        <h1 v-if="show">{{getAllData.banner_title.name}}</h1>
       </transition>
       <transition name="slide-left" appear>
         <hr>
       </transition>
       <div class="inner container">
         <div class="button" v-scroll-to="'#main'">
-          <a href="#">{{mainData.button_text.name}}</a>
+          <a href="#">{{getAllData.button_text.name}}</a>
         </div>
         <div class="content">
-          <h2 v-for="banner_text in mainData.banner_text">
+          <h2 v-for="banner_text in getAllData.banner_text">
             {{banner_text}}
           </h2>
-          &lt;!&ndash;<h2>{{data.data.banner_text[0]}}<br><br>{{data.data.banner_text[1]}}<br><br>{{data.data.banner_text[2]}}
+          <!--<h2>{{data.data.banner_text[0]}}<br><br>{{data.data.banner_text[1]}}<br><br>{{data.data.banner_text[2]}}
             <br>{{data.data.banner_text[3]}}<br><br>{{data.data.banner_text[4]}}
-          </h2>&ndash;&gt;
+          </h2>-->
         </div>
       </div>
     </section>
@@ -31,12 +31,12 @@
         <div class="row">
           <div class="col-md-4">
             <div class="img">
-              <img :src="mainData.audio.src"/>
+              <img :src="getAllData.audio.src"/>
             </div>
           </div>
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/igarsinimo_technika">{{mainData.audio.text}}</router-link>
+              <router-link to="/igarsinimo_technika">{{getAllData.audio.text}}</router-link>
             </div>
           </div>
         </div>
@@ -46,12 +46,12 @@
         <div class="row">
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/apsvietimo_technika">{{images.light.text}}</router-link>
+              <router-link to="/apsvietimo_technika">{{getAllData.images.light.text}}</router-link>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img">
-              <img :src="data.images.light.src"/>
+              <img :src="getAllData.images.light.src"/>
             </div>
           </div>
         </div>
@@ -61,12 +61,12 @@
         <div class="row">
           <div class="col-md-4">
             <div class="img">
-              <img :src="data.images.offer.src"/>
+              <img :src="getAllData.images.offer.src"/>
             </div>
           </div>
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/sprendimai">{{data.images.offer.text}}</router-link>
+              <router-link to="/sprendimai">{{getAllData.images.offer.text}}</router-link>
             </div>
           </div>
         </div>
@@ -76,12 +76,12 @@
         <div class="row">
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/atlikti_darbai">{{data.images.projects.text}}</router-link>
+              <router-link to="/atlikti_darbai">{{getAllData.images.projects.text}}</router-link>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img">
-              <img :src="data.images.projects.src"/>
+              <img :src="getAllData.images.projects.src"/>
             </div>
           </div>
         </div>
@@ -91,12 +91,12 @@
         <div class="row">
           <div class="col-md-4">
             <div class="img">
-              <img :src="data.images.partners.src"/>
+              <img :src="getAllData.images.partners.src"/>
             </div>
           </div>
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/musu_draugai">{{data.images.partners.text}}</router-link>
+              <router-link to="/musu_draugai">{{getAllData.images.partners.text}}</router-link>
             </div>
           </div>
         </div>
@@ -104,11 +104,11 @@
     </div>
     <app-form></app-form>
   </div>
-</div>-->
+</div>
 </template>
 
 <script>
-  import {mapState} from 'vuex'
+  import {mapGetters} from 'vuex'
   import contactForm from '../components/elements/contactForm'
 
   export default {
@@ -117,13 +117,10 @@
         show: true
       }
     },
-    mounted () {
-      this.$store.dispatch('loadCoins')
-    },
     computed: {
-     mainData(){
-         return this.$store.getters.getAllData;
-     }
+        ...mapGetters([
+            'getAllData'
+        ])
     },
     components:{
       appForm: contactForm

@@ -47,9 +47,9 @@
     }
   },
   "atlikti_darbai": {
-    "darbai_title": {
-      "name": "APŠVIESTI IR ĮGARSINTI RENGINIAI"
-    },
+    "darbai_title": [
+      "APŠVIESTI IR ĮGARSINTI RENGINIAI"
+    ],
     "koncertai":[{
       "name":"ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
       "images": [

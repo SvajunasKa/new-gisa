@@ -1,27 +1,26 @@
 <template>
     <header>
         <div class="container">
-
               <nav>
                 <router-link class="logo" to="/"><img src="../../assets/images/logo.png"/></router-link>
                 <ul class="nav-menu">
                   <li>
-                    <router-link class="link" to="/sprendimai"> {{headerData[0]}}</router-link>
+                    <router-link class="link" to="/sprendimai"> {{getAllData.menu[0]}}</router-link>
                   </li>
                   <li>
-                    <router-link class="link" to="/apsvietimo_technika">  {{headerData[1]}}</router-link>
+                    <router-link class="link" to="/apsvietimo_technika">{{getAllData.menu[1]}}</router-link>
                   </li>
                   <li>
-                    <router-link class="link" to="/igarsinimo_technika"> {{headerData[2]}}</router-link>
+                    <router-link class="link" to="/igarsinimo_technika">{{getAllData.menu[2]}}</router-link>
                   </li>
                   <li>
-                    <router-link class="link" to="/atlikti_darbai"> {{headerData[3]}}</router-link>
+                    <router-link class="link" to="/atlikti_darbai">{{getAllData.menu[3]}}</router-link>
                   </li>
                   <li>
-                    <router-link class="link" to="/musu_draugai"> {{headerData[4]}}</router-link>
+                    <router-link class="link" to="/musu_draugai">{{getAllData.menu[4]}}</router-link>
                   </li>
                   <li>
-                    <router-link class="link" to="/kontaktai" > {{headerData[5]}}</router-link>
+                    <router-link class="link" to="/kontaktai" >{{getAllData.menu[5]}}</router-link>
                   </li>
                 </ul>
               </nav>
@@ -33,13 +32,15 @@
     import {mapGetters} from 'vuex'
 
     export default {
-        mounted() {
-           // this.$store.dispatch('loadCoins')
+        data(){
+            return {
+                menuData: []
+            }
         },
         computed: {
-            headerData() {
-                return this.$store.getters.getAllData.menu;
-            }
+            ...mapGetters([
+                'getAllData'
+            ])
         },
     }
 </script>

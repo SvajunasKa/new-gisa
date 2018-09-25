@@ -2,15 +2,16 @@
     <div class="content">
         <div class="container">
             <div class="title">
-                <h1>{{data.data.atlikti_darbai.darbai_title.name}}</h1>
+                <h1>{{darbai.atlikti_darbai.darbai_title[0]}}</h1>
             </div>
-            <section v-for="data in data.data.atlikti_darbai.koncertai">
+            <app-loading v-if="isLoading"></app-loading>
+            <section v-for="data in darbai.atlikti_darbai.koncertai">
                 <div class="spotlight">
                     <div class="title">
                         <h2>{{data.name}}</h2>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 col-xs-2" v-for="(img, index) in data.images">
+                        <div class="col-md-2 col-xs-4" v-for="(img, index) in data.images">
                             <img :src="img" @click="show(data.images, index)"></div>
 
                     </div>
@@ -25,19 +26,30 @@
 <script>
     import {mapGetters} from 'vuex'
     import axios from 'axios'
+    import Loading from './elements/Loading'
 
     export default {
         name: "darbai",
-        computed: {
-            ...mapGetters([
-                'data'
-            ])
+        data() {
+            return {
+                darbai: [],
+                isLoading: true
+            }
         },
-     /* mounted() {
-        axios.get('../../src/Api/data.json')
-          .then(res => console.log(res));
+        /*computed: {
+            ...mapGetters([
+                'getAllData'
+            ])
+        },*/
+        mounted() {
+            axios.get('../../src/Api/data.json')
+                .then(res => {
+                    this.darbai = res.data;
+                    this.isLoading = false;
+                    console.log(res.data);
+                });
 
-      },*/
+        },
         methods: {
             show(params, index) {
                 this.$modal.show('images', {
@@ -46,6 +58,9 @@
                 });
             },
         },
+        components: {
+            appLoading: Loading
+        }
 
     }
 </script>
