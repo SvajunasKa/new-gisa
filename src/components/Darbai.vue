@@ -2,22 +2,24 @@
     <div class="content">
         <div class="container">
             <div class="title">
-                <h1>{{darbai.atlikti_darbai.darbai_title[0]}}</h1>
+                <h1>{{ darbai.atlikti_darbai && darbai.atlikti_darbai.darbai_title[0]}}</h1>
             </div>
             <app-loading v-if="isLoading"></app-loading>
-            <section v-for="data in darbai.atlikti_darbai.koncertai">
-                <div class="spotlight">
-                    <div class="title">
-                        <h2>{{data.name}}</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 col-xs-4" v-for="(img, index) in data.images">
-                            <img :src="img" @click="show(data.images, index)"></div>
 
-                    </div>
-                </div>
-                <hr>
-            </section>
+          <section v-if="darbai.atlikti_darbai.length > 0" v-for="data in darbai.atlikti_darbai.koncertai">
+            <div class="spotlight">
+              <div class="title">
+                <h2>{{data.name}}</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-2 col-xs-4" v-for="(img, index) in data.images">
+                  <img :src="img" @click="show(data.images, index)"></div>
+
+              </div>
+            </div>
+            <hr>
+          </section>
+
         </div>
     </div>
 
