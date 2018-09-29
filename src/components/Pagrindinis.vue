@@ -19,9 +19,6 @@
           <h2 v-for="banner_text in getAllData.banner_text">
             {{banner_text}}
           </h2>
-          <!--<h2>{{data.data.banner_text[0]}}<br><br>{{data.data.banner_text[1]}}<br><br>{{data.data.banner_text[2]}}
-            <br>{{data.data.banner_text[3]}}<br><br>{{data.data.banner_text[4]}}
-          </h2>-->
         </div>
       </div>
     </section>
@@ -46,12 +43,12 @@
         <div class="row">
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/apsvietimo_technika">{{getAllData.images.light.text}}</router-link>
+              <router-link to="/apsvietimo_technika">{{getAllData.light.text}}</router-link>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img">
-              <img :src="getAllData.images.light.src"/>
+              <img :src="getAllData.light.src"/>
             </div>
           </div>
         </div>
@@ -61,12 +58,12 @@
         <div class="row">
           <div class="col-md-4">
             <div class="img">
-              <img :src="getAllData.images.offer.src"/>
+              <img :src="getAllData.offer.src"/>
             </div>
           </div>
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/sprendimai">{{getAllData.images.offer.text}}</router-link>
+              <router-link to="/sprendimai">{{getAllData.offer.text}}</router-link>
             </div>
           </div>
         </div>
@@ -76,12 +73,12 @@
         <div class="row">
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/atlikti_darbai">{{getAllData.images.projects.text}}</router-link>
+              <router-link to="/atlikti_darbai">{{getAllData.projects.text}}</router-link>
             </div>
           </div>
           <div class="col-md-4">
             <div class="img">
-              <img :src="getAllData.images.projects.src"/>
+              <img :src="getAllData.projects.src"/>
             </div>
           </div>
         </div>
@@ -91,12 +88,12 @@
         <div class="row">
           <div class="col-md-4">
             <div class="img">
-              <img :src="getAllData.images.partners.src"/>
+              <img :src="getAllData.partners.src"/>
             </div>
           </div>
           <div class="col-md-8">
             <div class="text">
-              <router-link to="/musu_draugai">{{getAllData.images.partners.text}}</router-link>
+              <router-link to="/musu_draugai">{{getAllData.partners.text}}</router-link>
             </div>
           </div>
         </div>

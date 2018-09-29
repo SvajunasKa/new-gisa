@@ -22,4 +22,20 @@ export const family_img = [
   {"src": require("../assets/images/sviesa-seimai.jpg")},
   {"src": require("../assets/images/garso-komplektas-seimai.jpg")}
 ];
+export const koncertai = [
+    {
+      "src": require([
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai2.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai3.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai4.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai5.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai6.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai7.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai8.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai9.jpg",
+          "../assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai1.jpg"
+      ])
+    }
+];
 

@@ -1,4 +1,4 @@
-export const data = (state) => {
+export const getAllData = (state) => {
   return state;
 };
 export const images = (state) => {

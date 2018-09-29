@@ -2,18 +2,20 @@
     <div class="content">
         <div class="container">
             <div class="title">
-                <h1>{{darbai.atlikti_darbai.darbai_title[0]}}</h1>
+                <h1>{{darbai_title}}</h1>
             </div>
+            <hr>
             <app-loading v-if="isLoading"></app-loading>
-            <section v-for="data in darbai.atlikti_darbai.koncertai">
+            <section v-for="data in images">
                 <div class="spotlight">
                     <div class="title">
                         <h2>{{data.name}}</h2>
                     </div>
                     <div class="row">
-                        <div class="col-md-2 col-xs-4" v-for="(img, index) in data.images">
-                            <img :src="img" @click="show(data.images, index)"></div>
-
+                        <div class="col-md-3 col-xs-4" v-for="(img, index) in data.images">
+                            <app-lazy :src="img" @click="show(data.images, index)"></app-lazy>
+                            <img >
+                        </div>
                     </div>
                 </div>
                 <hr>
@@ -27,28 +29,26 @@
     import {mapGetters} from 'vuex'
     import axios from 'axios'
     import Loading from './elements/Loading'
+    import VLazyImage from "v-lazy-image";
 
     export default {
         name: "darbai",
         data() {
             return {
-                darbai: [],
+                darbai_title: null,
+                images: null,
                 isLoading: true
             }
         },
-        /*computed: {
-            ...mapGetters([
-                'getAllData'
-            ])
-        },*/
         mounted() {
             axios.get('../../src/Api/data.json')
                 .then(res => {
-                    this.darbai = res.data;
+                    this.darbai_title = res.data.atlikti_darbai.darbai_title[0];
+                    this.images = res.data.atlikti_darbai.koncertai;
                     this.isLoading = false;
-                    console.log(res.data);
-                });
-
+                })
+                .then()
+                .catch(error => console.log(error));
         },
         methods: {
             show(params, index) {
@@ -59,9 +59,10 @@
             },
         },
         components: {
-            appLoading: Loading
-        }
+            appLoading: Loading,
+            appLazy: VLazyImage
 
+        }
     }
 </script>
 
@@ -82,7 +83,6 @@
     h2 {
         text-align: center;
     }
-
     .container {
         .spotlight {
             margin: 50px 0;
@@ -94,6 +94,12 @@
             justify-content: center;
         }
     }
-
+    .v-lazy-image {
+        filter: blur(10px);
+        transition: filter 0.7s;
+    }
+    .v-lazy-image-loaded {
+        filter: blur(0);
+    }
 
 </style>

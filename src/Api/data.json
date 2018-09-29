@@ -21,52 +21,74 @@
     "NAUDOJAME PROFESIONALIUS QSC STIPRINTUVUS, RCF, MARTIN, COMMUNITY AKUSTIKĄ. APŠVIETIMUI SIŪLOME ROBE IR MARTIN VALDOMUS PROŽEKTORIUS, BEI SKANERIUS."
   ],
   "audio": {
-    "src": "src/assets/images/show.jpg",
+    "src": "src/assets/images/audio.jpg",
     "text": "Apšvietimo aparatūra"
+  },
+  "light": {
+    "src": "src/assets/images/show.jpg",
+    "text": "Garso aparatūra"
+  },
+  "offer": {
+    "src": "src/assets/images/komplektai.jpeg",
+    "text": "Siūlomi sprendimai"
+  },
+  "projects": {
+    "src": "src/assets/images/Veiveriu-miesto-svente.png",
+    "text": "Atlikti darbai"
+  },
+  "partners": {
+    "src": "src/assets/images/partners.jpg",
+    "text": "Mūsų draugai"
   },
   "sprendimai_page": {
     "offer_title": {
       "name": "RENGINIŲ APŠVIETIMO IR ĮGARSINIMO KOMPLEKTAI"
     },
-    "sprendimai":[{
+    "sprendimai": [
+      {
         "name": "šeimoms",
         "description": "Gimtadieniams, jubiliejams, bernvakariams, mergvakariams, vestuvėms. Bendras garso galingumas - 2,5kW Foniniai ir 2 valdomi prožektoriai.",
-        "img":["src/assets/images/sviesa-seimai.jpg", "src/assets/images/garso-komplektas-seimai.jpg"],
+        "img": [
+          "src/assets/images/sviesa-seimai.jpg",
+          "src/assets/images/garso-komplektas-seimai.jpg"
+        ],
         "button_text": "Plačiau"
-
-    },
+      },
       {
         "name": "bendruomenėms",
         "description": "blslfsd",
-        "img":["src/assets/images/sviesa-seimai.jpg", "src/assets/images/garso-komplektas-seimai.jpg"],
+        "img": [
+          "src/assets/images/sviesa-seimai.jpg",
+          "src/assets/images/garso-komplektas-seimai.jpg"
+        ],
         "button_text": "Plačiau"
       }
     ],
-    "community":{
-
+    "community": {
     }
   },
   "atlikti_darbai": {
     "darbai_title": [
       "APŠVIESTI IR ĮGARSINTI RENGINIAI"
     ],
-    "koncertai":[{
-      "name":"ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
-      "images": [
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai2.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai3.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai4.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai5.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai6.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai7.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai8.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai9.jpg",
-        "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai1.jpg"
-      ]
-    },
+    "koncertai": [
       {
-        "name":"BALBIERIŠKIO VASAROS ŠVENTĖ 2018",
+        "name": "ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
+        "images": [
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai2.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai3.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai4.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai5.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai6.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai7.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai8.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai9.jpg",
+          "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai1.jpg"
+        ]
+      },
+      {
+        "name": "BALBIERIŠKIO VASAROS ŠVENTĖ 2018",
         "images": [
           "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente.jpg",
           "src/assets/images/darbai/Balbieriskio-svente/balbieriskio-svente1.jpg",
@@ -90,7 +112,7 @@
         ]
       },
       {
-        "name":"STAKLIŠKIŲ SENIŪNIJOS VASAROS ŠVENTĖ 2018",
+        "name": "STAKLIŠKIŲ SENIŪNIJOS VASAROS ŠVENTĖ 2018",
         "images": [
           "src/assets/images/darbai/Stakliskiu-svente/1.jpg",
           "src/assets/images/darbai/Stakliskiu-svente/2.jpg",
@@ -106,7 +128,7 @@
         ]
       },
       {
-        "name":"DEGAIČIŲ MIESTO SVENTĖ 2017",
+        "name": "DEGAIČIŲ MIESTO SVENTĖ 2017",
         "images": [
           "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente1.jpg",
           "src/assets/images/darbai/Degaiciu-miesto-svente/degaiciu-svente2.jpg",
@@ -119,7 +141,7 @@
         ]
       },
       {
-        "name":"ŽIEŽMARIŲ MIESTO ŠVENTĖ 2017",
+        "name": "ŽIEŽMARIŲ MIESTO ŠVENTĖ 2017",
         "images": [
           "src/assets/images/darbai/Ziezmariu-miesto-svente/Ziezmariai.png",
           "src/assets/images/darbai/Ziezmariu-miesto-svente/Ziezmariai1.png",
@@ -127,7 +149,7 @@
         ]
       },
       {
-        "name":"VEIVERIŲ MIESTO ŠVENTĖ 2017",
+        "name": "VEIVERIŲ MIESTO ŠVENTĖ 2017",
         "images": [
           "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente.png",
           "src/assets/images/darbai/Veiveriu-miesto-svente/Veiveriu-miesto-svente1.png",
@@ -146,7 +168,7 @@
         ]
       },
       {
-        "name":"KRUONIO MIESTO ŠVENTĖ 2017",
+        "name": "KRUONIO MIESTO ŠVENTĖ 2017",
         "images": [
           "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente.png",
           "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-1.png",

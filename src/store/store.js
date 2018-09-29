@@ -10,8 +10,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        images: images,
-        data: texts,
+        data: texts
     },
 
     /*actions: {
@@ -34,6 +33,5 @@ export default new Vuex.Store({
             return state.data
         }
     }
-
     //getters,
 })

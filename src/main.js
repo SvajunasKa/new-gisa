@@ -8,6 +8,9 @@ import Vuelidate from 'vuelidate'
 import vueScrollto from 'vue-scrollto'
 import 'bootstrap/dist/css/bootstrap-grid.css'
 import style from '../src/assets/style/main.scss'
+import { VLazyImagePlugin } from "v-lazy-image";
+
+Vue.use(VLazyImagePlugin);
 
 Vue.use(vueScrollto);
 Vue.use(VueResource);
