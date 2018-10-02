@@ -13,8 +13,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-xs-4" v-for="(img, index) in data.images">
-                            <app-lazy :src="img" @click="show(data.images, index)"></app-lazy>
-                            <img >
+                            <img src="" v-lazy="img" @click="show(data.images, index)">
                         </div>
                     </div>
                 </div>
@@ -25,10 +24,9 @@
 </template>
 
 <script>
-    import {mapGetters} from 'vuex'
+    import VueLazyload from 'vue-lazyload'
     import axios from 'axios'
     import Loading from './elements/Loading'
-    import VLazyImage from "v-lazy-image";
 
     export default {
         name: "darbai",
@@ -59,8 +57,7 @@
         },
         components: {
             appLoading: Loading,
-            appLazy: VLazyImage
-
+            appLazy: VueLazyload
         }
     }
 </script>

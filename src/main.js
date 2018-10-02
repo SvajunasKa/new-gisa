@@ -8,10 +8,13 @@ import Vuelidate from 'vuelidate'
 import vueScrollto from 'vue-scrollto'
 import 'bootstrap/dist/css/bootstrap-grid.css'
 import style from '../src/assets/style/main.scss'
-import { VLazyImagePlugin } from "v-lazy-image";
+import VueLazyload from 'vue-lazyload'
 
-Vue.use(VLazyImagePlugin);
-
+Vue.use(VueLazyload, {
+    preLoad: 1.3,
+    loading: '/src/assets/images/ajax-loader.gif',
+    attempt: 3
+});
 Vue.use(vueScrollto);
 Vue.use(VueResource);
 Vue.use(Vuelidate);
