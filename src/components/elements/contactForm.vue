@@ -1,31 +1,32 @@
 <template>
-  <form>
-    <div class="field">
-      <label for="name">Vardas</label>
-      <input
-        type="text"
-        id="name"
-      />
-    </div>
-    <div class="field" >
-      <label for="email">E-pastas</label>
-      <input
-        type="text"
-        id="email"
-        :class="{invalid: $v.email.$error}"
-        @input="$v.email.$touch()"
-      />
+  <div class="container">
+    <form>
+      <div class="field">
+        <label for="name">Vardas</label>
+        <input
+                type="text"
+                id="name"
+        />
+      </div>
+      <div class="field" >
+        <label for="email">E-pastas</label>
+        <input
+                type="text"
+                id="email"
+                :class="{invalid: $v.email.$error}"
+                @input="$v.email.$touch()"
+        />
 
-    </div>
-    <div class="field">
-      <label for="message">Zinute</label>
-      <textarea
-        id="message"
-      />
-    </div>
+      </div>
+      <div class="field">
+        <label for="message">Zinute</label>
+        <textarea id="message"></textarea>
+      </div>
 
-    <button type="submit" :disabled="$v.invalid">Siusti</button>
-  </form>
+      <button type="submit" :disabled="$v.invalid">Siusti</button>
+    </form>
+  </div>
+
 </template>
 
 <script>

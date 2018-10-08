@@ -7,6 +7,7 @@ import VModal from 'vue-js-modal'
 import Vuelidate from 'vuelidate'
 import vueScrollto from 'vue-scrollto'
 import 'bootstrap/dist/css/bootstrap-grid.css'
+//import 'bootstrap/dist/css/bootstrap.min.css'
 import style from '../src/assets/style/main.scss'
 import VueLazyload from 'vue-lazyload'
 
