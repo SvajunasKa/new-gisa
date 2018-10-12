@@ -4,17 +4,17 @@
       <div class="field">
         <label for="name">Vardas</label>
         <input
-                type="text"
-                id="name"
+          type="text"
+          id="name"
         />
       </div>
-      <div class="field" >
+      <div class="field">
         <label for="email">E-pastas</label>
         <input
-                type="text"
-                id="email"
-                :class="{invalid: $v.email.$error}"
-                @input="$v.email.$touch()"
+          type="text"
+          id="email"
+          :class="{invalid: $v.email.$error}"
+          @input="$v.email.$touch()"
         />
 
       </div>
@@ -23,7 +23,7 @@
         <textarea id="message"></textarea>
       </div>
 
-      <button type="submit" :disabled="$v.invalid">Siusti</button>
+      <button class="button" type="submit" :disabled="$v.invalid">Siusti</button>
     </form>
   </div>
 
@@ -36,7 +36,7 @@
     name: "contactForm",
 
     validations: {
-      email:{
+      email: {
         required,
         email
       }
@@ -47,6 +47,10 @@
 
 <style scoped lang="scss">
   @import '~$scss';
+
+  form {
+    padding: 100px 0;
+  }
 
   .field {
     //width: 100%;
@@ -61,7 +65,7 @@
     input {
       //height: 40px;
       line-height: 40px;
-      &.invalid{
+      &.invalid {
         border: 1px solid red;
       }
     }
@@ -76,7 +80,6 @@
         border: none;
       }
     }
-
 
   }
 </style>

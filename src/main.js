@@ -19,7 +19,7 @@ Vue.use(VueLazyload, {
 Vue.use(vueScrollto);
 Vue.use(VueResource);
 Vue.use(Vuelidate);
-Vue.use(VModal,{ dynamic: true,  });
+Vue.use(VModal,{ dynamic: true, height:500});
 new Vue({
     el: '#app',
     style,
