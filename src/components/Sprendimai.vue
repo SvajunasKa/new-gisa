@@ -2,62 +2,84 @@
     <div class="content">
         <div class="container">
             <div class="title">
-                <h1>{{data.data.sprendimai_page.offer_title.name}}</h1>
+                <h1>{{title}}</h1>
             </div>
-            <section v-for="data in data.data.sprendimai_page.sprendimai">
-                <div class="row">
-                    <div class="col-md-5">
+            <section v-for="(data, index) in description">
+                <div class="row" v-if="index%2 === 0">
+                    <div class="col-md-4">
                         <div class="content">
                             <h4>{{data.name}}</h4>
                             <p>{{data.description}}</p>
                         </div>
                         <div class="link">
-                            <button @click="show(data.img)">{{data.button_text}}</button>
+                            <button class="vue-dialog-button" @click="showModal(data.papildoma_info)">{{data.button_text}}</button>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6 offset-2">
                         <div class="img" v-for="img in data.img">
                             <img :src="img">
                         </div>
                     </div>
+
+                </div>
+                <div class="row" v-else>
+                    <div class="col-md-4">
+                        <div class="img" v-for="img in data.img">
+                            <img :src="img">
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-2">
+                        <div class="content">
+                            <h4>{{data.name}}</h4>
+                            <p>{{data.description}}</p>
+                        </div>
+                        <div class="link">
+                            <button class="vue-dialog-button" @click="showModal()">{{data.button_text}}</button>
+                        </div>
+                    </div>
+
                 </div>
                 <hr>
             </section>
         </div>
+        <modal v-if="isModalVisible" @close="closeModal" v-bind:xxx="parametrai"></modal>
     </div>
+
 </template>
 
 <script>
-
-    import {mapGetters} from 'vuex'
-    import popup from './elements/Popup'
-
+    import modal from './elements/Popup-new'
     export default {
-
-        computed: {
-            ...mapGetters([
-                'data'
-            ]),
-
+        data() {
+            return {
+                title: null,
+                description: null,
+                show: false,
+                isModalVisible: false,
+                parametrai: "",
+            }
         },
-        created(){
-            this.$store.dispatch("loadData")
+        props : ['xxx'],
+        mounted() {
+            let data = this.$store.getters.getAllData;
+            this.title = data.sprendimai_page.offer_title.name;
+            this.description = data.sprendimai_page.sprendimai;
         },
         methods: {
-
-            show(params) {
-                this.$modal.show('images', {
-                    foo: params
-                });
-                this.$store.dispatch("loadData")
+            showModal(parametrai) {
+                this.isModalVisible = true;
+                console.log(parametrai);
+                this.parametrai = parametrai
+                //return parametrai
             },
-            /* hide () {
-               this.$modal.hide();
-             }*/
+            closeModal() {
+                this.isModalVisible = false;
+            }
         },
-        components: {
-            appPopup: popup
+        components:{
+            modal:modal
         }
+
     }
 
 </script>
@@ -69,6 +91,12 @@
         padding: 20px 0;
         h1 {
             @include h1();
+        }
+    }
+
+    section {
+        .row {
+            padding: 20px 0;
         }
     }
 
@@ -84,15 +112,17 @@
     h4 {
         font-size: 16px;
         text-transform: uppercase;
+        letter-spacing: 0.225em;
     }
 
     p {
         font-size: 16px;
         letter-spacing: 2px;
+        line-height: 1.4;
     }
 
-    .content {
-
-    }
+    /*.info{*/
+        /*display: none;*/
+    /*}*/
 
 </style>

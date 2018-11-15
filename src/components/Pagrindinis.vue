@@ -147,7 +147,7 @@
   @import '~$scss';
 
   .heading {
-    padding: 10vh 0;
+    padding: 5vh 0;
   }
 
   section {
@@ -220,13 +220,13 @@
   }
 
   .banner {
-    height: 70vh;
+    height: 80vh;
     text-align: center;
   }
 
   .button {
     display: inline-block;
-    margin-bottom: 10vh;
+    margin: 5vh 0;
     background-color: $red;
     line-height: 3;
     border: none;

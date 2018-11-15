@@ -52,20 +52,119 @@
           "src/assets/images/sviesa-seimai.jpg",
           "src/assets/images/garso-komplektas-seimai.jpg"
         ],
-        "button_text": "Plačiau"
+        "button_text": "Plačiau",
+        "papildoma_info": {
+          "garsas": [
+            "2 Žemų dažnių kolonėlės;",
+            "2 Aukštų dažnių kolonėlės;",
+            "2 Monitorinės kolonėlės;",
+            "Bendras galingumas 2,5kW garso;",
+            "Bazinio komplekto įrenginiai reikalingi įgarsinimui.*"
+          ],
+          "sviesa": [
+            "2 Šviesos efektų valdomi prožektoriai (Nightsun pro lighting 250W);",
+            "4 Foninio scenos apšvietimo šviesos efektai (Geni XTC 250w);",
+            "2 PAR RGBW prožektoriai (7x12W); + Baziniai apšvietimo įrenginiai. ** "
+          ],
+          "info": [
+            "* Bazinio komplekto įrenginiai yra: stiprintuvai, kolonėlių signalo apdorojimo procesoriai, jungiamieji laidai, elektros distribucija, 16 kanalų analoginis pultas, mikrofonai, grotuvas. Papildoma įranga: geitai, signalo kompresoriai, reverberatoriai, didesnio kanalų skaičiaus ar skaitmeninis pultas, magistralinis kabelis, papildomi monitoriai ir t.t. derinama užsakymo metu.",
+            "** Bazinio komplekto apšvietimo įrenginiai yra jungiamieji laidai, DMX valdymo pultas arba kompiuterinis DMX kontroleris, 4 vietų 2,5m aukščio stovas pakabinti foniniams prožektoriams. Papildomai galima komplektuoti 700W arba 3kW galios dūmų mašinas, burbulų mašinas, papildomus efektus ar šviesą.",
+            "Aptarnaujantis personalas - 1- 2 val. pasiruošimo ir 2 valandos renginiui."
+          ]
+        }
       },
       {
         "name": "bendruomenėms",
-        "description": "blslfsd",
+        "description": "Išleistuvėms, šimtadieniams, įstaigos vakarėliams.Bendras garso galingumas - 4kW; Foniniai ir 4 valdomi prožektoriai.",
         "img": [
-          "src/assets/images/sviesa-seimai.jpg",
-          "src/assets/images/garso-komplektas-seimai.jpg"
+          "src/assets/images/BENDRUOMENEMS_sviesa.png",
+          "src/assets/images/BENDRUOMENEMS_garsas.png"
         ],
-        "button_text": "Plačiau"
+        "button_text": "Plačiau",
+        "papildoma_info": {
+          "garsas": [
+            "4 Žemų dažnių kolonėlės; ",
+            "2 Aukštų dažnių kolonėlės.",
+            "2 Monitorinės kolonėlės.",
+            "Bendras garso galingumas- 3.6kW.",
+            "Bazinio komplekto įrenginiai reikalingi įgarsinimui.*"
+          ],
+          "šviesa": [
+            "2 Šviesos efektų valdomi prožektoriai (Nightsun pro lighting 250W);",
+            "2 Valdomi skeneriai (Robe Scan 575);",
+            "4 Foninio scenos apšvietimo šviesos efektai (Geni XTC 250 W);",
+            "2 PAR RGBW prožektoriai (7x12W);",
+            "+ Baziniai apšvietimo įrenginiai. **"
+          ],
+          "info": [
+            "* Bazinio komplekto įrenginiai yra: stiprintuvai, kolonėlių signalo apdorojimo procesoriai, jungiamieji laidai, elektros distribucija, 16 kanalų analoginis pultas, mikrofonai, grotuvas. Papildoma įranga: geitai, signalo kompresoriai, reverberatoriai, didesnio kanalų skaičiaus ar skaitmeninis pultas, magistralinis kabelis, papildomi monitoriai ir t.t. derinama užsakymo metu.",
+            "** Bazinio komplekto apšvietimo įrenginiai yra jungiamieji laidai, DMX valdymo pultas arba kompiuterinis DMX kontroleris, 4 vietų 2,5m aukščio stovas pakabinti foniniams prožektoriams. Papildomai galima komplektuoti 700W arba 3kW galios dūmų mašinas, burbulų mašinas, papildomus efektus ar šviesą.",
+            "Aptarnaujantis personalas - 1- 2 val. pasiruošimo ir 2 valandos renginiui."
+          ]
+        }
+      },
+      {
+        "name": "VIEŠIEMS RENGINIAMS",
+        "description": "Miesto šventėms, įvairioms sueigoms.Bendras garso galingumas - 9kW.Foniniai ir 6 valdomi prožektoriai.",
+        "img": [
+          "src/assets/images/sviesa-renginiams.jpg",
+          "src/assets/images/Viesiems-renginiams.png"
+        ],
+        "button_text": "Plačiau",
+        "papildoma_info": {
+          "garsas": [
+            "6 Žemų dažnių kolonėlės; ",
+            "2 Dvigubos aukštų dažnių kolonėlės; ",
+            "4 Monitorinės kolonėlės.",
+            "Bendras garso galingumas- 6kW.",
+            "Bazinio komplekto įrenginiai reikalingi įgarsinimui.*"
+          ],
+          "šviesa": [
+            "2 Valdomi šviesos efektų prožektoriai (Robe Spot at250 arba Robe Wash at250);",
+            "4 - 6 Valdomi skeneriai (Robe Scan 575)",
+            "4 Foninio scenos apšvietimo šviesos efektai (Geni XTC 250 W) 10 PAR RGBW prožektorių (7x12 W)",
+            "+ Baziniai apšvietimo įrenginiai. **"
+          ],
+          "info": [
+            "* Bazinio komplekto įrenginiai yra: stiprintuvai, kolonėlių signalo apdorojimo procesoriai, jungiamieji laidai, elektros distribucija, 16 kanalų analoginis pultas, mikrofonai, grotuvas. Papildoma įranga: geitai, signalo kompresoriai, reverberatoriai, didesnio kanalų skaičiaus ar skaitmeninis pultas, magistralinis kabelis, papildomi monitoriai ir t.t. derinama užsakymo metu.",
+            "** Bazinio komplekto apšvietimo įrenginiai yra jungiamieji laidai, DMX valdymo pultas arba kompiuterinis DMX kontroleris, 4 vietų 2,5m aukščio stovas pakabinti foniniams prožektoriams. Papildomai galima komplektuoti 700W arba 3kW galios dūmų mašinas, burbulų mašinas, papildomus efektus ar šviesą.",
+            "Aptarnaujantis personalas - 1- 2 val. pasiruošimo ir 2 valandos renginiui."
+          ]
+        }
+      },
+      {
+        "name": "KONCERTAMS",
+        "description": "Atlikėjams, koncertams, festivaliams.Bendras garso galingumas- 10 kW.Apšvietimas pagal poreikį.",
+        "img": [
+          "src/assets/images/degaiciu-svente.jpg",
+          "src/assets/images/KONCERTAMS_garsas.png"
+        ],
+        "button_text": "Plačiau",
+        "papildoma_info": {
+          "garsas": [
+            "8 Žemų dažnių kolonėlės;",
+            "2 Aukštų dažnių kolonėlės;",
+            "4 Monitorinės kolonėlės;",
+            "Bendras garso galingumas- 11kW.",
+            "Bazinio komplekto įrenginiai reikalingi įgarsinimui.*"
+          ],
+          "šviesa": [
+            "4 Šviesos efektų valdomi prožektoriai (Robe Spot at250 );",
+            "4 Šviesos efektų valdomi prožektoriai (Robe Wash at250);",
+            "8 Valdomi skeneriai (Robe Scan 575);",
+            "2 PAR RGBW prožektoriai (7x12W);",
+            "4 Foninio scenos apšvietimo šviesos efektai (Geni XTC 250 W);",
+            "+ Baziniai apšvietimo įrenginiai. **"
+          ],
+          "info": [
+            "* Bazinio komplekto įrenginiai yra: stiprintuvai, kolonėlių signalo apdorojimo procesoriai, jungiamieji laidai, elektros distribucija, 16 kanalų analoginis pultas, mikrofonai, grotuvas. Papildoma įranga: geitai, signalo kompresoriai, reverberatoriai, didesnio kanalų skaičiaus ar skaitmeninis pultas, magistralinis kabelis, papildomi monitoriai ir t.t. derinama užsakymo metu.",
+            "** Bazinio komplekto apšvietimo įrenginiai yra jungiamieji laidai, DMX valdymo pultas arba kompiuterinis DMX kontroleris, 4 vietų 2,5m aukščio stovas pakabinti foniniams prožektoriams. Papildomai galima komplektuoti 700W arba 3kW galios dūmų mašinas, burbulų mašinas, papildomus efektus ar šviesą.",
+            "Aptarnaujantis personalas - 1- 2 val. pasiruošimo ir 2 valandos renginiui."
+          ]
+        }
       }
-    ],
-    "community": {
-    }
+    ]
+
   },
   "atlikti_darbai": {
     "darbai_title": [

@@ -51,21 +51,20 @@
     header {
         background-color: $gray;
     }
-
     .logo {
         float: left;
         img {
             width: 100px;
         }
     }
-
     li {
         display: inline-block;
+        padding: 10px 15px;
         &:hover {
-            // background-color: $gray;
+            background-color: $gray;
+
         }
     }
-
     .link {
         text-decoration: none;
         text-transform: uppercase;
@@ -82,6 +81,7 @@
             justify-content: space-around;
             width: 100%;
             padding-left: 0;
+            margin: 0;
             a {
                 color: $white;
             }
