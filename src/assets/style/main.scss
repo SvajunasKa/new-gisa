@@ -1,8 +1,7 @@
-//@import "../../../node_modules/bootstrap-4-grid/scss/grid";
 @import 'fonts';
 @import "variables";
 @import "mixins";
-
+@import "other";
 
 body, html {
   color: $white;

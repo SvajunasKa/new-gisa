@@ -34,7 +34,7 @@
                             <p>{{data.description}}</p>
                         </div>
                         <div class="link">
-                            <button class="vue-dialog-button" @click="showModal()">{{data.button_text}}</button>
+                            <button class="vue-dialog-button"  @click="showModal(data.papildoma_info)"">{{data.button_text}}</button>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
                 <hr>
             </section>
         </div>
-        <modal v-if="isModalVisible" @close="closeModal" v-bind:xxx="parametrai"></modal>
+        <modal v-if="isModalVisible" @close="closeModal" :papildomaInfo="parametrai"></modal>
     </div>
 
 </template>
@@ -59,7 +59,7 @@
                 parametrai: "",
             }
         },
-        props : ['xxx'],
+        props : ['papildomaInfo'],
         mounted() {
             let data = this.$store.getters.getAllData;
             this.title = data.sprendimai_page.offer_title.name;
@@ -68,7 +68,6 @@
         methods: {
             showModal(parametrai) {
                 this.isModalVisible = true;
-                console.log(parametrai);
                 this.parametrai = parametrai
                 //return parametrai
             },
@@ -86,20 +85,6 @@
 
 <style scoped lang="scss">
     @import '~$scss';
-
-    .title {
-        padding: 20px 0;
-        h1 {
-            @include h1();
-        }
-    }
-
-    section {
-        .row {
-            padding: 20px 0;
-        }
-    }
-
     .img {
         display: inline-block;
         width: 50%;

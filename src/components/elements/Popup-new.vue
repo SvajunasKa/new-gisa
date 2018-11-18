@@ -1,52 +1,57 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modal-backdrop" >
-        <div class="modal"
-             >
-            <div>
-                <button type="button"
-                        class="btn-close"
-                        @click="close">close
-                </button>
-            </div>
-            <div class="modal-body">
-               <div v-for="garsas in xxx.garsas">
-                  {{ garsas}}
-               </div>
-              <div v-for="sviesa in xxx.sviesa">
-                {{ sviesa}}
-              </div>
-              <div v-for="info in xxx.info">
-                {{ info}}
-              </div>
+    <transition name="modal-fade">
+        <div class="modal-backdrop ">
+            <div class="modal">
+                <div v-if="papildomaInfo">
+                    <div>
+                        <button type="button"
+                                class="btn-close"
+                                @click="close">close
+                        </button>
+                    </div>
+                    <div class="modal-body ">
+                        <div v-for="garsas in papildomaInfo.garsas">
+                            <p v-html="garsas"></p>
+                        </div>
+                        <div v-for="sviesa in papildomaInfo.sviesa">
+                            <p v-html="sviesa"></p>
+                        </div>
+                        <div v-for="info in papildomaInfo.info">
+                            <p v-html="info"></p>
+                        </div>
 
+                    </div>
+                </div>
+                <div  v-if="sviesos">
+                    <div>
+                        <button type="button"
+                                class="btn-close"
+                                @click="close">close
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                       <iframe :src="sviesos"></iframe>
+                    </div>
+                </div>
             </div>
-
         </div>
-    </div>
-  </transition>
+    </transition>
 </template>
 
 <script>
 
     export default {
         name: "modal",
-        props: ['xxx'],
+        props: ['papildomaInfo', "sviesos"],
         methods: {
             close() {
                 this.$emit('close');
             }
         },
-        computed: {
-            // popUpData(){
-            //     console.log(xxx)
-            //     return this.xxx
-            // }
-        }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .modal-backdrop {
         position: fixed;
         top: 0;
@@ -66,16 +71,23 @@
         display: flex;
         flex-direction: column;
         max-width: calc(100% - 30px);
+        height: auto;
+        max-height: 500px;
+        iframe{
+            width: 560px ;
+            height: 315px;
+            border: none;
+        }
     }
 
     .modal-fade-enter,
     .modal-fade-leave-active {
-      opacity: 0;
+        opacity: 0;
     }
 
     .modal-fade-enter-active,
     .modal-fade-leave-active {
-      transition: opacity .5s ease
+        transition: opacity .5s ease
     }
 
     .modal-body {
