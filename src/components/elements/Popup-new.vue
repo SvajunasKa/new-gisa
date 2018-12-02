@@ -6,7 +6,7 @@
                     <div>
                         <button type="button"
                                 class="btn-close"
-                                @click="close">close
+                                @click="close">X
                         </button>
                     </div>
                     <div class="modal-body ">
@@ -102,7 +102,7 @@
         padding: 20px;
         cursor: pointer;
         font-weight: bold;
-        color: #4AAE9B;
+        color: black;
         background: transparent;
     }
 

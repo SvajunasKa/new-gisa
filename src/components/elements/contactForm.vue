@@ -1,85 +1,124 @@
 <template>
-  <div class="container">
-    <form>
-      <div class="field">
-        <label for="name">Vardas</label>
-        <input
-          type="text"
-          id="name"
-        />
-      </div>
-      <div class="field">
-        <label for="email">E-pastas</label>
-        <input
-          type="text"
-          id="email"
-          :class="{invalid: $v.email.$error}"
-          @input="$v.email.$touch()"
-        />
+    <div class="container">
+        <form @submit.prevent="submit" action="../../../mailer.php">
+            <div class="field">
+                <label for="name">Vardas</label>
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        v-model="contacts.name"
+                />
+            </div>
+            <div class="field">
+                <label for="email">E-pastas</label>
+                <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        v-model="contacts.email"
+                        :class="{invalid: $v.email.$error}"
+                        @input="$v.email.$touch()"
+                />
 
-      </div>
-      <div class="field">
-        <label for="message">Zinute</label>
-        <textarea id="message"></textarea>
-      </div>
+            </div>
+            <div class="field">
+                <label for="message">Zinute</label>
+                <textarea id="message" v-model="contacts.message" name="message"></textarea>
+            </div>
+            <button class="button" type="submit" :disabled="$v.invalid">Siusti</button>
+            <div class="responce" v-html="responseText">
+            </div>
+            <p v-html="error"></p>
+        </form>
 
-      <button class="button" type="submit" :disabled="$v.invalid">Siusti</button>
-    </form>
-  </div>
+
+    </div>
+
 
 </template>
 
 <script>
-  import {required, email} from 'vuelidate/lib/validators'
+    import {required, email} from 'vuelidate/lib/validators'
+    import axios from 'axios'
 
-  export default {
-    name: "contactForm",
+    export default {
+        name: "contactForm",
+        data() {
+            return {
+                contacts: {},
+                error: "",
+                responseText: null
+            }
+        },
+        validations: {
+            email: {
+                required,
+                email
+            }
+        },
+        methods: {
+            submit() {
+                let form = document.querySelector("form");
+                let url = form.getAttribute('action');
 
-    validations: {
-      email: {
-        required,
-        email
-      }
+                this.errors = {};
+                let formData = new FormData;
+                let values = Object.values(this.contacts);
+                for (let key in values) {
+                    formData.append(key, values[key]);
+                }
+
+
+                axios.post("http://gisa-new.work/mailer.php", formData)
+                    .then(res => {
+                        this.responseText = res.data;
+                    })
+                    .catch(e => {
+                        this.error = e.response.data;
+                    })
+
+
+            }
+        }
     }
-  }
 
 </script>
 
 <style scoped lang="scss">
-  @import '~$scss';
 
-  form {
-    padding: 100px 0;
-  }
-
-  .field {
-    //width: 100%;
-    label {
-      text-align: center;
-      font-size: 16px;
-      display: block;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-  ;
-    input {
-      //height: 40px;
-      line-height: 40px;
-      &.invalid {
-        border: 1px solid red;
-      }
-    }
-    input, textarea {
-      background: rgba(255, 255, 255, .075);
-      border-radius: 3px;
-      border: none;
-      padding: 5px 15px;
-      margin-bottom: 15px;
-      width: 100%;
-      &:focus {
-        border: none;
-      }
+    form {
+        padding: 100px 0;
     }
 
-  }
+    .field {
+        width: 100%;
+        label {
+            text-align: center;
+            font-size: 16px;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    ;
+        input {
+            //height: 40px;
+            line-height: 40px;
+            &.invalid {
+                border: 1px solid red;
+            }
+        }
+        input, textarea {
+            background: rgba(255, 255, 255, .075);
+            border-radius: 3px;
+            border: none;
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            &:focus {
+                border: none;
+            }
+        }
+
+    }
 </style>

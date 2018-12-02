@@ -47,7 +47,13 @@ module.exports = {
             'scss': [
               'vue-style-loader',
               'css-loader',
-              'sass-loader'
+              'sass-loader',
+                {
+                    loader: 'sass-resources-loader',
+                    options: {
+                        resources: './src/assets/style/main.scss',
+                    },
+                },
             ],
             'sass': [
               'vue-style-loader',
@@ -79,8 +85,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '$scss': path.resolve(__dirname,'./src/assets/style/main.scss')
+      'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

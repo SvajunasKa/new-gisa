@@ -20,7 +20,7 @@
                     <router-link class="link" to="/musu_draugai">{{getAllData.menu[4]}}</router-link>
                   </li>
                   <li>
-                    <router-link class="link" to="/kontaktai" >{{getAllData.menu[5]}}</router-link>
+                    <router-link class="link" to="/" >{{getAllData.menu[5]}}</router-link>
                   </li>
                 </ul>
               </nav>
@@ -46,7 +46,6 @@
 </script>
 
 <style scoped lang="scss">
-    @import '~$scss';
 
     header {
         background-color: $gray;

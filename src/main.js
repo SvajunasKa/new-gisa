@@ -7,7 +7,6 @@ import VModal from 'vue-js-modal'
 import Vuelidate from 'vuelidate'
 import vueScrollto from 'vue-scrollto'
 import 'bootstrap/dist/css/bootstrap-grid.css'
-import style from '../src/assets/style/main.scss'
 import VueLazyload from 'vue-lazyload'
 import bootstapVue from 'bootstrap-vue'
 
@@ -23,7 +22,6 @@ Vue.use(VModal,{ dynamic: true, height:500});
 Vue.use(bootstapVue);
 new Vue({
     el: '#app',
-    style,
     router,
     store,
     render: h => h(App)

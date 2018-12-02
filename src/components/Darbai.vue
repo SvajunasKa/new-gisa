@@ -63,7 +63,6 @@
 </script>
 
 <style scoped lang="scss">
-    @import '~$scss';
 
     .title {
         padding: 20px 0;

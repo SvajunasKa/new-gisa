@@ -107,7 +107,7 @@
       </div>
     </section>
     <hr>
-    <section>
+    <section id="contact">
       <app-form></app-form>
     </section>
   </div>
@@ -144,8 +144,6 @@
 
 
 <style lang="scss">
-  @import '~$scss';
-
   .heading {
     padding: 5vh 0;
   }

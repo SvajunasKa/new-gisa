@@ -82,7 +82,6 @@
 </script>
 
 <style scoped lang="scss">
-    @import '~$scss';
 
     .title {
         background-image: linear-gradient(top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/images/banner.jpg");
@@ -90,10 +89,8 @@
         background-size: cover;
         background-position: center;
         padding: 5em 0;
-
     }
     a {
-        cursor: pointer;
         img {
             background: $white;
             width: 100px;

@@ -84,7 +84,6 @@
 </script>
 
 <style scoped lang="scss">
-    @import '~$scss';
     .img {
         display: inline-block;
         width: 50%;
@@ -100,14 +99,5 @@
         letter-spacing: 0.225em;
     }
 
-    p {
-        font-size: 16px;
-        letter-spacing: 2px;
-        line-height: 1.4;
-    }
-
-    /*.info{*/
-        /*display: none;*/
-    /*}*/
 
 </style>
