@@ -17,3 +17,23 @@ p{
 a{
   cursor: pointer;
 }
+
+.home {
+  background-color: $gray;
+  height: 100vh;
+  position: relative;
+  &:before {
+    background-image: url("/src/assets/images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    //z-index: -1;
+  }
+}

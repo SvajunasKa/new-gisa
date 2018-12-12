@@ -128,7 +128,7 @@
         'getAllData'
       ])
     },
-    created: () => {
+    mounted () {
       document.body.className = 'home';
     },
     destroyed: () => {
@@ -143,34 +143,14 @@
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
   .heading {
-    padding: 5vh 0;
+    padding: 12vh 0;
   }
 
   section {
     background: $gray;
     opacity: 0.99999;
-  }
-
-  .home {
-    background-color: $gray;
-    height: 100vh;
-    position: relative;
-    &:before {
-      background-image: url("../assets/images/banner.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-      opacity: 0.2;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: fixed;
-      //z-index: -1;
-    }
   }
 
   h1 {

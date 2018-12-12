@@ -23,6 +23,9 @@
                     <router-link class="link" to="/" >{{getAllData.menu[5]}}</router-link>
                   </li>
                 </ul>
+                <div class="menu-btn"><p>Meniu</p>
+                  <span></span>
+                </div>
               </nav>
         </div>
     </header>
@@ -47,9 +50,12 @@
 
 <style scoped lang="scss">
 
-    header {
-        background-color: $gray;
-    }
+  header {
+    height: 5em;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+  }
     .logo {
         float: left;
         img {
@@ -85,6 +91,49 @@
                 color: $white;
             }
         }
+      .menu-btn{
+        position: absolute;
+        right: 0;
+        text-align: center;
+        span {
+          padding: 10px 30px;
+          &:after {
+            display: inline-block;
+            margin-left: 10px;
+            width: 20px;
+            height: 10px;
+            content: "";
+            border-left: solid 10px transparent;
+            border-top: solid 10px #fff;
+            border-right: solid 10px transparent;
+          }
+        }
+      }
     }
+
+  @media screen and (max-width: $break-tablet){
+    nav{
+      position: relative;
+      .nav-menu{
+        //display: none;
+        position: absolute;
+        display: block;
+        top: 3em;
+        background: $gray;
+        li{
+          display: block;
+          height: 40px;
+          text-align: center;
+          border-bottom: 1px solid $white;
+          &:last-of-type{
+            border-bottom: none;
+          }
+          a{
+           width: 100%;
+          }
+        }
+      }
+    }
+  }
 
 </style>

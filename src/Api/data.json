@@ -174,13 +174,15 @@
         "title": "WASH 250AT",
         "kuriami_efektai": "https://www.youtube.com/embed/_E4HMc4wyK4",
         "kiekis": "turimas keikis 4 vnt",
-        "img": "src/assets/images/sviesa/wash250at.png"
+        "img": "src/assets/images/sviesa/wash250at.png",
+        "efektai": "sukuriame efektai"
       },
       {
         "title": "SPOT 250AT",
         "kuriami_efektai": "https://www.youtube.com/embed/qQcWAmPpwYQ",
         "kiekis": "turimas keikis 4 vnt",
-        "img": "src/assets/images/sviesa/Spot250at.png"
+        "img": "src/assets/images/sviesa/Spot250at.png",
+        "efektai": "sukuriame efektai"
       }
 
     ]

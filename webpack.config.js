@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+let path = require('path');
+let webpack = require('webpack');
 module.exports = {
   entry: ['./src/main.js'],
   output: {
@@ -47,6 +47,7 @@ module.exports = {
             'scss': [
               'vue-style-loader',
               'css-loader',
+              'postcss-loader',
               'sass-loader',
                 {
                     loader: 'sass-resources-loader',
@@ -58,6 +59,7 @@ module.exports = {
             'sass': [
               'vue-style-loader',
               'css-loader',
+              'postcss-loader',
               'sass-loader?indentedSyntax',
             ]
           }
