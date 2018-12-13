@@ -11,7 +11,7 @@
                 />
             </div>
             <div class="field">
-                <label for="email">E-pastas</label>
+                <label for="email">E-paštas</label>
                 <input
                         type="text"
                         id="email"
@@ -23,15 +23,11 @@
 
             </div>
             <div class="field">
-                <label for="message">Zinute</label>
+                <label for="message">Žinute</label>
                 <textarea id="message" v-model="contacts.message" name="message"></textarea>
             </div>
-            <vue-recaptcha theme="dark" sitekey="6LdGPYEUAAAAAGdhI8vfqJSlbnC4WR88ChQJDtbO"
-                           @verify="onVerify"
-                           @expired="onExpired"
-                           ref="invisibleRecaptcha">
-            <button class="button" type="submit" name="submit" :disabled="$v.invalid">Siusti</button>
-            </vue-recaptcha>
+            <div class="g-recaptcha" data-sitekey="6Le2KYEUAAAAAH-E4q5lP5t9uhvthBDYBKLoqcFX"></div>
+            <button class="button" type="submit" name="submit" :disabled="$v.invalid">Siųsti</button>
             <div class="responce" v-html="responseText">
             </div>
             <p v-html="error"></p>
@@ -46,7 +42,6 @@
 <script>
     import {required, email} from 'vuelidate/lib/validators'
     import axios from 'axios'
-    import VueRecaptcha from 'vue-recaptcha';
 
     export default {
         name: "contactForm",
@@ -74,30 +69,19 @@
                 for (let key in values) {
                     formData.append(key, values[key]);
                 }
-                this.$refs.invisibleRecaptcha.execute();
-
-                axios.post("http://gisa-new.work/mailer.php", formData)
-                    .then(res => {
-                        this.responseText = res.data;
-                    })
-                    .catch(e => {
-                        this.error = e.response.data;
-                    })
-
-
-            },
-            onVerify: function (response) {
-                console.log('Verify: ' + response)
-            },
-            onExpired: () => {
-                console.log('Expired')
-            },
-            resetRecaptcha () {
-                this.$refs.recaptcha.reset() // Direct call reset method
+                let capchaRes = grecaptcha.getResponse();
+                if (capchaRes.length > 0){
+                    axios.post("http://gisa-new.work/mailer.php", formData)
+                        .then(res => {
+                            this.responseText = res.data;
+                        })
+                        .catch(e => {
+                            this.error = e.response.data;
+                        })
+                }else {
+                    this.error = "užpildykite formą"
+                }
             }
-        },
-        components:{
-            vueRecaptcha: VueRecaptcha
         }
     }
 

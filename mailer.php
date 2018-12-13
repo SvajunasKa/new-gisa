@@ -1,6 +1,5 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-
 if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     // Get the form fields and remove whitespace.
     $name = strip_tags(trim($_POST[0]));
@@ -43,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
         // Set a 500 (internal server error) response code.
         http_response_code(500);
         $response = "Žinutės išsiųsti nepavyko";
-        echo json_encode($response) ;
+        echo $response ;
     }
 }
 ?>
