@@ -1,10 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-//$name = strip_tags(trim($_POST["name"]));
-//$name = str_replace(array("\r", "\n"), array(" ", " "), $name);
 
-//var_dump( json_decode($_POST[1]))
-//echo $_POST;
 if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     // Get the form fields and remove whitespace.
     $name = strip_tags(trim($_POST[0]));

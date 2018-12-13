@@ -1,32 +1,32 @@
 <template>
     <header>
         <div class="container">
-              <nav>
+            <nav>
                 <router-link class="logo" to="/"><img src="../../assets/images/logo.png"/></router-link>
                 <ul class="nav-menu">
-                  <li>
-                    <router-link class="link" to="/sprendimai"> {{getAllData.menu[0]}}</router-link>
-                  </li>
-                  <li>
-                    <router-link class="link" to="/apsvietimo_technika">{{getAllData.menu[1]}}</router-link>
-                  </li>
-                  <li>
-                    <router-link class="link" to="/igarsinimo_technika">{{getAllData.menu[2]}}</router-link>
-                  </li>
-                  <li>
-                    <router-link class="link" to="/atlikti_darbai">{{getAllData.menu[3]}}</router-link>
-                  </li>
-                  <li>
-                    <router-link class="link" to="/musu_draugai">{{getAllData.menu[4]}}</router-link>
-                  </li>
-                  <li>
-                    <router-link class="link" to="/" >{{getAllData.menu[5]}}</router-link>
-                  </li>
+                    <li>
+                        <router-link class="link" to="/sprendimai"> {{getAllData.menu[0]}}</router-link>
+                    </li>
+                    <li>
+                        <router-link class="link" to="/apsvietimo_technika">{{getAllData.menu[1]}}</router-link>
+                    </li>
+                    <li>
+                        <router-link class="link" to="/igarsinimo_technika">{{getAllData.menu[2]}}</router-link>
+                    </li>
+                    <li>
+                        <router-link class="link" to="/atlikti_darbai">{{getAllData.menu[3]}}</router-link>
+                    </li>
+                    <li>
+                        <router-link class="link" to="/musu_draugai">{{getAllData.menu[4]}}</router-link>
+                    </li>
+                    <li>
+                        <router-link class="link" to="/">{{getAllData.menu[5]}}</router-link>
+                    </li>
                 </ul>
-                <div class="menu-btn"><p>Meniu</p>
-                  <span></span>
+                <div class="menu-btn" @click="showMenu"><p>Meniu</p>
+                    <span></span>
                 </div>
-              </nav>
+            </nav>
         </div>
     </header>
 </template>
@@ -35,7 +35,7 @@
     import {mapGetters} from 'vuex'
 
     export default {
-        data(){
+        data() {
             return {
                 menuData: []
             }
@@ -45,23 +45,30 @@
                 'getAllData'
             ])
         },
+        methods:{
+            showMenu(){
+                let menu = document.querySelector(".nav-menu");
+                menu.classList.toggle("show")
+            }
+        }
     }
 </script>
 
 <style scoped lang="scss">
 
-  header {
-    height: 5em;
-    width: 100%;
-    z-index: 9999;
-    position: fixed;
-  }
+    header {
+        width: 100%;
+        z-index: 9999;
+        position: fixed;
+    }
+
     .logo {
         float: left;
         img {
             width: 100px;
         }
     }
+
     li {
         display: inline-block;
         padding: 10px 15px;
@@ -70,6 +77,7 @@
 
         }
     }
+
     .link {
         text-decoration: none;
         text-transform: uppercase;
@@ -91,49 +99,58 @@
                 color: $white;
             }
         }
-      .menu-btn{
-        position: absolute;
-        right: 0;
-        text-align: center;
-        span {
-          padding: 10px 30px;
-          &:after {
-            display: inline-block;
-            margin-left: 10px;
-            width: 20px;
-            height: 10px;
-            content: "";
-            border-left: solid 10px transparent;
-            border-top: solid 10px #fff;
-            border-right: solid 10px transparent;
-          }
+        .menu-btn {
+            display: none;
         }
-      }
     }
 
-  @media screen and (max-width: $break-tablet){
-    nav{
-      position: relative;
-      .nav-menu{
-        //display: none;
-        position: absolute;
-        display: block;
-        top: 3em;
-        background: $gray;
-        li{
-          display: block;
-          height: 40px;
-          text-align: center;
-          border-bottom: 1px solid $white;
-          &:last-of-type{
-            border-bottom: none;
-          }
-          a{
-           width: 100%;
-          }
+    @media screen and (max-width: $break-tablet) {
+        nav {
+            position: relative;
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 3em;
+                background: $gray;
+                li {
+                    display: block;
+                    height: 40px;
+                    text-align: center;
+                    border-bottom: 1px solid $white;
+                    &:last-of-type {
+                        border-bottom: none;
+                    }
+                    a {
+                        width: 100%;
+                    }
+                }
+                &.show{
+                    display: block;
+                }
+            }
+            .menu-btn {
+                display: block;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                cursor: pointer;
+                span {
+                    padding: 10px 30px;
+                    &:after {
+                        display: inline-block;
+                        margin-left: 10px;
+                        width: 20px;
+                        height: 10px;
+                        content: "";
+                        border-left: solid 10px transparent;
+                        border-top: solid 10px #fff;
+                        border-right: solid 10px transparent;
+                    }
+                }
+
+            }
         }
-      }
+
     }
-  }
 
 </style>

@@ -12,13 +12,14 @@
 
               <div class="box">
                 <img class="img" :src="sviesa.img"/>
-                <a @click="showModal(sviesa.kuriami_efektai)">
-                  <img :src="sviesa.img"/>
-                </a>
                 <div class="text">
                   <p>{{sviesa.kiekis}}</p>
                   <a @click="showModal(sviesa.kuriami_efektai)">{{sviesa.efektai}}</a>
                 </div>
+                <a @click="showModal(sviesa.kuriami_efektai)">
+                  <img :src="sviesa.img"/>
+                </a>
+
               </div>
             </div>
           </div>
@@ -30,13 +31,14 @@
 
               <div class="box">
                 <img class="img" :src="sviesa.img"/>
-                <a @click="showModal(sviesa.kuriami_efektai)">
-                  <img :src="sviesa.img"/>
-                </a>
                 <div class="text">
                   <p>{{sviesa.kiekis}}</p>
                   <a @click="showModal(sviesa.kuriami_efektai)">{{sviesa.efektai}}</a>
                 </div>
+                <a @click="showModal(sviesa.kuriami_efektai)">
+                  <img :src="sviesa.img"/>
+                </a>
+
               </div>
             </div>
           </div>
@@ -65,7 +67,6 @@
     props: ['sviesos'],
     mounted() {
       let data = this.$store.getters.getAllData;
-      console.log(data)
       this.title = data.apsvietimas_page.apsvietimas_title.name;
       this.description = data.apsvietimas_page.apvietimas;
     },
@@ -73,7 +74,6 @@
       showModal(parametrai) {
         this.isModalVisible = true;
         this.parametrai = parametrai;
-        //return parametrai
       },
       closeModal() {
         this.isModalVisible = false;
@@ -92,7 +92,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 5em 0;
+    @include title()
   }
 
   a {

@@ -59,7 +59,7 @@
                 parametrai: "",
             }
         },
-        props : ['papildomaInfo'],
+        props : ['komplektai'],
         mounted() {
             let data = this.$store.getters.getAllData;
             this.title = data.sprendimai_page.offer_title.name;
@@ -84,6 +84,9 @@
 </script>
 
 <style scoped lang="scss">
+    .title{
+        @include title();
+    }
     .img {
         display: inline-block;
         width: 50%;

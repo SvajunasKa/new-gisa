@@ -13,3 +13,7 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+@mixin title(){
+  padding: 140px 0 80px 0;
+}

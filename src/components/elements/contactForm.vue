@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <form @submit.prevent="submit" action="../../../mailer.php">
+        <form @submit.prevent="submit" action="../../../mailer.php" >
             <div class="field">
                 <label for="name">Vardas</label>
                 <input
@@ -26,7 +26,12 @@
                 <label for="message">Zinute</label>
                 <textarea id="message" v-model="contacts.message" name="message"></textarea>
             </div>
-            <button class="button" type="submit" :disabled="$v.invalid">Siusti</button>
+            <vue-recaptcha theme="dark" sitekey="6LdGPYEUAAAAAGdhI8vfqJSlbnC4WR88ChQJDtbO"
+                           @verify="onVerify"
+                           @expired="onExpired"
+                           ref="invisibleRecaptcha">
+            <button class="button" type="submit" name="submit" :disabled="$v.invalid">Siusti</button>
+            </vue-recaptcha>
             <div class="responce" v-html="responseText">
             </div>
             <p v-html="error"></p>
@@ -41,6 +46,7 @@
 <script>
     import {required, email} from 'vuelidate/lib/validators'
     import axios from 'axios'
+    import VueRecaptcha from 'vue-recaptcha';
 
     export default {
         name: "contactForm",
@@ -68,7 +74,7 @@
                 for (let key in values) {
                     formData.append(key, values[key]);
                 }
-
+                this.$refs.invisibleRecaptcha.execute();
 
                 axios.post("http://gisa-new.work/mailer.php", formData)
                     .then(res => {
@@ -79,7 +85,19 @@
                     })
 
 
+            },
+            onVerify: function (response) {
+                console.log('Verify: ' + response)
+            },
+            onExpired: () => {
+                console.log('Expired')
+            },
+            resetRecaptcha () {
+                this.$refs.recaptcha.reset() // Direct call reset method
             }
+        },
+        components:{
+            vueRecaptcha: VueRecaptcha
         }
     }
 

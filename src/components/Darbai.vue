@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import VueLazyload from 'vue-lazyload'
+   // import VueLazyload from 'vue-lazyload'
     import axios from 'axios'
     import Loading from './elements/Loading'
 
@@ -57,7 +57,7 @@
         },
         components: {
             appLoading: Loading,
-            appLazy: VueLazyload
+            //appLazy: VueLazyload
         }
     }
 </script>
@@ -65,7 +65,7 @@
 <style scoped lang="scss">
 
     .title {
-        padding: 20px 0;
+        @include title();
         h1 {
             @include h1();
         }

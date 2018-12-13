@@ -2,31 +2,25 @@
     <transition name="modal-fade">
         <div class="modal-backdrop ">
             <div class="modal">
-                <div v-if="papildomaInfo">
-                    <div>
+                <div v-if="komplektai">
+                    <div class="button-container">
                         <button type="button"
                                 class="btn-close"
-                                @click="close">X
+                                @click="close">×
                         </button>
                     </div>
                     <div class="modal-body ">
-                        <div v-for="garsas in papildomaInfo.garsas">
-                            <p v-html="garsas"></p>
+                        <div v-for="(key, value) in papildomaInfo">
+                            <p><b v-html="value"></b></p>
+                            <p v-for="data in key" v-html="data"></p>
                         </div>
-                        <div v-for="sviesa in papildomaInfo.sviesa">
-                            <p v-html="sviesa"></p>
-                        </div>
-                        <div v-for="info in papildomaInfo.info">
-                            <p v-html="info"></p>
-                        </div>
-
                     </div>
                 </div>
                 <div  v-if="sviesos">
                     <div>
                         <button type="button"
                                 class="btn-close"
-                                @click="close">close
+                                @click="close">×
                         </button>
                     </div>
                     <div class="modal-body">
@@ -42,7 +36,7 @@
 
     export default {
         name: "modal",
-        props: ['papildomaInfo', "sviesos"],
+        props: ['komplektai', "sviesos"],
         methods: {
             close() {
                 this.$emit('close');
@@ -58,19 +52,20 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.7);
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 9999;
     }
 
     .modal {
         background: #FFFFFF;
+        border-radius: 5px;
         box-shadow: 2px 2px 20px 1px;
-        overflow-x: auto;
         display: flex;
         flex-direction: column;
-        max-width: calc(100% - 30px);
+        max-width: calc(100% - 200px);
         height: auto;
         max-height: 500px;
         iframe{
@@ -92,24 +87,40 @@
 
     .modal-body {
         position: relative;
-        padding: 20px 10px;
+        padding: 20px 40px;
         color: black;
+        overflow-y: auto;
+        height: 450px;
+    }
+    .button-container{
+        position: relative;
+        height: 50px;
+        .btn-close {
+            right: -10px;
+            top: -25px;
+            position: absolute;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: #aaa;
+            font-family: $font;
+            font-size: 50px;
+            background: transparent;
+        }
     }
 
-    .btn-close {
-        border: none;
-        font-size: 20px;
-        padding: 20px;
-        cursor: pointer;
-        font-weight: bold;
-        color: black;
-        background: transparent;
-    }
+
 
     .btn-green {
         color: white;
         background: #4AAE9B;
         border: 1px solid #4AAE9B;
         border-radius: 2px;
+    }
+    @media screen and (max-width: $break-tablet){
+        .modal{
+            max-width: calc(100% - 5px);
+        }
     }
 </style>
