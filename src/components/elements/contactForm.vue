@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <form @submit.prevent="submit" action="../../../mailer.php" >
+        <form @submit.prevent="submit" action="../../../mailer.php">
             <div class="field">
                 <label for="name">Vardas</label>
                 <input
@@ -49,7 +49,8 @@
             return {
                 contacts: {},
                 error: "",
-                responseText: null
+                responseText: null,
+                capchaRes: null
             }
         },
         validations: {
@@ -62,7 +63,7 @@
             submit() {
                 let form = document.querySelector("form");
                 let url = form.getAttribute('action');
-
+                console.log(this.contacts)
                 this.errors = {};
                 let formData = new FormData;
                 let values = Object.values(this.contacts);
@@ -70,15 +71,22 @@
                     formData.append(key, values[key]);
                 }
                 let capchaRes = grecaptcha.getResponse();
-                if (capchaRes.length > 0){
-                    axios.post("http://gisa-new.work/mailer.php", formData)
+                if (capchaRes.length > 0) {
+                    axios.post("http://gisa-new.work/mailer.php", {
+                        name: this.contacts.name,
+                        email: this.contacts.email,
+                        message: this.contacts.message,
+                        capcha: this.recaptcha
+                    })
                         .then(res => {
                             this.responseText = res.data;
+                            //console.log(res)
+
                         })
                         .catch(e => {
                             this.error = e.response.data;
                         })
-                }else {
+                } else {
                     this.error = "užpildykite formą"
                 }
             }

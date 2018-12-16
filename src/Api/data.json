@@ -169,7 +169,7 @@
     "apsvietimas_title": {
       "name": "APŠVIETIMO APARATŪRA"
     },
-    "apvietimas":[
+    "apvietimas": [
       {
         "title": "WASH 250AT",
         "kuriami_efektai": "https://www.youtube.com/embed/_E4HMc4wyK4",
@@ -200,22 +200,93 @@
       }
     ]
   },
-  "garsas_page":{
+  "garsas_page": {
     "garsas_title": {
       "name": "GARSO APARATŪRA"
     },
-    "garsas":[
+    "garsas": [
       {
-        "kiekis": "turimas keikis 4 vnt",
         "description": "Keturių juostų stiprintuvų sistema su 4-tos juostos praplėtimo galimybe. <br>Bendra galia - 10kW",
         "img": "src/assets/images/garsas/stiprintuvai.png",
+        "more": "plačiau",
         "info": [
           {
-            "title": "10KW GALIOS 4-JŲ JUOSTŲ QSC STIPRINTUVŲ SISTEMA."
+            "title": "10KW GALIOS 4-JŲ JUOSTŲ QSC STIPRINTUVŲ SISTEMA.",
+            "aprasymas": [
+              "Sistemą sudaro:",
+              "QSC PLX 1202 Aukštų dažnių 1200W galios, AB klasės galinis stiprintuvas su impulsiniu maitinimu. Galia 2x215W@8Ohm. 2x375W@4Ohm. 2x600W@2Ohm. 1x1200W@4Ohm. 2U aukščio 9,5kg svorio.",
+              "QSC PLX 3402 Vidutinių dažnių 3400W galios, H klasės galinis stiprintuvas su impulsiniu maitinimu. Galia 2x800W@8Ohm. 2x1250W@4Ohm. 2x1700W@2Ohm. 1x3400W@4Ohm. 2U aukščio 9,5kg svorio. ",
+              "2vnt. QSC PLX 3002 Žemų dažnių 2x3000W galios, H klasės galinis stiprintuvas su impulsiniu maitinimu. Galia 4x625W@8Ohm. 4x1050W@4Ohm. 4x1500W@2Ohm. 2x3000W@4Ohm. 2x2U aukščio 9,5kg svorio.",
+              "DBX Driverack 482 Kolonėlių procesorius 4 įėjimai, 8 išėjimai, kiekvieno kanalo 6 juostų parametriniai filtrai, vėlinimo ir fazių valdymo galimybė, limiteriai, kiekvieno įėjimo 31 juostos grafinis ekvalaizeris.",
+              "Bendras aukštis 10U, svoris 55kg."
+            ]
+          }
+        ]
+      },
+      {
+        "description": "4-jų juostų QSC stiprintuvų sistema. <br>Bendra galia - 11kW",
+        "img": "src/assets/images/garsas/stiprintuvu-rinkinys.png",
+        "more": "plačiau",
+        "info": [
+          {
+            "title": "11KW GALIOS 4-JŲ JUOSTŲ QSC STIPRINTUVŲ SISTEMA.",
+            "aprasymas":[
+              "Sistemą sudaro:",
+              "QSC CX404 Aukštų ir vidutinių aukštų dažnių 1600W galios, AB klasės galinis stiprintuvas su impulsiniu maitinimu. Galia 4x250W@8Ohm. 2x400W@4Ohm. 2x800W@8Ohm. 2U aukščio 9,5kg svorio.",
+              "QSC CX1202 Vidutinių žemų dažnių 2200W galios, H klasės galinis stiprintuvas su impulsiniu maitinimu. Galia 2x700W@8Ohm. 2x1100W@4Ohm. 1x2200W@8Ohm. 2U aukščio 9,5kg svorio.",
+              "QSC PL380 Žemų dažnių 8000W galios, D klasės galinis stiprintuvas su impulsiniu maitinimu. Galia 2x1500W@8Ohm. 2x2500W@4Ohm. 2x4000W@2Ohm. 1x8000W@4Ohm. 2U aukščio 10kg svorio.",
+              "Kolonėlių procesorius – 4 įėjimai, 8 išėjimai, kiekvieno kanalo 6 juostų parametriniai filtrai, vėlinimo ir fazių valdymo galimybė, limiteriai, kiekvieno įėjimo 31 juostos grafinis ekvalaizeris. Bendras aukštis 8U, svoris 45kg."
+            ]
+          }
+        ]
+      },
+      {
+        "description": "5kW galinis garso stiprintuvas QSC RMX5050.",
+        "img": "src/assets/images/garsas/garso-stiprintuvas.png",
+        "more": "plačiau",
+        "info": [
+          {
+            "title": "5KW GALINIS GARSO STIPRINTUVAS QSC RMX5050.",
+            "aprasymas":[
+              "5kW galios, H klasės galinis stiprintuvas su transformatoriniu maitinimu.",
+              "Galia: 2x1100W@8Ohm. 2x1800W@4Ohm. 2x2500W@2Ohm. 1x5000W@4Ohm. 3U aukščio 33kg svorio."
+            ]
+          }
+        ]
+      },
+      {
+        "description": "2,8kW galinis garso stiprintuvas dB Technologies.",
+        "img": "src/assets/images/garsas/garso-stiprintuvasdB.png",
+        "more": "plačiau",
+        "info": [
+          {
+            "title": "2,8KW GALINIS GARSO STIPRINTUVAS DB TECHNOLOGIES.",
+            "aprasymas":[
+              "2,8kW galios galinis stiprintuvas su transformatoriniu maitinimu.",
+              "Galia: 2x680W@8Ohm. 2x1050W@4Ohm. 2x1400W@2Ohm. 1x2800W@4Ohm. 2U aukščio 21kg svorio."
+            ]
+          }
+        ]
+      },
+      {
+        "description": "Žemų dažnių kolonėlė, galia 1000W. ",
+        "img": "src/assets/images/garsas/Zemu_dazniu_kolonele.png",
+        "kiekis": "turimas kiekis: 6vnt"
+      },
+      {
+        "description": "Mach M82I monitorinė kolonėlė su mažu posvyrio kampu, galia 300W.",
+        "img": "src/assets/images/garsas/monitorine-kolonele.png",
+        "more": "plačiau",
+        "kiekis": "turimas kiekis: 4vnt",
+        "info": [
+          {
+            "title": "300W MACH M82I MONITORINĖ KOLONĖLĖ SU MAŽU POSVYRIO KAMPU.",
+            "aprasymas":[
+              "Jautrumas 1W/1m - 96dB. Max SPL-124 dB. Atkuriama dažnių juosta 90Hz-20KHz, Galingumas 300/600W 8Ohm. Garsiakalbiai: 2x žemų/vidutinių 8“, 2x aukštų 1“. Svoris 18kg."
+            ]
           }
         ]
       }
-
     ]
   },
   "atlikti_darbai": {

@@ -1,13 +1,12 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     // Get the form fields and remove whitespace.
     $name = strip_tags(trim($_POST[0]));
     $name = str_replace(array("\r", "\n"), array(" ", " "), $name);
     $email = filter_var(trim($_POST[1]), FILTER_SANITIZE_EMAIL);
     $message = trim($_POST[2]);
-    //$user_answer = trim(htmlspecialchars($_POST['user_answer']));
-    //$answer = trim(htmlspecialchars($_POST['answer']));
 
     // Check that data was sent to the mailer.
     if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {

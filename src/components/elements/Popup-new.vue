@@ -27,6 +27,18 @@
                        <iframe :src="sviesos"></iframe>
                     </div>
                 </div>
+                <div v-if="garsas">
+                    <button type="button"
+                            class="btn-close"
+                            @click="close">×
+                    </button>
+                    <div class="modal-body ">
+                        <div v-for="xxx in garsas">
+                           <p><b>{{xxx.title}}</b></p>
+                            <p v-for="aaa in xxx.aprasymas" v-if="xxx.aprasymas" v-html="aaa"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </transition>
@@ -36,7 +48,7 @@
 
     export default {
         name: "modal",
-        props: ['komplektai', "sviesos"],
+        props: ['komplektai', "sviesos", "garsas"],
         methods: {
             close() {
                 this.$emit('close');
@@ -82,7 +94,7 @@
 
     .modal-fade-enter-active,
     .modal-fade-leave-active {
-        transition: opacity .5s ease
+        transition: opacity 0.8s ease
     }
 
     .modal-body {
