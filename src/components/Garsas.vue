@@ -33,6 +33,7 @@
         props: ["garsas"],
         mounted() {
             let data = this.$store.getters.getAllData;
+            this.title = data.garsas_page.garsas_title.name;
             this.description = data.garsas_page.garsas;
         }
     }

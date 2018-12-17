@@ -214,8 +214,17 @@
             "title": "10KW GALIOS 4-JŲ JUOSTŲ QSC STIPRINTUVŲ SISTEMA."
           }
         ]
+      },
+      {
+        "kiekis": "turimas keikis 4 vnt",
+        "description": "Keturių juostų stiprintuvų sistema su 4-tos juostos praplėtimo galimybe. <br>Bendra galia - 10kW",
+        "img": "src/assets/images/garsas/stiprintuvai.png",
+        "info": [
+          {
+            "title": "10KW GALIOS 4-JŲ JUOSTŲ QSC STIPRINTUVŲ SISTEMA."
+          }
+        ]
       }
-
     ]
   },
   "atlikti_darbai": {
