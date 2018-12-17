@@ -288,14 +288,44 @@
         ]
       },
       {
-        "kiekis": "turimas keikis 4 vnt",
-        "description": "Keturių juostų stiprintuvų sistema su 4-tos juostos praplėtimo galimybe. <br>Bendra galia - 10kW",
-        "img": "src/assets/images/garsas/stiprintuvai.png",
+        "kiekis": "Turimas keikis: 1vnt.",
+        "description": "HK audio PR:O 12 M, galia 400W. ",
+        "img": "src/assets/images/garsas/monitorine-kolonele-HK.png",
         "info": [
           {
-            "title": "10KW GALIOS 4-JŲ JUOSTŲ QSC STIPRINTUVŲ SISTEMA."
+            "title": "HK AUDIO PR:O 12 M 400W MONITORINĖ KOLONĖLĖ.",
+            "aprasymas": "Jautrumas 1W/1m - 104dB. Max SPL-128 dB. Atkuriama dažnių juosta 70Hz-19KHz, Galingumas 400/800W 8Ohm. Garsiakalbiai: 1 x žemų/vidutinių 12“, 1 x aukštų 1“. Svoris 16kg."
           }
         ]
+      },
+      {
+        "description": "Keturių juostų akustinė sistema, galia 4kW",
+        "img": "src/assets/images/garsas/akustine_sistema.png"
+      },
+      {
+        "kiekis": "Turimas keikis: 2vnt.",
+        "description": "Dviejų juostų aukštų dažnių kolonėlė, galia 1000W.",
+        "img": "src/assets/images/garsas/aukstu_dazniu_kolonele.png"
+      },
+      {
+        "kiekis": "Turimas keikis: 1vnt.",
+        "description": "Išorinė USB garso plokštė Roland UA-55. Keturių kanalų 24-bit/192 kHz, turinti Hi-Z įėjimą bei Phantom +48 maitinimą įėjimams.",
+        "img": "src/assets/images/garsas/Roland-UA55.png"
+      },
+      {
+        "kiekis": "Turimas keikis: 1vnt.",
+        "description": "Soundcraft GB2R-16, 16 kanalų mikšerinis pultas.",
+        "img": "src/assets/images/garsas/Mikserinis-pultas.png"
+      },
+      {
+        "kiekis": "Turimas keikis: 1vnt.",
+        "description": "Lexicon MPX-550 dviejų kanalų efektų procesorius.",
+        "img": "src/assets/images/garsas/Efektu-procesorius.png"
+      },
+      {
+        "kiekis": "Turimas keikis: 1vnt.",
+        "description": "DBX 1046, 4 kanalų kompresorius limiteris.",
+        "img": "src/assets/images/garsas/limiteris.png"
       }
     ]
   },
