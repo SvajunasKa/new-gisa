@@ -34,7 +34,7 @@
                             <p>{{data.description}}</p>
                         </div>
                         <div class="link">
-                            <button class="vue-dialog-button"  @click="showModal(data.papildoma_info)"">{{data.button_text}}</button>
+                            <button class="vue-dialog-button"  @click="showModal(data.papildoma_info)">{{data.button_text}}</button>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
                 <hr>
             </section>
         </div>
-        <modal v-if="isModalVisible" @close="closeModal" :papildomaInfo="parametrai"></modal>
+        <modal v-if="isModalVisible" @close="closeModal" :komplektai="parametrai"></modal>
     </div>
 
 </template>
@@ -68,8 +68,7 @@
         methods: {
             showModal(parametrai) {
                 this.isModalVisible = true;
-                this.parametrai = parametrai
-                //return parametrai
+                this.parametrai = parametrai;
             },
             closeModal() {
                 this.isModalVisible = false;

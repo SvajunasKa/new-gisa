@@ -1,56 +1,85 @@
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop ">
-      <div class="container">
         <div class="modal">
           <div v-if="komplektai">
-            <div class="button-container">
-              <button type="button"
-                      class="btn-close"
-                      @click="close">×
-              </button>
-            </div>
-            <div class="modal-body ">
-              <div v-for="(key, value) in papildomaInfo">
-                <p><b v-html="value"></b></p>
-                <p v-for="data in key" v-html="data"></p>
+            <div class="container">
+              <div class="button-container">
+                <button type="button"
+                        class="btn-close"
+                        @click="close">×
+                </button>
+              </div>
+              <div class="modal-body ">
+                <div v-for="(key, value) in komplektai">
+                  <h3><b v-html="value"></b></h3>
+                  <p v-for="data in key" v-html="data"></p>
+                </div>
               </div>
             </div>
+
           </div>
           <div v-if="sviesos">
-            <div>
-              <button type="button"
-                      class="btn-close"
-                      @click="close">×
-              </button>
+            <div class="container">
+              <div class="button-container">
+                <button type="button"
+                        class="btn-close"
+                        @click="close">×
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <iframe :src="sviesos"></iframe>
+              </div>
             </div>
-            <div class="modal-body">
-              <iframe :src="sviesos"></iframe>
-            </div>
+
           </div>
           <div v-if="garsas">
-            <div class="button-container">
-              <button type="button"
-                      class="btn-close"
-                      @click="close">×
-              </button>
-            </div>
-            <div class="modal-body ">
-              <img v-if="garsas.img" :src="garsas.img">
-              <div v-else  v-for="item in garsas">
-                <div  class="modal-title">
-                  <h3><b>{{item.title}}</b></h3>
-                </div>
-                <div class="modal-content">
-                  <p v-for="aaa in item.aprasymas" v-if="item.aprasymas" v-html="aaa"></p>
+            <div  class="container">
+              <div class="button-container">
+                <button type="button"
+                        class="btn-close"
+                        @click="close">×
+                </button>
+              </div>
+              <div class="modal-body ">
+                <img v-if="garsas.img" :src="garsas.img">
+                <div v-else  v-for="item in garsas">
+                  <div  class="modal-title">
+                    <h3><b>{{item.title}}</b></h3>
+                  </div>
+                  <div class="modal-content">
+                    <p v-for="aaa in item.aprasymas" v-if="item.aprasymas" v-html="aaa"></p>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
-        </div>
+          <div v-if="darbai">
+            <div class="button-container">
+              <div class="text-center">
+                <p v-html="darbai[0].name"></p>
+              </div>
+              <button type="button"
+                      class="btn-close"
+                      @click="close">×
+              </button>
+
+            </div>
+                <div class="modal-content">
+                    <img class="darbai-img" :src="darbai[0].images[index]"/>
+
+              </div>
+            <div class="button-container">
+              <div class="next" @click="next()" :class="{hide: isHide, nextHide}"></div>
+              <div class="prev" @click="prev()" :class="{hide: isHide1, prevHide}"></div>
+            </div>
+            </div>
+          </div>
       </div>
 
-    </div>
+
   </transition>
 </template>
 
@@ -58,16 +87,87 @@
 
   export default {
     name: "modal",
-    props: ['komplektai', "sviesos", "garsas"],
-    methods: {
-      close() {
-        this.$emit('close');
+    data(){
+      return{
+        index: null,
+        isHide: false,
+        isHide1:false
       }
     },
+    props: ["komplektai", "sviesos", "garsas", "darbai"],
+    computed: {
+      nextHide() {
+        let keys = Object.keys(this.darbai[0].images);
+        console.log(keys)
+        //console.log("indexas", this.index, keys.length)
+        if (this.index === keys.length - 1) {
+          this.isHide = true;
+        }else {
+          this.isHide = false;
+        }
+      },
+      prevHide(){
+        if (this.index == 0) {
+         this.isHide1 = true
+        }else {
+          this.isHide1 = false
+        }
+      }
+    },
+
+    methods: {
+      next() {
+        this.index++;
+      },
+      prev() {
+        this.index--;
+      },
+      close() {
+        this.$emit('close');
+      },
+      getIndex(){
+        this.index = this.darbai[1];
+      }
+
+    },
+    beforeMount(){
+      this.getIndex();
+    }
   }
 </script>
 
 <style scoped lang="scss">
+  .text-center{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+   p{
+     color: black;
+     margin: 0;
+   }
+  }
+  .prev{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent black transparent transparent;
+    cursor: pointer;
+  }
+  .next{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent black;
+    cursor: pointer;
+  }
   .modal-backdrop {
     position: fixed;
     top: 0;
@@ -89,7 +189,7 @@
     flex-direction: column;
     max-width: calc(100% - 200px);
     height: auto;
-    max-height: 500px;
+    max-height: 570px;
     margin: 0 auto;
     iframe {
       width: 560px;
@@ -115,23 +215,26 @@
     overflow-y: auto;
     height: auto;
     max-height: 450px;
-    h3, p {
-      text-align: center;
-    }
-    .modal-content {
-      //height: 350px;
-      display: flex;
-     justify-content: center;
-      flex-flow: column;
-    }
     img{
       width: 100%;
     }
+  }
+  .modal-content {
+    //height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  }
+  .darbai-img{
+    max-height: 470px;
+    width: auto;
   }
 
   .button-container {
     position: relative;
     height: 50px;
+    display: flex;
+    align-items: center;
     .btn-close {
       right: -10px;
       top: -25px;
@@ -145,6 +248,7 @@
       font-size: 50px;
       background: transparent;
     }
+
   }
 
   .btn-green {
@@ -153,6 +257,10 @@
     border: 1px solid #4AAE9B;
     border-radius: 2px;
   }
+  .hide {
+    display: none;
+  }
+
 
   @media screen and (max-width: $break-tablet) {
     .modal {

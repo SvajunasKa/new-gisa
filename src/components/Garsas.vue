@@ -8,7 +8,7 @@
         <div class="row" v-if="index%2 === 0">
           <div class="col-md-4">
             <div class="img-box">
-              <img :src="garsas.img" @click="showModal(garsas)">
+              <img v-lazy="garsas.img" @click="showModal(garsas)">
             </div>
 
           </div>
@@ -34,7 +34,7 @@
           </div>
           <div class="col-md-4">
             <div class="img-box">
-              <img :src="garsas.img" @click="showModal(garsas)">
+              <img v-lazy="garsas.img" @click="showModal(garsas)">
             </div>
 
           </div>

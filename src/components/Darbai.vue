@@ -8,18 +8,19 @@
             <app-loading v-if="isLoading"></app-loading>
             <section v-for="data in images">
                 <div class="spotlight">
-                    <div class="title">
+                    <div class="subtitle">
                         <h2>{{data.name}}</h2>
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-xs-4" v-for="(img, index) in data.images">
-                            <img src="" v-lazy="img" @click="show(data.images, index)">
+                            <img src="" v-lazy="img" @click="showModal(data, index)">
                         </div>
                     </div>
                 </div>
                 <hr>
             </section>
         </div>
+      <modal v-if="isModalVisible" @close="closeModal" :darbai="[parametrai, index]"></modal>
     </div>
 </template>
 
@@ -27,6 +28,7 @@
    // import VueLazyload from 'vue-lazyload'
     import axios from 'axios'
     import Loading from './elements/Loading'
+   import modal from './elements/Popup-new'
 
     export default {
         name: "darbai",
@@ -34,9 +36,13 @@
             return {
                 darbai_title: null,
                 images: null,
-                isLoading: true
+                isLoading: true,
+              isModalVisible: false,
+              parametrai: "",
+              index: ""
             }
         },
+      props: ["darbai"],
         mounted() {
             axios.get('../../src/Api/data.json')
                 .then(res => {
@@ -48,16 +54,19 @@
                 .catch(error => console.log(error));
         },
         methods: {
-            show(params, index) {
-                this.$modal.show('images', {
-                    foo: params,
-                    index: index
-                });
-            },
+          showModal(parametrai, index) {
+            this.isModalVisible = true;
+            this.parametrai = parametrai;
+            this.index = index;
+            //console.log(this.index)
+          },
+          closeModal() {
+            this.isModalVisible = false;
+          }
         },
         components: {
             appLoading: Loading,
-            //appLazy: VueLazyload
+          modal:modal
         }
     }
 </script>
@@ -96,5 +105,12 @@
     .v-lazy-image-loaded {
         filter: blur(0);
     }
+  img{
+    cursor: pointer;
+    max-width: 250px;
+  }
+  .subtitle{
+    margin: 30px 0;
+  }
 
 </style>

@@ -1,7 +1,10 @@
 <template>
     <modal name="images" @before-open="beforeOpen" height="auto">
         <div class="v--modal-box">
-            <div @click="modalClose()">X</div>
+          <div class="button-container">
+            <div class="btn-close" @click="modalClose()">×</div>
+          </div>
+
             <div id="index" @click="next()" :class="{hide: isHide, slepti}">next</div>
             <img :src="content[index]"/>
 
@@ -66,5 +69,22 @@
 
     img {
         width: 100%;
+    }
+    .button-container {
+      position: relative;
+      height: 50px;
+      .btn-close {
+        right: -10px;
+        top: -25px;
+        position: absolute;
+        border: none;
+        padding: 20px;
+        cursor: pointer;
+        font-weight: 700;
+        color: #aaa;
+        font-family: $font;
+        font-size: 50px;
+        background: transparent;
+      }
     }
 </style>
