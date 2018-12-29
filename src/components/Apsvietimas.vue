@@ -1,43 +1,42 @@
 <template>
   <div class="content">
     <div class="title">
-      <h1>{{title}}</h1>
+      <h1 v-html="title"></h1>
     </div>
     <div class="container">
       <section v-for="(sviesa, index) in description">
         <div class="row" v-if="index%2 === 0">
-          <h2>{{sviesa.title}}</h2>
+          <h2 v-html="sviesa.title"></h2>
           <div class="col-md-7 offset-md-5">
             <div class="content">
-
               <div class="box">
-                <img class="img" :src="sviesa.img"/>
+                <img class="img" v-lazy="sviesa.img"/>
                 <div class="text">
-                  <p>{{sviesa.kiekis}}</p>
-                  <a @click="showModal(sviesa.kuriami_efektai)">{{sviesa.efektai}}</a>
+                  <p v-html="sviesa.kiekis"></p>
+                  <a class="button-link" @click="showModal(sviesa.kuriami_efektai)" v-html="sviesa.efektai"></a>
                 </div>
-                <a @click="showModal(sviesa.kuriami_efektai)">
-                  <img :src="sviesa.img"/>
-                </a>
+                <!--<a @click="showModal(sviesa.kuriami_efektai)">-->
+                  <!--<img src="" v-lazy="sviesa.img"/>-->
+                <!--</a>-->
 
               </div>
             </div>
           </div>
         </div>
         <div class="row" v-else>
-          <h2>{{sviesa.title}}</h2>
+          <h2 v-html="sviesa.title"></h2>
           <div class="col-md-7">
             <div class="content">
 
               <div class="box">
                 <img class="img" :src="sviesa.img"/>
                 <div class="text">
-                  <p>{{sviesa.kiekis}}</p>
-                  <a @click="showModal(sviesa.kuriami_efektai)">{{sviesa.efektai}}</a>
+                  <p v-html="sviesa.kiekis"></p>
+                  <a class="button-link" @click="showModal(sviesa.kuriami_efektai)" v-html="sviesa.efektai"></a>
                 </div>
-                <a @click="showModal(sviesa.kuriami_efektai)">
-                  <img :src="sviesa.img"/>
-                </a>
+                <!--<a @click="showModal(sviesa.kuriami_efektai)">-->
+                  <!--<img src="" v-lazy="sviesa.img"/>-->
+                <!--</a>-->
 
               </div>
             </div>
@@ -117,6 +116,25 @@
   .box {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    .text{
+      text-align: center;
+    }
+    .button-link{
+      width: 250px;
+      height: 50px;
+      line-height: 50px;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $break-mobile){
+    .box{
+      flex-flow: column;
+      align-items: center;
+      .text{
+        margin: 20px 0;
+      }
+    }
   }
 </style>

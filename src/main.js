@@ -9,6 +9,7 @@ import vueScrollto from 'vue-scrollto'
 import 'bootstrap/dist/css/bootstrap-grid.css'
 import VueLazyload from 'vue-lazyload'
 
+
 Vue.use(VueLazyload, {
     preLoad: 1.3,
     loading: '/src/assets/images/ajax-loader.gif',

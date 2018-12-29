@@ -11,22 +11,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $secret = '6Le2KYEUAAAAAMwcDn5z0kN-tBc99bpFDOQ5Blgf';
         $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
         $responseData = json_decode($verifyResponse);
-        if ($responseData->success) {
+
             $name = strip_tags(trim($data['name']));
             $name = str_replace(array("\r", "\n"), array(" ", " "), $name);
             $email = filter_var(trim($data['email']), FILTER_SANITIZE_EMAIL);
             $message = trim($data['message']);
 
-            // Check that data was sent to the mailer.
             if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // Set a 400 (bad request) response code and exit.
                 http_response_code(400);
                 echo "Prašau, baigti pilyti formą";
                 exit;
             }
 
 
-            $recipient = "svajunas_kaseta@yahoo.com";//"andrius.chaziachmetovas@ktu.lt, dobisdobis@gmail.com, sviesa@gisa.lt, garsas@gisa.lt";
+            $recipient = "andrius.chaziachmetovas@ktu.lt, dobisdobis@gmail.com, sviesa@gisa.lt, garsas@gisa.lt";
 
 
             // Set the email subject.
@@ -52,9 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $response = "Žinutės išsiųsti nepavyko";
                 echo $response;
             }
-        } else {
-            echo "Klaida";
-        }
+
     }else{
         echo 'capcha klaida';
     }

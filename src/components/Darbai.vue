@@ -2,7 +2,7 @@
     <div class="content">
         <div class="container">
             <div class="title">
-                <h1>{{darbai_title}}</h1>
+                <h1 v-html="darbai_title"></h1>
             </div>
             <hr>
             <app-loading v-if="isLoading"></app-loading>
@@ -20,15 +20,15 @@
                 <hr>
             </section>
         </div>
-      <modal v-if="isModalVisible" @close="closeModal" :darbai="[parametrai, index]"></modal>
+        <modal v-if="isModalVisible" @close="closeModal" :darbai="[parametrai, index]"></modal>
     </div>
 </template>
 
 <script>
-   // import VueLazyload from 'vue-lazyload'
+    // import VueLazyload from 'vue-lazyload'
     import axios from 'axios'
     import Loading from './elements/Loading'
-   import modal from './elements/Popup-new'
+    import modal from './elements/Popup-new'
 
     export default {
         name: "darbai",
@@ -37,36 +37,31 @@
                 darbai_title: null,
                 images: null,
                 isLoading: true,
-              isModalVisible: false,
-              parametrai: "",
-              index: ""
+                isModalVisible: false,
+                parametrai: "",
+                index: ""
             }
         },
-      props: ["darbai"],
+        props: ["darbai"],
         mounted() {
-            axios.get('../../src/Api/data.json')
-                .then(res => {
-                    this.darbai_title = res.data.atlikti_darbai.darbai_title[0];
-                    this.images = res.data.atlikti_darbai.koncertai;
-                    this.isLoading = false;
-                })
-                .then()
-                .catch(error => console.log(error));
+            let data = this.$store.getters.getAllData;
+            this.darbai_title = data.atlikti_darbai.darbai_title.name;
+            this.images = data.atlikti_darbai.koncertai;
+            this.isLoading = false
         },
         methods: {
-          showModal(parametrai, index) {
-            this.isModalVisible = true;
-            this.parametrai = parametrai;
-            this.index = index;
-            //console.log(this.index)
-          },
-          closeModal() {
-            this.isModalVisible = false;
-          }
+            showModal(parametrai, index) {
+                this.isModalVisible = true;
+                this.parametrai = parametrai;
+                this.index = index;
+            },
+            closeModal() {
+                this.isModalVisible = false;
+            }
         },
         components: {
             appLoading: Loading,
-          modal:modal
+            modal: modal
         }
     }
 </script>
@@ -87,6 +82,7 @@
     h2 {
         text-align: center;
     }
+
     .container {
         .spotlight {
             margin: 50px 0;
@@ -98,19 +94,28 @@
             justify-content: center;
         }
     }
+
     .v-lazy-image {
         filter: blur(10px);
         transition: filter 0.7s;
     }
+
     .v-lazy-image-loaded {
         filter: blur(0);
     }
-  img{
-    cursor: pointer;
-    max-width: 250px;
-  }
-  .subtitle{
-    margin: 30px 0;
-  }
+
+    img {
+        cursor: pointer;
+        max-width: 250px;
+    }
+
+    .subtitle {
+        margin: 30px 0;
+    }
+    @media screen and (max-width: $break-mobile){
+        img{
+            max-width: 100% ;
+        }
+    }
 
 </style>

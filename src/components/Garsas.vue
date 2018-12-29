@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="title">
-      <h1>{{title}}</h1>
+      <h1 v-html="title"></h1>
     </div>
     <div class="container">
       <section v-for="(garsas, index) in description">
@@ -17,18 +17,18 @@
               <p v-html="garsas.description"></p>
               <p v-html="garsas.kiekis"></p>
               <div class="text" v-if="garsas.more">
-                <a @click="showModal(garsas.info)" v-html="garsas.more"></a>
+                <a class="button-link" @click="showModal(garsas.info)" v-html="garsas.more"></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="row" v-else>
+        <div class="row flex" v-else>
           <div class="col-md-8">
             <div class="text-block">
               <p v-html="garsas.description"></p>
               <p v-html="garsas.kiekis"></p>
               <div class="text" v-if="garsas.more">
-                <a @click="showModal(garsas.info)" v-html="garsas.more"></a>
+                <a class="button-link" @click="showModal(garsas.info)" v-html="garsas.more"></a>
               </div>
             </div>
           </div>
@@ -113,6 +113,27 @@
     height: 300px;
     flex-flow: column;
     justify-content: center;
+  }
+  .button-link{
+      width: 250px;
+      height: 50px;
+      line-height: 50px;
+      display: block;
+  }
+  @media screen and (max-width: $break-mobile) {
+      .flex {
+          display: flex;
+          .col-md-4 {
+              order: 1;
+          }
+          .col-md-8 {
+              order: 2;
+          }
+      }
+      .img-box {
+          width: 100%;
+          height: auto;
+      }
   }
 
 </style>

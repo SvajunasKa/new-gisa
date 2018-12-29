@@ -329,10 +329,22 @@
       }
     ]
   },
-  "atlikti_darbai": {
-    "darbai_title": [
-      "APŠVIESTI IR ĮGARSINTI RENGINIAI"
+  "kontaktai":{
+    "title": {
+      "name": "SU MUMIS GALITE SUSISIEKTI:"
+    },
+    "description": [
+      "GARSAS@GISA.LT TEL.: 8-676 97728",
+      "SVIESA@GISA.LT 8-676 97729"
     ],
+    "info": {
+      "text": "ARBA UŽPILDYKITE ŠIĄ FORMĄ IR MES SU JUMIS SUSISIEKSIME"
+    }
+  },
+  "atlikti_darbai": {
+    "darbai_title": {
+      "name":"APŠVIESTI IR ĮGARSINTI RENGINIAI"
+    },
     "koncertai": [
       {
         "name": "ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
@@ -443,6 +455,20 @@
           "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-4.png",
           "src/assets/images/darbai/Kruonio-miesto-svente/Kruonio-miesto-svente-5.png"
         ]
+      }
+    ]
+  },
+  "partneriai":{
+    "title": {
+      "name": "MŪSŲ DRAUGAI"
+    },
+    "draugai": [
+      {
+        "name": "GRUPĖ NEMUNO KRANTAI",
+        "images": [
+          "src/assets/images/partneriai/nemuno-krantai.jpg"
+        ],
+        "link": "http://nemunokrantai.lt/"
       }
     ]
   }

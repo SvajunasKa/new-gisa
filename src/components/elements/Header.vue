@@ -20,11 +20,13 @@
                         <router-link class="link" to="/musu_draugai">{{getAllData.menu[4]}}</router-link>
                     </li>
                     <li>
-                        <router-link class="link" to="/">{{getAllData.menu[5]}}</router-link>
+                        <a class="link" href="/#contact"  >{{getAllData.menu[5]}}</a>
                     </li>
                 </ul>
-                <div class="menu-btn" @click="showMenu"><p>Meniu</p>
-                    <span></span>
+                <div class="menu-btn" @click="showMenu">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
             </nav>
         </div>
@@ -37,7 +39,8 @@
     export default {
         data() {
             return {
-                menuData: []
+                menuData: [],
+                headerPosition: 0
             }
         },
         computed: {
@@ -45,21 +48,61 @@
                 'getAllData'
             ])
         },
+        mounted(){
+                window.addEventListener('scroll', this.handleScroll);
+        },
         methods:{
             showMenu(){
                 let menu = document.querySelector(".nav-menu");
-                menu.classList.toggle("show")
+                let btn = document.querySelector(".menu-btn");
+                menu.classList.toggle("show");
+                btn.classList.toggle("change")
+            },
+            handleScroll() {
+                    this.getPosition();
+                    let header = document.querySelector("header");
+                    if (this.headerPosition < 114){
+                        header.classList.add('color');
+                    }else {
+                        header.classList.remove('color');
+                    }
+            },
+            getPosition(){
+                let header = document.getElementsByTagName("h1")[0];
+                const box = header.getBoundingClientRect();
+                this.headerPosition = box.y
             }
+
         }
     }
 </script>
 
 <style scoped lang="scss">
+    .bar1, .bar2, .bar3 {
+        width: 26px;
+        height: 3px;
+        background-color: $white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-8px, 5px);
+    }
 
+    .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-7px, -5px);
+    }
     header {
         width: 100%;
         z-index: 9999;
         position: fixed;
+        &.color{
+            background-color: $gray;
+        }
     }
 
     .logo {
@@ -110,12 +153,14 @@
             .nav-menu {
                 display: none;
                 position: absolute;
-                top: 3em;
+                top: 61px;
+                right: 0;
+                width: auto;
                 background: $gray;
                 li {
                     display: block;
                     height: 40px;
-                    text-align: center;
+                    text-align: right;
                     border-bottom: 1px solid $white;
                     &:last-of-type {
                         border-bottom: none;

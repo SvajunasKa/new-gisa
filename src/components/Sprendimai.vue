@@ -2,17 +2,17 @@
     <div class="content">
         <div class="container">
             <div class="title">
-                <h1>{{title}}</h1>
+                <h1 v-html="title"></h1>
             </div>
             <section v-for="(data, index) in description">
                 <div class="row" v-if="index%2 === 0">
                     <div class="col-md-4">
                         <div class="content">
-                            <h4>{{data.name}}</h4>
-                            <p>{{data.description}}</p>
+                            <h4 v-html="data.name"></h4>
+                            <p v-html="data.description"></p>
                         </div>
                         <div class="link">
-                            <button class="vue-dialog-button" @click="showModal(data.papildoma_info)">{{data.button_text}}</button>
+                            <button class="button-link" @click="showModal(data.papildoma_info)" v-html="data.button_text"></button>
                         </div>
                     </div>
                     <div class="col-md-6 offset-2">
@@ -30,11 +30,11 @@
                     </div>
                     <div class="col-md-6 offset-2">
                         <div class="content">
-                            <h4>{{data.name}}</h4>
-                            <p>{{data.description}}</p>
+                            <h4 v-html="data.name"></h4>
+                            <p v-html="data.description"></p>
                         </div>
                         <div class="link">
-                            <button class="vue-dialog-button"  @click="showModal(data.papildoma_info)">{{data.button_text}}</button>
+                            <button class="button-link"  @click="showModal(data.papildoma_info)" v-html="data.button_text"></button>
                         </div>
                     </div>
 
@@ -100,6 +100,10 @@
         text-transform: uppercase;
         letter-spacing: 0.225em;
     }
-
-
+    .button-link{
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        display: block;
+    }
 </style>
