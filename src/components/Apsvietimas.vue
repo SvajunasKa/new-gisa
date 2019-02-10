@@ -4,45 +4,24 @@
       <h1 v-html="title"></h1>
     </div>
     <div class="container">
-      <section v-for="(sviesa, index) in description">
-        <div class="row" v-if="index%2 === 0">
-          <h2 v-html="sviesa.title"></h2>
-          <div class="col-md-7 offset-md-5">
-            <div class="content">
-              <div class="box">
-                <img class="img" v-lazy="sviesa.img"/>
-                <div class="text">
-                  <p v-html="sviesa.kiekis"></p>
-                  <a class="button-link" @click="showModal(sviesa.kuriami_efektai)" v-html="sviesa.efektai"></a>
-                </div>
-                <!--<a @click="showModal(sviesa.kuriami_efektai)">-->
-                  <!--<img src="" v-lazy="sviesa.img"/>-->
-                <!--</a>-->
-
-              </div>
+      <section v-for="(sviesa, index) in description" class="lights">
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="sound">
+              <tr>
+                <th><h3>Klasė</h3></th>
+                <th><h3>Pavadinimas</h3></th>
+                <th><h3>Kiekis</h3></th>
+              </tr>
+              <tr v-for="visaSviesa in sviesa.info">
+                <td><p v-html="visaSviesa.klase"></p></td>
+                <td><p v-html="visaSviesa.pavadinimas"></p></td>
+                <td><p v-html="visaSviesa.kiekis"></p></td>
+              </tr>
+            </table>
             </div>
-          </div>
         </div>
-        <div class="row" v-else>
-          <h2 v-html="sviesa.title"></h2>
-          <div class="col-md-7">
-            <div class="content">
 
-              <div class="box">
-                <img class="img" :src="sviesa.img"/>
-                <div class="text">
-                  <p v-html="sviesa.kiekis"></p>
-                  <a class="button-link" @click="showModal(sviesa.kuriami_efektai)" v-html="sviesa.efektai"></a>
-                </div>
-                <!--<a @click="showModal(sviesa.kuriami_efektai)">-->
-                  <!--<img src="" v-lazy="sviesa.img"/>-->
-                <!--</a>-->
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
       </section>
     </div>
     <modal v-if="isModalVisible" @close="closeModal" :sviesos="parametrai"></modal>
@@ -85,7 +64,9 @@
 </script>
 
 <style scoped lang="scss">
-
+.lights{
+  min-height: 80vh;
+}
   .title {
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/images/banner.jpg");
     background-repeat: no-repeat;

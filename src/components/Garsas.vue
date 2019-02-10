@@ -5,41 +5,25 @@
     </div>
     <div class="container">
       <section v-for="(garsas, index) in description">
-        <div class="row" v-if="index%2 === 0">
-          <div class="col-md-4">
-            <div class="img-box">
-              <img v-lazy="garsas.img" @click="showModal(garsas)">
-            </div>
-
-          </div>
-          <div class="col-md-8">
+        <div class="row">
+          <div class="col-sm-12">
             <div class="text-block">
-              <p v-html="garsas.description"></p>
-              <p v-html="garsas.kiekis"></p>
-              <div class="text" v-if="garsas.more">
-                <a class="button-link" @click="showModal(garsas.info)" v-html="garsas.more"></a>
-              </div>
+              <h2 v-html="garsas.description"></h2>
             </div>
+            <table class="sound">
+              <tr>
+                <th><h3>Klasė</h3></th>
+                <th><h3>Pavadinimas</h3></th>
+                <th><h3>Kiekis</h3></th>
+              </tr>
+              <tr v-for="visasGarsas in garsas.info">
+                <td><p v-html="visasGarsas.klase"  ></p></td>
+                <td><p v-html="visasGarsas.pavadinimas"></p></td>
+                <td><p v-html="visasGarsas.kiekis"></p></td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="row flex" v-else>
-          <div class="col-md-8">
-            <div class="text-block">
-              <p v-html="garsas.description"></p>
-              <p v-html="garsas.kiekis"></p>
-              <div class="text" v-if="garsas.more">
-                <a class="button-link" @click="showModal(garsas.info)" v-html="garsas.more"></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="img-box">
-              <img v-lazy="garsas.img" @click="showModal(garsas)">
-            </div>
-
-          </div>
-        </div>
-        <hr>
       </section>
     </div>
     <modal v-if="isModalVisible" @close="closeModal" :garsas="parametrai"></modal>
@@ -90,9 +74,6 @@
     @include title();
   }
 
-  section {
-    //height: 250px;
-  }
 
   .img-box {
     width: 200px;
@@ -110,7 +91,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    height: 300px;
+    height: 170px;
     flex-flow: column;
     justify-content: center;
   }
