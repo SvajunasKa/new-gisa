@@ -682,6 +682,22 @@
     },
     "koncertai": [
       {
+        "name": "Kapelos “Temela” dešimtmečio jubiliejaus šventinis koncertas",
+        "images": [
+          "src/assets/images/darbai/Temela-jubiliejus/1.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/2.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/3.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/4.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/5.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/6.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/7.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/8.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/9.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/10.jpg",
+          "src/assets/images/darbai/Temela-jubiliejus/12.jpg"
+        ]
+      },
+      {
         "name": "ŽIEŽMARIŲ MIESTO ŠVENTĖ 2018 (ŠV. JOKŪBO ATLAIDAI)",
         "images": [
           "src/assets/images/darbai/Ziezmariu-miesto-svente-2018/Ziezmariai.jpg",
