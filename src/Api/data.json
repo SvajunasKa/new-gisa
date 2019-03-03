@@ -252,7 +252,7 @@
           },
           {
             "klase": "Sub",
-            "pavadinimas": "RCF 2x15“ (KV2-copy) 2400W",
+            "pavadinimas": "KV2 2x15“ 2400W",
             "kiekis": "2 vnt"
           },
           {
@@ -264,11 +264,6 @@
             "klase": "Monitors",
             "pavadinimas": "Tesla 1x15“ + 1x1“ 300W",
             "kiekis": "4 vnt"
-          },
-          {
-            "klase": "Monitors",
-            "pavadinimas": "HK Audio PRO 12 400W",
-            "kiekis": "1 vnt"
           }
         ]
       },
@@ -278,12 +273,12 @@
           {
             "klase": "AB",
             "pavadinimas": "QSC PLX 1202 2x600 W @ 2 Ω ",
-            "kiekis": "1 vnt"
+            "kiekis": "2 vnt"
           },
           {
             "klase": "AB",
             "pavadinimas": "QSC PLX 1602       2x800 W @ 2 Ω ",
-            "kiekis": "1 vnt"
+            "kiekis": "2 vnt"
           },
           {
             "klase": "H",
@@ -302,11 +297,11 @@
           },
           {
             "klase": "AB+B",
-            "pavadinimas": "QSC CX404            4x400 W @ 4 Ω    ",
-            "kiekis": "1 vnt"
+            "pavadinimas": "QSC CX404            4x400 W @ 4 Ω",
+            "kiekis": "2 vnt"
           },
           {
-            "klase": "D",
+            "klase": "H",
             "pavadinimas": "QSC PL 340         2x2000 W @ 2 Ω",
             "kiekis": "1 vnt"
           },
@@ -324,40 +319,50 @@
             "klase": "H",
             "pavadinimas": "QSC CX1202V       2x1100 W @ 4 Ω",
             "kiekis": "1 vnt"
-          },
-          {
-            "klase": "H",
-            "pavadinimas": "DB Technologies  2x1400 W @ 2 Ω",
-            "kiekis": "1 vnt"
           }
         ]
       },
       {
-        "description": "Kolonėlių procesoriai",
+        "description": "Garso apdirbimas",
         "info": [
           {
-            "klase": "Digital",
-            "pavadinimas": "DBX DriveRack PA 2in 6out",
+            "klase": "Digital Speaker",
+            "pavadinimas": "DBX DriveRack 480 4in 8out",
             "kiekis": "1 vnt"
           },
           {
-            "klase": "Digital",
-            "pavadinimas": "DBX DriveRack PA+ 2in 6out",
-            "kiekis": "1 vnt"
-          },
-          {
-            "klase": "Digital",
+            "klase": "Digital Speaker",
             "pavadinimas": "DBX DriveRack 481 4in 8out",
-            "kiekis": "1 vnt"
+            "kiekis": "2 vnt"
           },
           {
-            "klase": "Digital",
+            "klase": "Digital Speaker",
             "pavadinimas": "DBX DriveRack 482 4in 8out",
             "kiekis": "1 vnt"
           },
           {
-            "klase": "Analog",
+            "klase": "Digital Speaker",
+            "pavadinimas": "DBX DriveRack PA 2in 6out",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Digital Speaker",
+            "pavadinimas": "DBX DriveRack PA+ 2in 6out",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Analog Speaker",
             "pavadinimas": "Nexo TS",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Effect",
+            "pavadinimas": "Lexicon MPX-550",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Dynamic",
+            "pavadinimas": "DBX 1046",
             "kiekis": "1 vnt"
           }
         ]
@@ -377,7 +382,7 @@
           },
           {
             "klase": "Wireless dynamic",
-            "pavadinimas": "Shure  SLX + beta58 hendheld.  800MHz",
+            "pavadinimas": "Shure  SLX + B58 hendheld. ",
             "kiekis": "1 vnt"
           },
           {
@@ -412,8 +417,13 @@
           },
           {
             "klase": "Condenser",
+            "pavadinimas": "Shure Beta 98",
+            "kiekis": "4 vnt"
+          },
+          {
+            "klase": "Condenser",
             "pavadinimas": "AKG perception 170",
-            "kiekis": "1 vnt"
+            "kiekis": "3 vnt"
           },
           {
             "klase": "Condenser",
@@ -424,11 +434,6 @@
             "klase": "Condenser",
             "pavadinimas": "Beyerdynamic Opus 53",
             "kiekis": "2 vnt"
-          },
-          {
-            "klase": "Condenser",
-            "pavadinimas": "Shure Beta 98",
-            "kiekis": "4 vnt"
           },
           {
             "klase": "Condenser",
@@ -496,18 +501,18 @@
             "kiekis": "1 vnt"
           },
           {
-            "klase": "Di BOX",
+            "klase": "Di Box",
+            "pavadinimas": "BSS AR 133 Active Mono",
+            "kiekis": "2 vnt"
+          },
+          {
+            "klase": "Di Box",
             "pavadinimas": "Samson S-Max MD2 Passive stereo",
             "kiekis": "1 vnt"
           },
           {
-            "klase": "Di BOX",
+            "klase": "Di Box",
             "pavadinimas": "Omnitronic LH-055 Passive  Mono  ",
-            "kiekis": "2 vnt"
-          },
-          {
-            "klase": "Di BOX",
-            "pavadinimas": "BSS AR 133 Active Mono",
             "kiekis": "2 vnt"
           }
         ]
