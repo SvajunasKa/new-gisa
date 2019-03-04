@@ -46,17 +46,17 @@ hr{
   }
 
   td{
-    border: 1px solid $white;
+    border: 1px solid $gray;
     border-bottom: none;
     border-right: none;
     &:last-of-type{
-      border-right: 1px solid $white;
+      border-right: 1px solid $gray;
     }
   }
   tr{
     &:last-of-type{
       td{
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $gray;
       }
     }
   }

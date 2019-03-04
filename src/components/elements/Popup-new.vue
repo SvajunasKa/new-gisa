@@ -43,14 +43,18 @@
                             </button>
                         </div>
                         <div class="modal-body ">
-                            <img v-if="garsas.img" :src="garsas.img">
-                            <div v-else v-for="item in garsas">
-                                <div class="modal-title">
-                                    <h3><b>{{item.title}}</b></h3>
-                                </div>
-                                <div class="modal-content">
-                                    <p v-for="aaa in item.aprasymas" v-if="item.aprasymas" v-html="aaa"></p>
-                                </div>
+                              <table class="sound">
+                                <tr>
+                                  <th><h3>Klasė</h3></th>
+                                  <th><h3>Pavadinimas</h3></th>
+                                  <th><h3>Kiekis</h3></th>
+                                </tr>
+                                <tr v-for="visasGarsas in garsas.info">
+                                  <td><p v-html="visasGarsas.klase"  ></p></td>
+                                  <td><p v-html="visasGarsas.pavadinimas"></p></td>
+                                  <td><p v-html="visasGarsas.kiekis"></p></td>
+                                </tr>
+                              </table>
                             </div>
                         </div>
                     </div>
@@ -76,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 
 
     </transition>
