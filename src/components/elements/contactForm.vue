@@ -73,11 +73,6 @@
         },
         methods: {
             submit() {
-                let formData = new FormData;
-                let values = Object.values(this.contacts);
-                for (let key in values) {
-                    formData.append(key, values[key]);
-                }
                 let capchaRes = grecaptcha.getResponse();
                 if (capchaRes.length > 0) {
                     axios.post("../../mailer.php", {

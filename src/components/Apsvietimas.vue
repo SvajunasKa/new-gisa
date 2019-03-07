@@ -4,10 +4,13 @@
       <h1 v-html="title"></h1>
     </div>
     <div class="container">
-      <section v-for="(sviesa, index) in description" class="lights">
-        <div class="row">
+      <section class="lights">
+        <div class="row" v-for="(sviesa, index) in description">
           <div class="col-sm-12">
-            <table class="sound">
+            <div class="text-block">
+              <h2 v-html="sviesa.description"></h2>
+            </div>
+            <table class="light">
               <tr>
                 <th><h3>Klasė</h3></th>
                 <th><h3>Pavadinimas</h3></th>
@@ -19,9 +22,8 @@
                 <td><p v-html="visaSviesa.kiekis"></p></td>
               </tr>
             </table>
-            </div>
+          </div>
         </div>
-
       </section>
     </div>
     <modal v-if="isModalVisible" @close="closeModal" :sviesos="parametrai"></modal>
@@ -64,9 +66,14 @@
 </script>
 
 <style scoped lang="scss">
-.lights{
-  min-height: 80vh;
-}
+  .lights {
+    min-height: 80vh;
+  }
+
+  .light {
+
+  }
+
   .title {
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../assets/images/banner.jpg");
     background-repeat: no-repeat;
@@ -89,6 +96,7 @@
       //float: left;
     }
   }
+
   h2 {
     text-align: center;
     width: 100%;
@@ -98,10 +106,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .text{
+    .text {
       text-align: center;
     }
-    .button-link{
+    .button-link {
       width: 250px;
       height: 50px;
       line-height: 50px;
@@ -109,11 +117,11 @@
     }
   }
 
-  @media screen and (max-width: $break-mobile){
-    .box{
+  @media screen and (max-width: $break-mobile) {
+    .box {
       flex-flow: column;
       align-items: center;
-      .text{
+      .text {
         margin: 20px 0;
       }
     }
