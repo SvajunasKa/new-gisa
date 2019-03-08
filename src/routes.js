@@ -16,7 +16,8 @@ const routes = [
   {path:'/apsvietimo_technika', component: Apvietimas},
   {path: '/atlikti_darbai', component: Darbai},
   {path: '/igarsinimo_technika', component:Garsas},
-  {path: '/musu_draugai', component: Partneriai}
+  {path: '/musu_draugai', component: Partneriai},
+  {path: '*', component: Pagrindinis},
 ];
 
 export default new VueRouter({

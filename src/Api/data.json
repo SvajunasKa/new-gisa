@@ -214,7 +214,18 @@
             "kiekis": "4 vnt"
           }
         ]
+      },
+      {
+        "description": "Efektai",
+        "info": [
+          {
+            "klase": "Smoke",
+            "pavadinimas": "Dūmų mašina 3kW DMX",
+            "kiekis": "1 vnt"
+          }
+        ]
       }
+
     ]
   },
   "garsas_page": {
@@ -646,17 +657,8 @@
             "kiekis": "2 vnt"
           }
         ]
-      },
-      {
-        "description": "Efektai",
-        "info": [
-          {
-            "klase": "Smoke",
-            "pavadinimas": "Dūmų mašina 3kW DMX",
-            "kiekis": "1 vnt"
-          }
-        ]
       }
+
     ]
   },
   "kontaktai": {

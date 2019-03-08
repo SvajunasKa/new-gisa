@@ -7,26 +7,15 @@
       <section v-for="(garsas, index) in description">
         <div class="row">
           <div class="col-sm-12">
-            <div class="text-block">
-              <h2 v-html="garsas.description"></h2>
+            <div class="text-block" @click="showModal(garsas)">
+              <h2 v-html="garsas.description" ></h2>
             </div>
-            <table class="sound">
-              <tr>
-                <th><h3>Klasė</h3></th>
-                <th><h3>Pavadinimas</h3></th>
-                <th><h3>Kiekis</h3></th>
-              </tr>
-              <tr v-for="visasGarsas in garsas.info">
-                <td><p v-html="visasGarsas.klase"  ></p></td>
-                <td><p v-html="visasGarsas.pavadinimas"></p></td>
-                <td><p v-html="visasGarsas.kiekis"></p></td>
-              </tr>
-            </table>
+
           </div>
         </div>
       </section>
     </div>
-    <modal v-if="isModalVisible" @close="closeModal" :garsas="parametrai"></modal>
+    <modal v-if="isModalVisible" @close="closeModal" :garsas="parametrai" @click="showModal(garsas)" ></modal>
   </div>
 
 </template>
@@ -91,9 +80,10 @@
     text-align: center;
     display: flex;
     align-items: center;
-    height: 170px;
+    //height: 170px;
     flex-flow: column;
     justify-content: center;
+    cursor: pointer;
   }
   .button-link{
       width: 250px;
