@@ -58,8 +58,6 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
                 <div v-if="darbai">
                     <div class="button-container">
                         <div class="text-center">
@@ -79,6 +77,8 @@
                         <div class="prev" @click="prev()" :class="{hide: isHide1, prevHide}"></div>
                     </div>
                 </div>
+                </div>
+
             </div>
 
 

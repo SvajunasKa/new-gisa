@@ -5,6 +5,5 @@ Allow: /sprendimai
 Allow: /apsvietimo_technika
 Allow: /igarsinimo_technika
 Allow: /atlikti_darbai
-Allow: /atlikti_darbai
 
 Sitemap: http://gisa.lt/sitemap.xml
