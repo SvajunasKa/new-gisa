@@ -10,18 +10,19 @@ export default new Vuex.Store({
         data: texts,
         wp:''
     },
-    getters: {
-        getAllData: state => state.data,
-        wpData: state =>{
+    actions: {
+        loadData({commit}) {
             axios.get('http://admin.gisa.lt/wp-json/wp/v2/pages')
-                .then(response => {
-                    this.$state.wp = response.data;
-                });
-            return console.log(state)
+                .then(res => res.data)
+                .then(pages => {
+                    commit('SET_PAGES', pages)
+                })
         }
+
     },
-
-    mutations:{
-
+    mutations: {
+        SET_PAGES(state, pages) {
+            state.pages = pages
+        }
     }
 })
