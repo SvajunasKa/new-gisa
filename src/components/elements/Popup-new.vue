@@ -43,17 +43,17 @@
                             </button>
                         </div>
                         <div class="modal-body ">
-                              <table class="sound">
-                                <tr>
-                                  <th><h3>Klasė</h3></th>
-                                  <th><h3>Pavadinimas</h3></th>
-                                  <th><h3>Kiekis</h3></th>
-                                </tr>
-                                <tr v-for="visasGarsas in garsas.info">
-                                  <td><p v-html="visasGarsas.klase"  ></p></td>
-                                  <td><p v-html="visasGarsas.pavadinimas"></p></td>
-                                  <td><p v-html="visasGarsas.kiekis"></p></td>
-                                </tr>
+                              <table class="sound" v-html="garsas">
+                                <!--<tr>-->
+                                  <!--<th><h3>Klasė</h3></th>-->
+                                  <!--<th><h3>Pavadinimas</h3></th>-->
+                                  <!--<th><h3>Kiekis</h3></th>-->
+                                <!--</tr>-->
+                                <!--<tr v-for="visasGarsas in garsas.info">-->
+                                  <!--<td><p v-html="visasGarsas.klase"  ></p></td>-->
+                                  <!--<td><p v-html="visasGarsas.pavadinimas"></p></td>-->
+                                  <!--<td><p v-html="visasGarsas.kiekis"></p></td>-->
+                                <!--</tr>-->
                               </table>
                             </div>
                         </div>
