@@ -1,38 +1,27 @@
 <template>
   <div class="content">
-    <div class="title">
-      <h1 v-html="title"></h1>
-    </div>
-    <div class="container">
-      <section class="lights">
-        <div class="row" v-for="(sviesa, index) in description">
-          <div class="col-sm-12">
-            <div class="text-block">
-              <h2 v-html="sviesa.description"></h2>
+    <div v-for="data in wpData" v-if="data.slug === 'apsvietimas'">
+      <div class="title">
+        <h1 v-html="title"></h1>
+      </div>
+      <div class="container">
+        <section>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-block">
+                <div class="light" v-html="data.content.rendered"></div>
+              </div>
             </div>
-            <table class="light">
-              <tr>
-                <th><h3>Klasė</h3></th>
-                <th><h3>Pavadinimas</h3></th>
-                <th><h3>Kiekis</h3></th>
-              </tr>
-              <tr v-for="visaSviesa in sviesa.info">
-                <td><p v-html="visaSviesa.klase"></p></td>
-                <td><p v-html="visaSviesa.pavadinimas"></p></td>
-                <td><p v-html="visaSviesa.kiekis"></p></td>
-              </tr>
-            </table>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-    <modal v-if="isModalVisible" @close="closeModal" :sviesos="parametrai"></modal>
   </div>
 
 </template>
 
 <script>
-  import modal from './elements/Popup-new'
+  import {mapState} from 'vuex'
 
   export default {
     name: "apsvietimas",
@@ -44,34 +33,19 @@
         parametrai: "",
       }
     },
-    props: ['sviesos'],
     mounted() {
-      let data = this.$store.getters.getAllData;
-      this.title = data.apsvietimas_page.apsvietimas_title.name;
-      this.description = data.apsvietimas_page.apvietimas;
+      this.$store.dispatch('loadData');
     },
-    methods: {
-      showModal(parametrai) {
-        this.isModalVisible = true;
-        this.parametrai = parametrai;
-      },
-      closeModal() {
-        this.isModalVisible = false;
-      }
-    },
-    components: {
-      modal: modal
-    }
+    computed: mapState([
+      'wpData'
+    ])
+
   }
 </script>
 
 <style scoped lang="scss">
   .lights {
     min-height: 80vh;
-  }
-
-  .light {
-
   }
 
   .title {
@@ -88,13 +62,6 @@
       width: 100px;
     }
     @extend p;
-  }
-
-  .content {
-    .img {
-      width: 200px;
-      //float: left;
-    }
   }
 
   h2 {

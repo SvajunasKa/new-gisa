@@ -40,51 +40,48 @@ hr{
 }
 .sound{
   width: 100%;
-  th, td{
+  table{
+    width: 100%;
+    display: none;
+    &.active{
+      display: table;
+    }
+  }
+  td{
     font-family: $font;
     text-align: center;
-  }
-
-  td{
-    border: 1px solid $gray;
+    border: 1px solid $white;
     border-bottom: none;
     border-right: none;
+    height: 50px;
     &:last-of-type{
-      border-right: 1px solid $gray;
+      border-right: 1px solid $white;
     }
   }
   tr{
     &:last-of-type{
       td{
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+  tr{
+    &:first-of-type{
+      td{
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-weight: bold;
       }
     }
   }
 }
+
 .light{
-    width: 100%;
-    th, td{
-      font-family: $font;
-      text-align: center;
-    }
-
-    td{
-      border: 1px solid $white;
-      border-bottom: none;
-      border-right: none;
-      width: 200px;
-      &:last-of-type{
-        border-right: 1px solid $white;
-      }
-    }
-    tr{
-      &:last-of-type{
-        td{
-          border-bottom: 1px solid $white;
-        }
-      }
-    }
-
+   @extend .sound;
+  table{
+    display: table;
+  }
 }
 @media screen and (max-width: $break-mobile){
   .button-link{
