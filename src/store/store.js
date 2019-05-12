@@ -12,7 +12,7 @@ export default new Vuex.Store({
     },
     actions: {
         loadData({commit}) {
-            axios.get('http://admin.gisa.lt/wp-json/wp/v2/pages')
+            axios.get('https://admin.gisa.lt/wp-json/wp/v2/pages')
                 .then(res => res.data)
                 .then(wpData => {
                     commit('SET_PAGES', wpData)
