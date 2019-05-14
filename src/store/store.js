@@ -26,6 +26,11 @@ export default new Vuex.Store({
         }
     },
     getters: {
-        getAllData: state => state.data
+        getAllData: state => {
+            return state.data
+        },
+        getWpData: state =>{
+            return state.wpData
+        }
     }
 })

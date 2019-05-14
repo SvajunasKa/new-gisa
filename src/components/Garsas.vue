@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <div v-for="data in wpData" v-if="data.slug === 'garsas'">
+        <div v-for="data in $store.state.wpData" v-if="data.slug === 'garsas'">
             <div class="title">
                 <h1 v-html="data.title.rendered"></h1>
             </div>
@@ -12,6 +12,7 @@
                                 <!--<div class="loading" v-if="loading">-->
                                     <!--<img src="/src/assets/images/ajax-loader.gif">-->
                                 <!--</div>-->
+                                <!--{{$store.state.wpData.content}}-->
                                 <div class="sound" v-html="data.content.rendered"></div>
                             </div>
                         </div>
@@ -38,16 +39,13 @@
         },
         mounted() {
             this.$store.dispatch('loadData');
-                //.then(res => console.log(res));
-            let prom = this.$store.dispatch('loadData');
-           console.log(prom.then(r => console.log(r)))
 
             this.getElements();
         },
         methods: {
             getElements() {
                 let tag = document.getElementsByTagName("h2");
-                //console.log(tag)
+                console.log(tag)
                 let arr = [...tag];
                 this.showTable(arr)
             },
@@ -63,10 +61,12 @@
         beforeCreate() {
             window.addEventListener('load', this.getElements, false);
         },
+
+
         computed: {
-            ...mapState([
-                'wpData'
-            ])
+            // ...mapState([
+            //     'wpData'
+            // ]),
         }
 
     }
