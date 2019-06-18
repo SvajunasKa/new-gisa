@@ -254,12 +254,12 @@
           {
             "klase": "Sub",
             "pavadinimas": "RCF 1x18“ 900W",
-            "kiekis": "6 vnt"
+            "kiekis": "4 vnt"
           },
           {
             "klase": "Sub",
-            "pavadinimas": "Zeck 1X18“ 1500W",
-            "kiekis": "2 vnt"
+            "pavadinimas": "KV2 VHD18“ 1500W",
+            "kiekis": "8 vnt"
           },
           {
             "klase": "Sub",
@@ -304,7 +304,7 @@
           {
             "klase": "H",
             "pavadinimas": "QSC PLX 3402       2x1700 W @ 2 Ω",
-            "kiekis": "3 vnt"
+            "kiekis": "5 vnt"
           },
           {
             "klase": "AB+B",
@@ -524,7 +524,12 @@
           {
             "klase": "Di Box",
             "pavadinimas": "Omnitronic LH-055 Passive  Mono  ",
-            "kiekis": "2 vnt"
+            "kiekis": "3 vnt"
+          },
+          {
+            "klase": "Snake (digital)",
+            "pavadinimas": "2 x UTP + 1 x XLR + Power 80m",
+            "kiekis": "1 vnt"
           }
         ]
       },
@@ -544,6 +549,11 @@
           {
             "klase": "32A",
             "pavadinimas": "32 A to 32 A + 10x16 A",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "63A",
+            "pavadinimas": "63 A to 3x32 A + 14x16 A",
             "kiekis": "1 vnt"
           }
         ]
@@ -610,6 +620,16 @@
             "klase": "Power",
             "pavadinimas": "32A, 380V 3m.",
             "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Power",
+            "pavadinimas": "32A, 380V 20m.",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Power",
+            "pavadinimas": "63A, 380V 24m.",
+            "kiekis": "2 vnt"
           }
         ]
       },
@@ -678,6 +698,25 @@
       "name": "APŠVIESTI IR ĮGARSINTI RENGINIAI"
     },
     "koncertai": [
+      {
+        "name": "Prienų miesto šventė 2019",
+        "images": [
+          "src/assets/images/darbai/Prienu-svente/archive/15.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/16.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/17.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/18.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/018.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/19.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/20.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/21.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/22.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/23.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/24.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/25.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/26.jpg",
+          "src/assets/images/darbai/Prienu-svente/archive/27.jpg"
+        ]
+      },
       {
         "name": "Kapelos “Temela” dešimtmečio jubiliejaus šventinis koncertas",
         "images": [
