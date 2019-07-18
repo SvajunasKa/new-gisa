@@ -59,7 +59,6 @@
                 parametrai: "",
             }
         },
-        props : ['komplektai'],
         mounted() {
             let data = this.$store.getters.getAllData;
             this.title = data.sprendimai_page.offer_title.name;

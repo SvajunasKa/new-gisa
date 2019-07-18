@@ -25,8 +25,6 @@
 </template>
 
 <script>
-    // import VueLazyload from 'vue-lazyload'
-    import axios from 'axios'
     import Loading from './elements/Loading'
     import modal from './elements/Popup-new'
 
@@ -42,7 +40,6 @@
                 index: ""
             }
         },
-        props: ["darbai"],
         mounted() {
             let data = this.$store.getters.getAllData;
             this.darbai_title = data.atlikti_darbai.darbai_title.name;

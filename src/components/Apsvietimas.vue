@@ -26,13 +26,11 @@
         </div>
       </section>
     </div>
-    <modal v-if="isModalVisible" @close="closeModal" :sviesos="parametrai"></modal>
   </div>
 
 </template>
 
 <script>
-  import modal from './elements/Popup-new'
 
   export default {
     name: "apsvietimas",
@@ -44,23 +42,10 @@
         parametrai: "",
       }
     },
-    props: ['sviesos'],
     mounted() {
       let data = this.$store.getters.getAllData;
       this.title = data.apsvietimas_page.apsvietimas_title.name;
       this.description = data.apsvietimas_page.apvietimas;
-    },
-    methods: {
-      showModal(parametrai) {
-        this.isModalVisible = true;
-        this.parametrai = parametrai;
-      },
-      closeModal() {
-        this.isModalVisible = false;
-      }
-    },
-    components: {
-      modal: modal
     }
   }
 </script>

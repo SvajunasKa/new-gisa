@@ -19,21 +19,6 @@
                     </div>
 
                 </div>
-                <div v-if="sviesos">
-                    <div class="container">
-                        <div class="button-container">
-                            <button type="button"
-                                    class="btn-close"
-                                    @click="close">×
-                            </button>
-                        </div>
-
-                        <div class="modal-body">
-                            <iframe :src="sviesos"></iframe>
-                        </div>
-                    </div>
-
-                </div>
                 <div v-if="garsas">
                     <div class="container">
                         <div class="button-container">
@@ -43,21 +28,21 @@
                             </button>
                         </div>
                         <div class="modal-body ">
-                              <table class="sound">
+                            <table class="sound">
                                 <tr>
-                                  <th><h3>Klasė</h3></th>
-                                  <th><h3>Pavadinimas</h3></th>
-                                  <th><h3>Kiekis</h3></th>
+                                    <th><h3>Klasė</h3></th>
+                                    <th><h3>Pavadinimas</h3></th>
+                                    <th><h3>Kiekis</h3></th>
                                 </tr>
                                 <tr v-for="visasGarsas in garsas.info">
-                                  <td><p v-html="visasGarsas.klase"  ></p></td>
-                                  <td><p v-html="visasGarsas.pavadinimas"></p></td>
-                                  <td><p v-html="visasGarsas.kiekis"></p></td>
+                                    <td><p v-html="visasGarsas.klase"></p></td>
+                                    <td><p v-html="visasGarsas.pavadinimas"></p></td>
+                                    <td><p v-html="visasGarsas.kiekis"></p></td>
                                 </tr>
-                              </table>
-                            </div>
+                            </table>
                         </div>
                     </div>
+                </div>
                 <div v-if="darbai">
                     <div class="button-container">
                         <div class="text-center">
@@ -77,65 +62,61 @@
                         <div class="prev" @click="prev()" :class="{hide: isHide1, prevHide}"></div>
                     </div>
                 </div>
-                </div>
-
             </div>
-
-
-
+        </div>
     </transition>
 </template>
 
 <script>
 
-    export default {
-        name: "modal",
-        data() {
-            return {
-                index: null,
-                isHide: false,
-                isHide1: false
-            }
-        },
-        props: ["komplektai", "sviesos", "garsas", "darbai"],
-        computed: {
-            nextHide() {
-                let keys = Object.keys(this.darbai[0].images);
-                if (this.index === keys.length - 1) {
-                    this.isHide = true;
-                } else {
-                    this.isHide = false;
-                }
-            },
-            prevHide() {
-                if (this.index == 0) {
-                    this.isHide1 = true
-                } else {
-                    this.isHide1 = false
-                }
-            }
-        },
+	export default {
+		name: "modal",
+		data() {
+			return {
+				index: null,
+				isHide: false,
+				isHide1: false
+			}
+		},
+		props: ["komplektai", "garsas", "darbai"],
+		computed: {
+			nextHide() {
+				let keys = Object.keys(this.darbai[0].images);
+				if (this.index === keys.length - 1) {
+					this.isHide = true;
+				} else {
+					this.isHide = false;
+				}
+			},
+			prevHide() {
+				if (this.index == 0) {
+					this.isHide1 = true
+				} else {
+					this.isHide1 = false
+				}
+			}
+		},
 
-        methods: {
-            next() {
-                this.index++;
-            },
-            prev() {
-                this.index--;
-            },
-            close() {
-                this.$emit('close');
-            },
-            getIndex() {
-                if(this.darbai)
-                    this.index = this.darbai[1];
-            }
+		methods: {
+			next() {
+				this.index++;
+			},
+			prev() {
+				this.index--;
+			},
+			close() {
+				this.$emit('close');
+			},
+			getIndex() {
+				if (this.darbai)
+					this.index = this.darbai[1];
+			}
 
-        },
-        beforeMount() {
-            this.getIndex();
-        }
-    }
+		},
+		beforeMount() {
+			this.getIndex();
+		}
+	}
 </script>
 
 <style scoped lang="scss">
