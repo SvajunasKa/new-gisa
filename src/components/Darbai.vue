@@ -25,8 +25,6 @@
 </template>
 
 <script>
-    // import VueLazyload from 'vue-lazyload'
-    import axios from 'axios'
     import Loading from './elements/Loading'
     import modal from './elements/Popup-new'
 

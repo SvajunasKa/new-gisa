@@ -8,11 +8,10 @@
                 <section>
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="text-block">
+                            <div class="text-block" v-for="data in $store.state.wpData">
                                 <!--<div class="loading" v-if="loading">-->
                                     <!--<img src="/src/assets/images/ajax-loader.gif">-->
                                 <!--</div>-->
-                                <!--{{$store.state.wpData.content}}-->
                                 <div class="sound" v-html="data.content.rendered"></div>
                             </div>
                         </div>
@@ -34,39 +33,21 @@
                 description: null,
                 isModalVisible: false,
                 parametrai: "",
-                //loading: true
+                loading: true
             }
         },
+      props:["garsas"],
         mounted() {
-            this.$store.dispatch('loadData');
-
-            this.getElements();
+           this.$store.dispatch('loadData');
+            this.loading = false
         },
         methods: {
-            getElements() {
-                let tag = document.getElementsByTagName("h2");
-                console.log(tag)
-                let arr = [...tag];
-                this.showTable(arr)
-            },
-            showTable(a) {
-                a.forEach((e) => {
-                    e.addEventListener("click", () => {
-                        let tar = event.target;
-                        tar.nextElementSibling.classList.toggle("active");
-                    })
-                })
-            }
-        },
-        beforeCreate() {
-            window.addEventListener('load', this.getElements, false);
-        },
 
-
+        },
         computed: {
-            // ...mapState([
-            //     'wpData'
-            // ]),
+            ...mapState([
+                'wpData'
+            ]),
         }
 
     }
@@ -108,10 +89,6 @@
         height: 50px;
         line-height: 50px;
         display: block;
-    }
-
-    table {
-        color: red;
     }
 
     @media screen and (max-width: $break-mobile) {
