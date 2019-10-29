@@ -12,7 +12,7 @@ import VueLazyload from 'vue-lazyload'
 
 Vue.use(VueLazyload, {
     preLoad: 1.3,
-    loading: '/src/assets/images/ajax-loader.gif',
+    loading: '/src/assets/images/puff.svg',
     attempt: 3
 });
 Vue.use(vueScrollto);
