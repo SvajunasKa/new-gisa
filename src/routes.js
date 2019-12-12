@@ -11,13 +11,13 @@ import Sprendimai from './components/Sprendimai'
 Vue.use(VueRouter);
 
 const routes = [
-  {path: '/', component: Pagrindinis},
-  {path: '/sprendimai', component: Sprendimai},
-  {path:'/apsvietimo_technika', component: Apvietimas},
-  {path: '/atlikti_darbai', component: Darbai},
-  {path: '/igarsinimo_technika', component:Garsas},
-  {path: '/musu_draugai', component: Partneriai},
-  {path: '*', component: Pagrindinis},
+    { path: '/', component: Pagrindinis },
+    { path: '/sprendimai', component: Sprendimai },
+    { path: '/apsvietimo_technika', component: Apvietimas },
+    { path: '/atlikti_darbai', component: Darbai },
+    { path: '/igarsinimo_technika', component: Garsas, props: true },
+    { path: '/musu_draugai', component: Partneriai },
+    { path: '*', component: Pagrindinis },
 ];
 
 export default new VueRouter({

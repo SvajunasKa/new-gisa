@@ -25,7 +25,7 @@
                 <div class="row" v-else>
                     <div class="col-md-4">
                         <div class="img" v-for="img in data.img">
-                            <img :src="img">
+                            <img :src="img" }>
                         </div>
                     </div>
                     <div class="col-md-6 offset-2">
@@ -63,6 +63,7 @@
             let data = this.$store.getters.getAllData;
             this.title = data.sprendimai_page.offer_title.name;
             this.description = data.sprendimai_page.sprendimai;
+            //console.log(data)
         },
         methods: {
             showModal(parametrai) {
