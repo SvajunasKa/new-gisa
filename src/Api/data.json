@@ -22,11 +22,11 @@
   ],
   "audio": {
     "src": "src/assets/images/audio.jpg",
-    "text": "Apšvietimo aparatūra"
+    "text": "Garso aparatūra"
   },
   "light": {
     "src": "src/assets/images/show.jpg",
-    "text": "Garso aparatūra"
+    "text": "Apšvietimo aparatūra"
   },
   "offer": {
     "src": "src/assets/images/komplektai.jpeg",
@@ -44,35 +44,34 @@
     "offer_title": {
       "name": "RENGINIŲ APŠVIETIMO IR ĮGARSINIMO KOMPLEKTAI"
     },
-    "sprendimai": [
-      {
-        "name": "šeimoms",
-        "description": "Gimtadieniams, jubiliejams, bernvakariams, mergvakariams, vestuvėms. Bendras garso galingumas - 2,5kW Foniniai ir 2 valdomi prožektoriai.",
-        "img": [
-          "src/assets/images/sviesa-seimai.jpg",
-          "src/assets/images/garso-komplektas-seimai.jpg"
+    "sprendimai": [{
+      "name": "šeimoms",
+      "description": "Gimtadieniams, jubiliejams, bernvakariams, mergvakariams, vestuvėms. Bendras garso galingumas - 2,5kW Foniniai ir 2 valdomi prožektoriai.",
+      "img": [
+        "src/assets/images/sviesa-seimai.jpg",
+        "src/assets/images/garso-komplektas-seimai.jpg"
+      ],
+      "button_text": "Plačiau",
+      "papildoma_info": {
+        "Garsas:": [
+          "2 Žemų dažnių kolonėlės;",
+          "2 Aukštų dažnių kolonėlės;",
+          "2 Monitorinės kolonėlės;",
+          "Bendras galingumas 2,5kW garso;",
+          "Bazinio komplekto įrenginiai reikalingi įgarsinimui.*"
         ],
-        "button_text": "Plačiau",
-        "papildoma_info": {
-          "Garsas:": [
-            "2 Žemų dažnių kolonėlės;",
-            "2 Aukštų dažnių kolonėlės;",
-            "2 Monitorinės kolonėlės;",
-            "Bendras galingumas 2,5kW garso;",
-            "Bazinio komplekto įrenginiai reikalingi įgarsinimui.*"
-          ],
-          "Šviesa:": [
-            "2 Šviesos efektų valdomi prožektoriai (Nightsun pro lighting 250W);",
-            "4 Foninio scenos apšvietimo šviesos efektai (Geni XTC 250w);",
-            "2 PAR RGBW prožektoriai (7x12W); + Baziniai apšvietimo įrenginiai. ** "
-          ],
-          "Papildoma informacija:": [
-            "* Bazinio komplekto įrenginiai yra: stiprintuvai, kolonėlių signalo apdorojimo procesoriai, jungiamieji laidai, elektros distribucija, 16 kanalų analoginis pultas, mikrofonai, grotuvas. <br> Papildoma įranga:  <br> geitai, signalo kompresoriai, reverberatoriai, didesnio kanalų skaičiaus ar skaitmeninis pultas, magistralinis kabelis, papildomi monitoriai ir t.t.  <br>derinama užsakymo metu.",
-            "** Bazinio komplekto apšvietimo įrenginiai yra jungiamieji laidai, DMX valdymo pultas arba kompiuterinis DMX kontroleris, 4 vietų 2,5m aukščio stovas pakabinti foniniams prožektoriams.  <br>Papildomai galima komplektuoti 700W arba 3kW galios dūmų mašinas, burbulų mašinas, papildomus efektus ar šviesą.",
-            "Aptarnaujantis personalas - 1- 2 val. pasiruošimo ir 2 valandos renginiui."
-          ]
-        }
-      },
+        "Šviesa:": [
+          "2 Šviesos efektų valdomi prožektoriai (Nightsun pro lighting 250W);",
+          "4 Foninio scenos apšvietimo šviesos efektai (Geni XTC 250w);",
+          "2 PAR RGBW prožektoriai (7x12W); + Baziniai apšvietimo įrenginiai. ** "
+        ],
+        "Papildoma informacija:": [
+          "* Bazinio komplekto įrenginiai yra: stiprintuvai, kolonėlių signalo apdorojimo procesoriai, jungiamieji laidai, elektros distribucija, 16 kanalų analoginis pultas, mikrofonai, grotuvas. <br> Papildoma įranga:  <br> geitai, signalo kompresoriai, reverberatoriai, didesnio kanalų skaičiaus ar skaitmeninis pultas, magistralinis kabelis, papildomi monitoriai ir t.t.  <br>derinama užsakymo metu.",
+          "** Bazinio komplekto apšvietimo įrenginiai yra jungiamieji laidai, DMX valdymo pultas arba kompiuterinis DMX kontroleris, 4 vietų 2,5m aukščio stovas pakabinti foniniams prožektoriams.  <br>Papildomai galima komplektuoti 700W arba 3kW galios dūmų mašinas, burbulų mašinas, papildomus efektus ar šviesą.",
+          "Aptarnaujantis personalas - 1- 2 val. pasiruošimo ir 2 valandos renginiui."
+        ]
+      }
+    },
       {
         "name": "bendruomenėms",
         "description": "Išleistuvėms, šimtadieniams, įstaigos vakarėliams.Bendras garso galingumas - 4kW; Foniniai ir 4 valdomi prožektoriai.",
@@ -169,61 +168,57 @@
     "apsvietimas_title": {
       "name": "APŠVIETIMO APARATŪRA"
     },
-    "apvietimas": [
-      {
-        "description": "Apšvietimas",
-        "info":[
-          {
-            "klase": "PAR",
-            "pavadinimas": "Led RGBW 60W",
-            "kiekis": "12 vnt"
-          },
-          {
-            "klase": "PAR",
-            "pavadinimas": "RGB PAR-56 Stairville",
-            "kiekis": "7 vnt"
-          },
-          {
-            "klase": "Scanner",
-            "pavadinimas": "Martin RoboScan 812",
-            "kiekis": "2 vnt"
-          },
-          {
-            "klase": "Scanner",
-            "pavadinimas": "Robe 575XT",
-            "kiekis": "8 vnt"
-          },
-          {
-            "klase": "Spot",
-            "pavadinimas": "Robe 250at",
-            "kiekis": "4 vnt"
-          },
-          {
-            "klase": "Wash",
-            "pavadinimas": "Robe 250at",
-            "kiekis": "4 vnt"
-          },
-          {
-            "klase": "DMX Splitter",
-            "pavadinimas": "4 ch optically isolated",
-            "kiekis": "1 vnt"
-          },
-          {
-            "klase": "Static",
-            "pavadinimas": "Martin Robo color",
-            "kiekis": "4 vnt"
-          }
-        ]
+    "apvietimas": [{
+      "description": "Apšvietimas",
+      "info": [{
+        "klase": "PAR",
+        "pavadinimas": "Led RGBW 60W",
+        "kiekis": "12 vnt"
       },
+        {
+          "klase": "PAR",
+          "pavadinimas": "RGB PAR-56 Stairville",
+          "kiekis": "7 vnt"
+        },
+        {
+          "klase": "Scanner",
+          "pavadinimas": "Martin RoboScan 812",
+          "kiekis": "2 vnt"
+        },
+        {
+          "klase": "Scanner",
+          "pavadinimas": "Robe 575XT",
+          "kiekis": "8 vnt"
+        },
+        {
+          "klase": "Spot",
+          "pavadinimas": "Robe 250at",
+          "kiekis": "4 vnt"
+        },
+        {
+          "klase": "Wash",
+          "pavadinimas": "Robe 250at",
+          "kiekis": "4 vnt"
+        },
+        {
+          "klase": "DMX Splitter",
+          "pavadinimas": "4 ch optically isolated",
+          "kiekis": "1 vnt"
+        },
+        {
+          "klase": "Static",
+          "pavadinimas": "Martin Robo color",
+          "kiekis": "4 vnt"
+        }
+      ]
+    },
       {
         "description": "Efektai",
-        "info": [
-          {
-            "klase": "Smoke",
-            "pavadinimas": "Dūmų mašina 3kW DMX",
-            "kiekis": "1 vnt"
-          }
-        ]
+        "info": [{
+          "klase": "Smoke",
+          "pavadinimas": "Dūmų mašina 3kW DMX",
+          "kiekis": "1 vnt"
+        }]
       }
 
     ]
@@ -232,60 +227,62 @@
     "garsas_title": {
       "name": "GARSO APARATŪRA"
     },
-    "garsas": [
-      {
-        "description": "Akustika",
-        "info": [
-          {
-            "klase": "PA",
-            "pavadinimas": "Nexo TS2400 2500 W Max. SPL.  143 dB (Rigging system)",
-            "kiekis": "4 vnt"
-          },
-          {
-            "klase": "PA",
-            "pavadinimas": "Community SLS920 500 W Max. SPL.  137 dB",
-            "kiekis": "4 vnt"
-          },
-          {
-            "klase": "PA",
-            "pavadinimas": "Selenium 2x15“+1x1“ 800 W Max. SPL.  134 dB",
-            "kiekis": "2 vnt"
-          },
-          {
-            "klase": "Sub",
-            "pavadinimas": "RCF 1x18“ 900W",
-            "kiekis": "4 vnt"
-          },
-          {
-            "klase": "Sub",
-            "pavadinimas": "KV2 VHD18“ 1500W",
-            "kiekis": "8 vnt"
-          },
-          {
-            "klase": "Sub",
-            "pavadinimas": "KV2 2x15“ 2400W",
-            "kiekis": "2 vnt"
-          },
-          {
-            "klase": "Monitors",
-            "pavadinimas": "Mach M821 200W  ",
-            "kiekis": "4 vnt"
-          },
-          {
-            "klase": "Monitors",
-            "pavadinimas": "Tesla 1x15“ + 1x1“ 300W",
-            "kiekis": "4 vnt"
-          }
-        ]
+    "garsas": [{
+      "description": "Akustika",
+      "info": [{
+        "klase": "PA",
+        "pavadinimas": "Nexo TS2400 2500 W Max. SPL.  143 dB (Rigging system)",
+        "kiekis": "4 vnt"
       },
+        {
+          "klase": "PA",
+          "pavadinimas": "Community SLS920 500 W Max. SPL.  137 dB",
+          "kiekis": "4 vnt"
+        },
+        {
+          "klase": "PA",
+          "pavadinimas": "Selenium 2x15“+1x1“ 800 W Max. SPL.  134 dB",
+          "kiekis": "2 vnt"
+        },
+        {
+          "klase": "Sub",
+          "pavadinimas": "RCF 1x18“ 900W",
+          "kiekis": "2 vnt"
+        },
+        {
+          "klase": "Sub",
+          "pavadinimas": "KV2 VHD18“ 1500W",
+          "kiekis": "8 vnt"
+        },
+        {
+          "klase": "Sub",
+          "pavadinimas": "KV2 2x15“ 2400W",
+          "kiekis": "2 vnt"
+        },
+        {
+          "klase": "Monitors",
+          "pavadinimas": "Nexo PS10  ",
+          "kiekis": "6 vnt"
+        },
+        {
+          "klase": "Monitors/Front fill",
+          "pavadinimas": "Mach M821 200W  ",
+          "kiekis": "4 vnt"
+        },
+        {
+          "klase": "Monitors",
+          "pavadinimas": "Tesla 1x15“ + 1x1“ 300W",
+          "kiekis": "4 vnt"
+        }
+      ]
+    },
       {
         "description": "Stiprintuvai",
-        "info": [
-          {
-            "klase": "AB",
-            "pavadinimas": "QSC PLX 1202 2x600 W @ 2 Ω ",
-            "kiekis": "2 vnt"
-          },
+        "info": [{
+          "klase": "AB",
+          "pavadinimas": "QSC PLX 1202 2x600 W @ 2 Ω ",
+          "kiekis": "2 vnt"
+        },
           {
             "klase": "AB",
             "pavadinimas": "QSC PLX 1602       2x800 W @ 2 Ω ",
@@ -319,7 +316,7 @@
           {
             "klase": "D",
             "pavadinimas": "QSC PL 380         2x4000 W @ 2 Ω",
-            "kiekis": "1 vnt"
+            "kiekis": "3 vnt"
           },
           {
             "klase": "H",
@@ -335,16 +332,15 @@
       },
       {
         "description": "Garso apdirbimas",
-        "info": [
-          {
-            "klase": "Digital Speaker",
-            "pavadinimas": "DBX DriveRack 480 4in 8out",
-            "kiekis": "1 vnt"
-          },
+        "info": [{
+          "klase": "Digital Speaker",
+          "pavadinimas": "DBX DriveRack 480 4in 8out",
+          "kiekis": "1 vnt"
+        },
           {
             "klase": "Digital Speaker",
             "pavadinimas": "DBX DriveRack 481 4in 8out",
-            "kiekis": "2 vnt"
+            "kiekis": "3 vnt"
           },
           {
             "klase": "Digital Speaker",
@@ -353,12 +349,12 @@
           },
           {
             "klase": "Digital Speaker",
-            "pavadinimas": "DBX DriveRack PA 2in 6out",
+            "pavadinimas": "DBX DriveRack PA+ 2in 6out",
             "kiekis": "1 vnt"
           },
           {
             "klase": "Digital Speaker",
-            "pavadinimas": "DBX DriveRack PA+ 2in 6out",
+            "pavadinimas": "Xilica Xp-8080 8in 8out",
             "kiekis": "1 vnt"
           },
           {
@@ -380,12 +376,11 @@
       },
       {
         "description": "Mikrofonai",
-        "info": [
-          {
-            "klase": "Wireless dynamic",
-            "pavadinimas": "Shure  ULXD +  beta 58 hendheld.",
-            "kiekis": "2 vnt"
-          },
+        "info": [{
+          "klase": "Wireless dynamic",
+          "pavadinimas": "Shure  ULXD +   hendheld B58/B87 + bodypack",
+          "kiekis": "3 vnt"
+        },
           {
             "klase": "Wireless dynamic",
             "pavadinimas": "Shure  SLX + SM58 hendheld. ",
@@ -397,24 +392,29 @@
             "kiekis": "1 vnt"
           },
           {
-            "klase": "Wireless dynamic",
-            "pavadinimas": "Shure  BLX + Bodypack  +PG30 hedset",
-            "kiekis": "1 vnt"
-          },
-          {
             "klase": "Dynamic",
             "pavadinimas": "Shure SM58",
             "kiekis": "2 vnt"
           },
           {
             "klase": "Dynamic",
-            "pavadinimas": "Shure Beta 58",
+            "pavadinimas": "Shure B58",
             "kiekis": "1 vnt"
           },
           {
             "klase": "Dynamic",
-            "pavadinimas": "Shure Beta 57",
+            "pavadinimas": "Shure B57",
             "kiekis": "2 vnt"
+          },
+          {
+            "klase": "Dynamic",
+            "pavadinimas": "Shure B52",
+            "kiekis": "1 vnt"
+          },
+          {
+            "klase": "Condenser",
+            "pavadinimas": "Shure B98",
+            "kiekis": "6 vnt"
           },
           {
             "klase": "Dynamic",
@@ -425,11 +425,6 @@
             "klase": "Dynamic",
             "pavadinimas": "AKG D112",
             "kiekis": "1 vnt"
-          },
-          {
-            "klase": "Condenser",
-            "pavadinimas": "Shure Beta 98",
-            "kiekis": "4 vnt"
           },
           {
             "klase": "Condenser",
@@ -454,12 +449,12 @@
           {
             "klase": "Condenser",
             "pavadinimas": "Superlux S241",
-            "kiekis": "4 vnt"
+            "kiekis": "5 vnt"
           },
           {
             "klase": "Condenser",
             "pavadinimas": "Superlux PRA-383D",
-            "kiekis": "1 vnt"
+            "kiekis": "2 vnt"
           },
           {
             "klase": "Drum Set",
@@ -470,12 +465,11 @@
       },
       {
         "description": "Mikšeriniai pultai",
-        "info": [
-          {
-            "klase": "Digital",
-            "pavadinimas": "Behringer X32 produce",
-            "kiekis": "1 vnt"
-          },
+        "info": [{
+          "klase": "Digital",
+          "pavadinimas": "Behringer X32 produce",
+          "kiekis": "1 vnt"
+        },
           {
             "klase": "Analog",
             "pavadinimas": "Soundcraft GB2R-16",
@@ -490,21 +484,25 @@
       },
       {
         "description": "Magistralės scenos interfeisai",
-        "info": [
-          {
-            "klase": "Stagebox",
-            "pavadinimas": "Behringer S16",
-            "kiekis": "1 vnt"
-          },
+        "info": [{
+          "klase": "Stagebox",
+          "pavadinimas": "Behringer S16",
+          "kiekis": "1 vnt"
+        },
           {
             "klase": "Snake (digital)",
             "pavadinimas": "2 x UTP +  2 x XLR + Power  50m.",
             "kiekis": "1 vnt"
           },
           {
+            "klase": "Snake (digital)",
+            "pavadinimas": "2 x UTP + 1 x XLR + Power 80m",
+            "kiekis": "1 vnt"
+          },
+          {
             "klase": "Multicore",
             "pavadinimas": "10 in. 2 out.  15m",
-            "kiekis": "1 vnt"
+            "kiekis": "2 vnt"
           },
           {
             "klase": "Multicore",
@@ -514,7 +512,7 @@
           {
             "klase": "Di Box",
             "pavadinimas": "BSS AR 133 Active Mono",
-            "kiekis": "2 vnt"
+            "kiekis": "4 vnt"
           },
           {
             "klase": "Di Box",
@@ -524,33 +522,25 @@
           {
             "klase": "Di Box",
             "pavadinimas": "Omnitronic LH-055 Passive  Mono  ",
-            "kiekis": "3 vnt"
-          },
-          {
-            "klase": "Snake (digital)",
-            "pavadinimas": "2 x UTP + 1 x XLR + Power 80m",
-            "kiekis": "1 vnt"
+            "kiekis": "2 vnt"
           }
         ]
       },
       {
         "description": "Efektų blokai",
-        "info": [
-          {
-            "klase": "",
-            "pavadinimas": "Lexicon MPX-550",
-            "kiekis": "1 vnt"
-          }
-        ]
+        "info": [{
+          "klase": "",
+          "pavadinimas": "Lexicon MPX-550",
+          "kiekis": "1 vnt"
+        }]
       },
       {
         "description": "Distribucija",
-        "info": [
-          {
-            "klase": "32A",
-            "pavadinimas": "32 A to 32 A + 10x16 A",
-            "kiekis": "1 vnt"
-          },
+        "info": [{
+          "klase": "32A",
+          "pavadinimas": "32 A to 32 A + 10x16 A",
+          "kiekis": "1 vnt"
+        },
           {
             "klase": "63A",
             "pavadinimas": "63 A to 3x32 A + 14x16 A",
@@ -560,12 +550,11 @@
       },
       {
         "description": "Kabeliai",
-        "info": [
-          {
-            "klase": "Signal",
-            "pavadinimas": "XLR male to XLR female 3 m.",
-            "kiekis": "5 vnt"
-          },
+        "info": [{
+          "klase": "Signal",
+          "pavadinimas": "XLR male to XLR female 3 m.",
+          "kiekis": "5 vnt"
+        },
           {
             "klase": "Signal",
             "pavadinimas": "XLR male to XLR female 5 m.",
@@ -574,7 +563,7 @@
           {
             "klase": "Signal",
             "pavadinimas": "XLR male to XLR female 10 m.",
-            "kiekis": "10 vnt"
+            "kiekis": "15 vnt"
           },
           {
             "klase": "Signal",
@@ -635,12 +624,11 @@
       },
       {
         "description": "Stovai",
-        "info": [
-          {
-            "klase": "Microphone",
-            "pavadinimas": "KM & other  ~1,7m",
-            "kiekis": "25 vnt"
-          },
+        "info": [{
+          "klase": "Microphone",
+          "pavadinimas": "KM & other  ~1,7m",
+          "kiekis": "25 vnt"
+        },
           {
             "klase": "Microphone",
             "pavadinimas": "Other low",
@@ -652,25 +640,29 @@
             "kiekis": "2 vnt"
           },
           {
+            "klase": "Speaker",
+            "pavadinimas": "Fenix AT-06 6.5m. 250kg",
+            "kiekis": "2 vnt"
+          },
+          {
             "klase": "Lights",
             "pavadinimas": "3m. 50kg.",
             "kiekis": "1 vnt"
           },
           {
             "klase": "Lights",
-            "pavadinimas": "4m. 90kg.",
+            "pavadinimas": "Varytec 4m. 85kg.",
             "kiekis": "4 vnt"
           }
         ]
       },
       {
         "description": "DJ setup",
-        "info": [
-          {
-            "klase": "Mikšeris",
-            "pavadinimas": "Pioneer djm-800",
-            "kiekis": "1 vnt"
-          },
+        "info": [{
+          "klase": "Mikšeris",
+          "pavadinimas": "Pioneer djm-800",
+          "kiekis": "1 vnt"
+        },
           {
             "klase": "Media Player",
             "pavadinimas": "Pioneer CDJ-2000",
@@ -696,26 +688,25 @@
     "darbai_title": {
       "name": "APŠVIESTI IR ĮGARSINTI RENGINIAI"
     },
-    "koncertai": [
-      {
-        "name": "Prienų miesto šventė 2019",
-        "images": [
-          "src/assets/images/darbai/Prienu-svente/archive/15.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/16.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/17.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/18.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/018.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/19.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/20.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/21.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/22.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/23.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/24.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/25.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/26.jpg",
-          "src/assets/images/darbai/Prienu-svente/archive/27.jpg"
-        ]
-      },
+    "koncertai": [{
+      "name": "Prienų miesto šventė 2019",
+      "images": [
+        "src/assets/images/darbai/Prienu-svente/archive/15.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/16.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/17.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/18.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/018.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/19.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/20.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/21.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/22.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/23.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/24.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/25.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/26.jpg",
+        "src/assets/images/darbai/Prienu-svente/archive/27.jpg"
+      ]
+    },
       {
         "name": "Kapelos “Temela” dešimtmečio jubiliejaus šventinis koncertas",
         "images": [
@@ -848,15 +839,12 @@
     "title": {
       "name": "MŪSŲ DRAUGAI"
     },
-    "draugai": [
-      {
-        "name": "GRUPĖ NEMUNO KRANTAI",
-        "images": [
-          "src/assets/images/partneriai/nemuno-krantai.jpg"
-        ],
-        "link": "http://nemunokrantai.lt/"
-      }
-    ]
+    "draugai": [{
+      "name": "GRUPĖ NEMUNO KRANTAI",
+      "images": [
+        "src/assets/images/partneriai/nemuno-krantai.jpg"
+      ],
+      "link": "http://nemunokrantai.lt/"
+    }]
   }
 }
-
