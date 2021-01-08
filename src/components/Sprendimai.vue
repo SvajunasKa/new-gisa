@@ -5,7 +5,7 @@
                 <h1 v-html="title"></h1>
             </div>
             <section v-for="(data, index) in description">
-                <div class="row" v-if="index%2 === 0">
+                <div class="row" >
                     <div class="col-md-4">
                         <div class="content">
                             <h4 v-html="data.name"></h4>
@@ -22,23 +22,23 @@
                     </div>
 
                 </div>
-                <div class="row" v-else>
-                    <div class="col-md-4">
-                        <div class="img" v-for="img in data.img">
-                            <img :src="img" }>
-                        </div>
-                    </div>
-                    <div class="col-md-6 offset-2">
-                        <div class="content">
-                            <h4 v-html="data.name"></h4>
-                            <p v-html="data.description"></p>
-                        </div>
-                        <div class="link">
-                            <button class="button-link"  @click="showModal(data.papildoma_info)" v-html="data.button_text"></button>
-                        </div>
-                    </div>
+<!--                <div class="row" v-else>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="img" v-for="img in data.img">-->
+<!--                            <img :src="img" }>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6 offset-2">-->
+<!--                        <div class="content">-->
+<!--                            <h4 v-html="data.name"></h4>-->
+<!--                            <p v-html="data.description"></p>-->
+<!--                        </div>-->
+<!--                        <div class="link">-->
+<!--                            <button class="button-link"  @click="showModal(data.papildoma_info)" v-html="data.button_text"></button>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                </div>
+<!--                </div>-->
                 <hr>
             </section>
         </div>
@@ -63,7 +63,6 @@
             let data = this.$store.getters.getAllData;
             this.title = data.sprendimai_page.offer_title.name;
             this.description = data.sprendimai_page.sprendimai;
-            //console.log(data)
         },
         methods: {
             showModal(parametrai) {

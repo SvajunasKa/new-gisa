@@ -21,6 +21,7 @@
     </div>
     <hr />
     <app-section
+      id="main"
       :link_text="getAllData.audio.text"
       link="igarsinimo_technika"
       :img_link="getAllData.audio.src"
@@ -79,7 +80,6 @@ export default {
   mounted() {
     let data = this.$store.getters.getAllData;
     this.title = data.audio.text;
-    console.log(this.title);
     document.body.className = "home";
   },
   destroyed: () => {
