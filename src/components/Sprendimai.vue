@@ -22,23 +22,6 @@
                     </div>
 
                 </div>
-<!--                <div class="row" v-else>-->
-<!--                    <div class="col-md-4">-->
-<!--                        <div class="img" v-for="img in data.img">-->
-<!--                            <img :src="img" }>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-6 offset-2">-->
-<!--                        <div class="content">-->
-<!--                            <h4 v-html="data.name"></h4>-->
-<!--                            <p v-html="data.description"></p>-->
-<!--                        </div>-->
-<!--                        <div class="link">-->
-<!--                            <button class="button-link"  @click="showModal(data.papildoma_info)" v-html="data.button_text"></button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                </div>-->
                 <hr>
             </section>
         </div>

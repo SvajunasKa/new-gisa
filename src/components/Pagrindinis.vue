@@ -80,10 +80,6 @@ export default {
   mounted() {
     let data = this.$store.getters.getAllData;
     this.title = data.audio.text;
-    document.body.className = "home";
-  },
-  destroyed: () => {
-    document.body.className = "";
   },
   components: {
     appForm: contactForm,
@@ -94,6 +90,22 @@ export default {
 
 
 <style lang="scss" scoped>
+.content{
+  position: relative;
+  &:before {
+    background-image: url("/src/assets/images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+  }
+}
 .heading {
   padding: 12vh 0;
 }
@@ -150,6 +162,7 @@ h1 {
 .banner {
   height: 80vh;
   text-align: center;
+  position: relative;
 }
 
 .button {
